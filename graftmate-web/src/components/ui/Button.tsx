@@ -6,7 +6,7 @@ type Size = "sm" | "md" | "lg";
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-accent text-white hover:bg-accent-bright shadow-[0_0_24px_var(--accent-glow)]",
+    "bg-primary text-white hover:bg-primary-hover shadow-[0_0_24px_var(--primary-glow)]",
   secondary:
     "border border-border bg-surface-raised text-foreground hover:border-primary/40 hover:bg-surface",
   ghost: "text-muted hover:text-foreground",
@@ -40,7 +40,7 @@ export function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if ("href" in props && props.href) {
     const { href, ...linkProps } = props;

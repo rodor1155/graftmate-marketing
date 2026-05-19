@@ -11,7 +11,7 @@ export function CtaBanner() {
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-lg text-muted">
             Join UK tradespeople who quote by voice, scan receipts with AI, and
-            invoice in one tap — for £29.99 a month, flat.
+            invoice in one tap — £9.99/month for 3 months, then £29.99 flat.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button href="/pricing" size="lg">

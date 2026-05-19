@@ -4,7 +4,7 @@ const comparisons = [
     them: "Type on a tiny keyboard after a 10-hour day",
   },
   {
-    us: "£29.99 — one plan, everything included",
+    us: "£9.99 for 3 months — one plan, everything included",
     them: "Three tiers, features locked behind upgrades",
   },
   {

@@ -20,10 +20,13 @@ export function PricingTeaser() {
               Simple pricing
             </p>
             <p className="mt-4 font-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
-              £29<span className="text-3xl text-muted">.99</span>
+              £9<span className="text-3xl text-muted">.99</span>
               <span className="text-xl font-medium text-muted">/month</span>
             </p>
-            <p className="mt-3 text-muted">
+            <p className="mt-3 text-sm text-muted">
+              For your first 3 months, then £29.99/month.
+            </p>
+            <p className="mt-2 text-muted">
               One plan. Every feature. No tiers, no upsells, no per-seat fees.
             </p>
           </div>

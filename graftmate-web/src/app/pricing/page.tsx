@@ -1,29 +1,86 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
+import { PricingFaq } from "@/components/pricing/PricingFaq";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "One plan at £29.99/month. Every feature included for UK sole traders.",
+  description:
+    "£9.99/month for your first 3 months, then £29.99/month. One plan with every feature for UK sole traders. 14-day free trial, no credit card required.",
 };
+
+const features = [
+  "Voice quotes",
+  "AI receipt scanning",
+  "Unlimited quotes & invoices",
+  "Expense tracking with OCR",
+  "Google Calendar sync",
+  "UK VAT support",
+  "Email support",
+  "No user limits",
+];
+
+const TRIAL_URL = "https://graftmate.net/login";
 
 export default function PricingPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-lg text-center">
-        <h1 className="font-display text-4xl font-bold">Simple pricing</h1>
-        <p className="mt-8 font-display text-6xl font-bold text-gradient-brand">
-          £29.99
-          <span className="text-2xl font-medium text-muted">/month</span>
-        </p>
-        <p className="mt-4 text-muted">
-          One plan. Every feature. No tiers.
-        </p>
-        <Button href="/pricing" size="lg" className="mt-8">
-          Start free trial
-        </Button>
-        <p className="mt-4 text-sm text-muted-dim">
-          Full pricing page coming next.
-        </p>
+    <div className="relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-40" />
+      <div className="pointer-events-none absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
+
+      <div className="relative mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <header className="text-center">
+          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+            Simple pricing
+          </p>
+          <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground">
+            One plan. Everything included.
+          </h1>
+        </header>
+
+        <div className="mt-10 rounded-2xl border border-primary/35 bg-gradient-to-b from-surface-raised to-surface p-8 sm:p-10">
+          <div className="text-center">
+            <span className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-secondary">
+              Launch offer
+            </span>
+            <p className="mt-6 font-display text-6xl font-bold tracking-tight text-foreground sm:text-7xl">
+              £9.99
+              <span className="text-2xl font-medium text-muted sm:text-3xl">
+                /month
+              </span>
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted">
+              Launch offer: First 3 months at £9.99, then £29.99/month
+            </p>
+          </div>
+
+          <Button href={TRIAL_URL} size="lg" className="mt-8 w-full">
+            Start 14-day free trial
+          </Button>
+          <p className="mt-4 text-center text-sm text-muted-dim">
+            No credit card required. Cancel anytime.
+          </p>
+
+          <ul className="mt-10 space-y-3 border-t border-border-subtle pt-10">
+            {features.map((feature) => (
+              <li
+                key={feature}
+                className="flex items-center gap-3 text-sm text-foreground"
+              >
+                <span
+                  className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/25 text-sm font-bold text-secondary"
+                  aria-hidden
+                >
+                  ✓
+                </span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-16">
+          <PricingFaq />
+        </div>
       </div>
     </div>
   );

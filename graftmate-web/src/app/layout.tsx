@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Outfit } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { PromoBanner } from "@/components/layout/PromoBanner";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -50,7 +51,10 @@ export default function RootLayout({
       className={`${outfit.variable} ${dmSans.variable} h-full`}
     >
       <body className="min-h-full flex flex-col font-sans antialiased">
-        <Header />
+        <div className="sticky top-0 z-50">
+          <PromoBanner />
+          <Header />
+        </div>
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

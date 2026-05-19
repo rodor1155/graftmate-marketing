@@ -37,7 +37,8 @@ export function Hero() {
             </div>
 
             <p className="mt-4 text-sm text-muted-dim">
-              £29.99/month · One plan · No tiers · Cancel anytime
+              £9.99/month for 3 months, then £29.99 · One plan · No tiers ·
+              Cancel anytime
             </p>
 
             <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted">
@@ -106,7 +107,7 @@ function VoiceDemo() {
 
           <button
             type="button"
-            className="flex w-full items-center justify-center gap-2 rounded-lg bg-accent py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-bright"
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
           >
             Convert to invoice
             <ArrowIcon />

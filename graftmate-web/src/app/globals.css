@@ -10,6 +10,7 @@
   --muted: #a8a29e;
   --muted-dim: #78716c;
   --primary: #2d5016;
+  --primary-hover: #1f3a0f;
   --primary-bright: #3d6b1f;
   --secondary: #5a7c3e;
   --accent: #d45d00;
@@ -29,6 +30,7 @@
   --color-muted: var(--muted);
   --color-muted-dim: var(--muted-dim);
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
   --color-primary-bright: var(--primary-bright);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
