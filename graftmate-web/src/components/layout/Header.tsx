@@ -37,7 +37,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button href="/pricing" variant="ghost" size="sm">
+          <Button href="https://graftmate.net/login" variant="ghost" size="sm">
             Sign in
           </Button>
           <Button href="/pricing" size="sm">
@@ -70,7 +70,7 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-3 flex flex-col gap-2 border-t border-border-subtle pt-3">
-              <Button href="/pricing" variant="secondary" className="w-full">
+              <Button href="https://graftmate.net/login" variant="secondary" className="w-full">
                 Sign in
               </Button>
               <Button href="/pricing" className="w-full">
