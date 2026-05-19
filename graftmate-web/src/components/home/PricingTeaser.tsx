@@ -14,9 +14,9 @@ export function PricingTeaser() {
     <section className="relative overflow-hidden py-16 sm:py-24">
       <div className="pointer-events-none absolute inset-0 bg-noise opacity-40" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-b from-surface-raised to-surface">
+        <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-primary/35 bg-gradient-to-b from-surface-raised to-surface">
           <div className="border-b border-border-subtle px-6 py-8 text-center sm:px-10">
-            <p className="text-sm font-medium uppercase tracking-wider text-accent-bright">
+            <p className="text-sm font-medium uppercase tracking-wider text-secondary">
               Simple pricing
             </p>
             <p className="mt-4 font-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
@@ -32,7 +32,7 @@ export function PricingTeaser() {
             <ul className="space-y-3">
               {included.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/20 text-accent">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/25 text-secondary">
                     ✓
                   </span>
                   {item}

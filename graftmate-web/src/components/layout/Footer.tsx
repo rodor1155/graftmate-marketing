@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/layout/Logo";
 
 const footerLinks = {
   Product: [
@@ -19,12 +20,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent font-display text-lg font-bold text-[#0a0a0b]">
-                G
-              </span>
-              <span className="font-display text-xl font-bold">Graftmate</span>
-            </Link>
+            <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
               Business management built for UK sole traders. Voice quotes,
               receipt scanning, and invoicing — without the spreadsheet
@@ -45,7 +41,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted transition-colors hover:text-accent-bright"
+                      className="text-sm text-muted transition-colors hover:text-secondary"
                     >
                       {link.label}
                     </Link>

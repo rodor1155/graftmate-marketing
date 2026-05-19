@@ -51,7 +51,7 @@ export function FeaturesOverview() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-xl">
-            <p className="text-sm font-medium uppercase tracking-wider text-accent-bright">
+            <p className="text-sm font-medium uppercase tracking-wider text-secondary">
               Everything you need
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -69,11 +69,11 @@ export function FeaturesOverview() {
               key={feature.tag}
               className={`group rounded-xl border p-6 transition-colors ${
                 feature.highlight
-                  ? "border-accent/40 bg-gradient-to-br from-accent/10 to-surface lg:col-span-2 lg:row-span-1"
-                  : "border-border bg-surface hover:border-accent/25"
+                  ? "border-primary/40 bg-gradient-to-br from-primary/15 to-surface lg:col-span-2 lg:row-span-1"
+                  : "border-border bg-surface hover:border-primary/25"
               }`}
             >
-              <span className="text-xs font-semibold uppercase tracking-wider text-accent-bright">
+              <span className="text-xs font-semibold uppercase tracking-wider text-secondary">
                 {feature.tag}
               </span>
               <h3 className="mt-3 font-display text-lg font-semibold leading-snug text-foreground">

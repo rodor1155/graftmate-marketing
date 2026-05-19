@@ -23,7 +23,7 @@ export function HowItWorks() {
   return (
     <section className="border-t border-border-subtle bg-surface py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <p className="text-sm font-medium uppercase tracking-wider text-accent-bright">
+        <p className="text-sm font-medium uppercase tracking-wider text-secondary">
           How it works
         </p>
         <h2 className="mt-3 max-w-lg font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -33,7 +33,7 @@ export function HowItWorks() {
         <ol className="mt-12 grid gap-8 sm:grid-cols-3">
           {steps.map((item) => (
             <li key={item.step} className="relative">
-              <span className="font-display text-5xl font-bold text-accent/20">
+              <span className="font-display text-5xl font-bold text-primary/25">
                 {item.step}
               </span>
               <h3 className="mt-2 font-display text-lg font-semibold text-foreground">

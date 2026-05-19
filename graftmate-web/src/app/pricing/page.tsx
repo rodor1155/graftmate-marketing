@@ -11,7 +11,7 @@ export default function PricingPage() {
     <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-lg text-center">
         <h1 className="font-display text-4xl font-bold">Simple pricing</h1>
-        <p className="mt-8 font-display text-6xl font-bold text-accent-bright">
+        <p className="mt-8 font-display text-6xl font-bold text-gradient-brand">
           £29.99
           <span className="text-2xl font-medium text-muted">/month</span>
         </p>

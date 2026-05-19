@@ -30,7 +30,7 @@ export function AdminPain() {
     <section className="border-y border-border-subtle bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-wider text-accent-bright">
+          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
             Sound familiar?
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -45,9 +45,9 @@ export function AdminPain() {
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {painPoints.map((point) => (
             <li key={point.title}>
-              <article className="group h-full rounded-xl border border-border bg-background p-5 transition-colors hover:border-accent/30 hover:bg-surface-raised">
+              <article className="group h-full rounded-xl border border-border bg-background p-5 transition-colors hover:border-primary/30 hover:bg-surface-raised">
                 <span
-                  className="mb-3 block h-0.5 w-8 rounded-full bg-accent transition-all group-hover:w-12"
+                  className="mb-3 block h-0.5 w-8 rounded-full bg-secondary transition-all group-hover:w-12"
                   aria-hidden
                 />
                 <h3 className="font-display text-lg font-semibold leading-snug text-foreground">

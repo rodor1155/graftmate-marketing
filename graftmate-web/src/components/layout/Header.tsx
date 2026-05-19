@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { Logo } from "@/components/layout/Logo";
 
 const navLinks = [
   { href: "/features", label: "Features" },
@@ -15,21 +16,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border-subtle bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="group flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent font-display text-lg font-bold text-[#0a0a0b]">
-            G
-          </span>
-          <span className="font-display text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-accent-bright">
-            Graftmate
-          </span>
-        </Link>
+        <Logo priority />
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted transition-colors hover:text-foreground"
+              className="text-sm font-medium text-muted transition-colors hover:text-secondary"
             >
               {link.label}
             </Link>

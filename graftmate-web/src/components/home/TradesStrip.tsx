@@ -20,7 +20,7 @@ export function TradesStrip() {
               key={trade}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-foreground"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+              <span className="h-1.5 w-1.5 rounded-full bg-secondary" aria-hidden />
               {trade}
             </span>
           ))}
