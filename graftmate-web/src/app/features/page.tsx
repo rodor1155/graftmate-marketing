@@ -2,26 +2,28 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { FeatureSection } from "@/components/features/FeatureSection";
 import {
-  CalendarIcon,
-  ExpenseIcon,
+  ClientIcon,
+  EmailIcon,
+  InboxIcon,
   InvoiceIcon,
-  ReceiptIcon,
   UkIcon,
   VoiceIcon,
 } from "@/components/features/FeatureIcons";
 import {
-  CalendarVisual,
-  ExpenseVisual,
+  ClientVisual,
+  EmailVisual,
+  InboxVisual,
   InvoiceVisual,
-  ReceiptVisual,
   UkVisual,
   VoiceQuoteVisual,
 } from "@/components/features/FeatureVisuals";
 
+const SIGNUP_URL = "https://graftmate.net/signup";
+
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "Voice quotes, AI receipt scanning, quote-to-invoice, expense tracking, Google Calendar, and UK VAT — built for sole traders.",
+    "AI quote generation, unified inbox, inbound email parsing, client management, and UK VAT — built for sole traders.",
 };
 
 export default function FeaturesPage() {
@@ -38,12 +40,12 @@ export default function FeaturesPage() {
             Everything you need to run your trade business
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-            Quotes, invoices, expenses, and your diary — in one app built for UK
-            sole traders. No spreadsheets. No faff.
+            AI quotes, unified inbox, client management, and invoicing — in one
+            app built for UK sole traders. No spreadsheets. No faff.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/pricing" size="lg">
-              Start 14-day free trial
+            <Button href={SIGNUP_URL} size="lg">
+              Get started →
             </Button>
             <Button href="/pricing" variant="secondary" size="lg">
               View pricing
@@ -54,13 +56,13 @@ export default function FeaturesPage() {
 
       <section className="mx-auto max-w-6xl space-y-6 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <FeatureSection
-          id="voice-quotes"
+          id="ai-quotes"
           icon={<VoiceIcon />}
-          label="Voice quotes"
-          title="Quote by speaking, not typing"
-          description="After a long day on site, the last thing you want is to peck out line items on your phone. Tell Graftmate the job in plain English — customer, price, materials — and get a professional quote with VAT, ready to email."
+          label="AI quote generation"
+          title="Describe the job, get a quote in seconds"
+          description="After a long day on site, the last thing you want is to peck out line items on your phone. Tell GraftMate the job in plain English — by voice or text — and get a professional quote with VAT, ready to email."
           bullets={[
-            "Speak naturally: job scope, price, and materials in one go",
+            "Speak naturally or type: job scope, price, and materials in one go",
             "Hands-free from the van — no typing on a small screen",
             "Professional PDF quotes with UK VAT included",
             "Send to your customer before you pull away",
@@ -69,26 +71,57 @@ export default function FeaturesPage() {
         />
 
         <FeatureSection
-          id="receipt-scanning"
-          icon={<ReceiptIcon />}
-          label="AI receipt scanning"
-          title="Snap a receipt, done"
-          description="Point your camera at any receipt from Screwfix, merchants, or fuel stations. Graftmate reads the details and logs the expense — so you're not stuffing paper in the glovebox for January."
+          id="unified-inbox"
+          icon={<InboxIcon />}
+          label="Unified inbox"
+          title="Email and WhatsApp in one place"
+          description="Stop scrolling through hundreds of messages to find a job detail. GraftMate brings every client conversation into one inbox — automatically linked to the right contact and job."
           bullets={[
-            "AI extracts amount, date, and supplier automatically",
-            "Expenses auto-categorised (materials, fuel, tools, and more)",
-            "VAT rate detected and stored for your records",
-            "Works with crumpled receipts and thermal paper",
+            "WhatsApp and email messages in a single view",
+            "Conversations auto-linked to clients and jobs",
+            "See full message history without switching apps",
+            "Never lose a quote request in the chat again",
           ]}
-          visual={<ReceiptVisual />}
+          visual={<InboxVisual />}
+          reversed
+        />
+
+        <FeatureSection
+          id="inbound-email"
+          icon={<EmailIcon />}
+          label="Inbound email parsing"
+          title="Clients email you, messages appear automatically"
+          description="Give clients your GraftMate email address. When they send a message, it lands in your unified inbox — parsed, linked to the right client, and ready to action."
+          bullets={[
+            "Dedicated GraftMate address for your business",
+            "Inbound emails parsed and linked automatically",
+            "No manual forwarding or copy-paste",
+            "Works alongside your existing email habits",
+          ]}
+          visual={<EmailVisual />}
+        />
+
+        <FeatureSection
+          id="client-management"
+          icon={<ClientIcon />}
+          label="Client management"
+          title="Full history, follow-ups, and contact tracking"
+          description="Every client in one place — quotes sent, messages received, jobs in progress, and follow-ups due. No more digging through WhatsApp to remember what you quoted last month."
+          bullets={[
+            "Complete client history at a glance",
+            "Track follow-ups and next actions",
+            "See all quotes, jobs, and messages per client",
+            "Stay on top of every relationship",
+          ]}
+          visual={<ClientVisual />}
           reversed
         />
 
         <FeatureSection
           id="quote-to-invoice"
           icon={<InvoiceIcon />}
-          label="Quote to invoice"
-          title="One tap from quote to invoice"
+          label="Jobs & invoicing"
+          title="From quote to paid in minutes"
           description="When your customer accepts, don't re-type everything into a new document. Convert the quote to a branded invoice instantly — same line items, same VAT, same professional look."
           bullets={[
             "Accepted quote becomes an invoice in one tap",
@@ -100,47 +133,16 @@ export default function FeaturesPage() {
         />
 
         <FeatureSection
-          id="expense-tracking"
-          icon={<ExpenseIcon />}
-          label="Expense tracking"
-          title="Track every penny without the spreadsheet"
-          description="See where your money goes without maintaining a maze of tabs. Receipt scanning, smart categories, and VAT breakdowns keep you ready for tax time — and your accountant will thank you."
-          bullets={[
-            "All expenses in one place, linked to receipts",
-            "Filter by category, supplier, or date range",
-            "Input and output VAT tracked for returns",
-            "Export-ready summaries when you need them",
-          ]}
-          visual={<ExpenseVisual />}
-          reversed
-        />
-
-        <FeatureSection
-          id="calendar"
-          icon={<CalendarIcon />}
-          label="Google Calendar"
-          title="Your jobs, synced to your calendar"
-          description="Site visits, installs, and follow-ups stay in the diary you already use. Graftmate syncs with Google Calendar so you're not juggling two systems or missing a Saturday job."
-          bullets={[
-            "Jobs and appointments sync to Google Calendar",
-            "See your week at a glance on phone or desktop",
-            "Avoid double-booking site visits",
-            "Reminders where you already look every morning",
-          ]}
-          visual={<CalendarVisual />}
-        />
-
-        <FeatureSection
           id="uk-specific"
           icon={<UkIcon />}
-          label="UK-specific"
-          title="Built for UK trades"
-          description="Generic US software doesn't understand VAT, pounds, or how UK sole traders actually work. Graftmate is built from the ground up for British tradespeople."
+          label="Built for UK trades"
+          title="£GBP, UK VAT, British English"
+          description="Generic US software doesn't understand VAT, pounds, or how UK sole traders actually work. GraftMate is built from the ground up for British tradespeople."
           bullets={[
             "Multi-rate VAT: 20%, 5%, and 0% on quotes and invoices",
             "All amounts in £ sterling — no currency confusion",
             "UK date formats and phone number fields",
-            "Designed for sole traders, not enterprise teams",
+            "British English throughout — designed for sole traders",
           ]}
           visual={<UkVisual />}
           reversed
@@ -156,8 +158,8 @@ export default function FeaturesPage() {
             £9.99/month for your first 3 months, then £29.99. No tiers, no
             per-seat fees.
           </p>
-          <Button href="/pricing" size="lg" className="mt-8">
-            See pricing
+          <Button href={SIGNUP_URL} size="lg" className="mt-8">
+            Get started →
           </Button>
         </div>
       </section>

@@ -5,6 +5,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/layout/Logo";
 
+const SIGNUP_URL = "https://graftmate.net/signup";
+const LOGIN_URL = "https://graftmate.net/login";
+
 const navLinks = [
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
@@ -31,11 +34,11 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button href="https://graftmate.net/login" variant="ghost" size="sm">
+          <Button href={LOGIN_URL} variant="ghost" size="sm">
             Sign in
           </Button>
-          <Button href="/pricing" size="sm">
-            Start free trial
+          <Button href={SIGNUP_URL} size="sm">
+            Get started →
           </Button>
         </div>
 
@@ -64,11 +67,11 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-3 flex flex-col gap-2 border-t border-border-subtle pt-3">
-              <Button href="https://graftmate.net/login" variant="secondary" className="w-full">
+              <Button href={LOGIN_URL} variant="ghost" className="w-full">
                 Sign in
               </Button>
-              <Button href="/pricing" className="w-full">
-                Start free trial
+              <Button href={SIGNUP_URL} className="w-full">
+                Get started →
               </Button>
             </div>
           </nav>

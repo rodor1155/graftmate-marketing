@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/Button";
 
 const included = [
-  "Voice quotes & invoicing",
-  "AI receipt scanning",
-  "Expense tracking with VAT",
-  "Google Calendar sync",
+  "AI quote generation",
+  "Unified inbox (email + WhatsApp)",
+  "Inbound email parsing",
+  "Client management",
   "Quote-to-invoice in one tap",
   "Unlimited customers & jobs",
 ];
@@ -46,15 +46,12 @@ export function PricingTeaser() {
             <div className="flex flex-col justify-center gap-4">
               <p className="text-sm leading-relaxed text-muted">
                 Competitors charge £30–40/month and still lock features behind
-                higher tiers. Graftmate gives you everything for one honest
+                higher tiers. GraftMate gives you everything for one honest
                 price.
               </p>
               <Button href="/pricing" size="lg" className="w-full sm:w-auto">
                 See full pricing
               </Button>
-              <p className="text-xs text-muted-dim">
-                14-day free trial · No credit card required
-              </p>
             </div>
           </div>
         </div>

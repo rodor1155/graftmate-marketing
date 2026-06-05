@@ -2,7 +2,7 @@ const faqs = [
   {
     question: "What happens after 3 months?",
     answer:
-      "Your subscription moves to the standard rate of £29.99/month. We'll remind you before the prodival period ends — no surprises.",
+      "Your subscription moves to the standard rate of £29.99/month. We'll remind you before the promotional period ends — no surprises.",
   },
   {
     question: "Can I cancel anytime?",
@@ -10,9 +10,9 @@ const faqs = [
       "Yes. Cancel from your account settings whenever you like. There are no long-term contracts or cancellation fees.",
   },
   {
-    question: "Do I need a credit card for the trial?",
+    question: "What is the launch offer?",
     answer:
-      "No. Start your 14-day free trial without entering card details. You only pay if you choose to continue afterwards.",
+      "Founding members get £9.99/month for their first 3 months, then £29.99/month. Only 9 founder spots remain — every feature is included from day one.",
   },
   {
     question: "Is VAT included?",

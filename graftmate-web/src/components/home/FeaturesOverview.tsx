@@ -2,17 +2,24 @@ import { Button } from "@/components/ui/Button";
 
 const features = [
   {
-    tag: "Voice quotes",
-    title: "Quote by speaking — not typing on a tiny screen",
+    tag: "AI quotes",
+    title: "Describe the job, get a quote in seconds",
     description:
-      "Tell Graftmate the job while you're in the van. It builds a professional quote with VAT, ready to send before you've started the engine.",
+      "Tell GraftMate the job while you're in the van — by voice or text. It builds a professional quote with VAT, ready to send before you've started the engine.",
     highlight: true,
   },
   {
-    tag: "Receipt OCR",
-    title: "Snap a receipt. AI fills in the expense.",
+    tag: "Unified inbox",
+    title: "Email and WhatsApp in one place",
     description:
-      "Point your phone at any Screwfix or merchant receipt. Amount, VAT rate, and supplier — logged automatically.",
+      "Every client conversation in a single inbox, automatically linked to the right job and contact.",
+    highlight: false,
+  },
+  {
+    tag: "Inbound email",
+    title: "Clients email you, messages appear automatically",
+    description:
+      "Give clients your GraftMate address. Their emails land in your inbox — parsed and linked to the right client.",
     highlight: false,
   },
   {
@@ -23,17 +30,10 @@ const features = [
     highlight: false,
   },
   {
-    tag: "Calendar sync",
-    title: "Google Calendar — site visits sorted",
-    description:
-      "Book jobs, site visits, and follow-ups. Your diary stays in sync so you never double-book a Saturday.",
-    highlight: false,
-  },
-  {
     tag: "UK-built",
     title: "VAT, £ sterling, sole-trader simple",
     description:
-      "Multi-rate VAT (20%, 5%, 0%). Prices in pounds. No enterprise bloat — just what a UK tradesperson actually needs.",
+      "Multi-rate VAT (20%, 5%, 0%). Prices in pounds. British English throughout — built for UK tradespeople.",
     highlight: false,
   },
   {

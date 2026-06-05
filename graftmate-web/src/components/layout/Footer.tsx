@@ -22,12 +22,20 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              Business management built for UK sole traders. Voice quotes,
-              receipt scanning, and invoicing — without the spreadsheet
-              headache.
+              AI-powered job management built for UK sole traders. Quote
+              generation, unified inbox, and client management — without the
+              spreadsheet headache.
             </p>
             <p className="mt-4 text-xs text-muted-dim">
               Prices in GBP · VAT-ready · Made for UK trades
+            </p>
+            <p className="mt-2 text-sm text-muted">
+              <a
+                href="mailto:support@graftmate.net"
+                className="transition-colors hover:text-secondary"
+              >
+                support@graftmate.net
+              </a>
             </p>
           </div>
 
@@ -54,15 +62,18 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border-subtle pt-8 sm:flex-row">
           <p className="text-xs text-muted-dim">
-            © {new Date().getFullYear()} Graftmate. All rights reserved.
+            © 2026 GraftMate. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-muted-dim">
-            <Link href="#" className="hover:text-muted">
+            <a
+              href="https://graftmate.net/privacy"
+              className="hover:text-muted"
+            >
               Privacy
-            </Link>
-            <Link href="#" className="hover:text-muted">
+            </a>
+            <a href="https://graftmate.net/terms" className="hover:text-muted">
               Terms
-            </Link>
+            </a>
           </div>
         </div>
       </div>

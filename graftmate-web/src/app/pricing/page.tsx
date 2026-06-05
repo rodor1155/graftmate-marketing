@@ -2,24 +2,24 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { PricingFaq } from "@/components/pricing/PricingFaq";
 
+const SIGNUP_URL = "https://graftmate.net/signup";
+
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "£9.99/month for your first 3 months, then £29.99/month. One plan with every feature for UK sole traders. 14-day free trial, no credit card required.",
+    "£9.99/month for your first 3 months, then £29.99/month. One plan with every feature for UK sole traders.",
 };
 
 const features = [
-  "Voice quotes",
-  "AI receipt scanning",
+  "AI quote generation",
+  "Unified inbox (email + WhatsApp)",
+  "Inbound email parsing",
+  "Client management",
   "Unlimited quotes & invoices",
-  "Expense tracking with OCR",
-  "Google Calendar sync",
   "UK VAT support",
   "Email support",
   "No user limits",
 ];
-
-const TRIAL_URL = "https://graftmate.net/login";
 
 export default function PricingPage() {
   return (
@@ -53,11 +53,11 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <Button href={TRIAL_URL} size="lg" className="mt-8 w-full">
-            Start 14-day free trial
+          <Button href={SIGNUP_URL} size="lg" className="mt-8 w-full">
+            Get started →
           </Button>
           <p className="mt-4 text-center text-sm text-muted-dim">
-            No credit card required. Cancel anytime.
+            Cancel anytime.
           </p>
 
           <ul className="mt-10 space-y-3 border-t border-border-subtle pt-10">

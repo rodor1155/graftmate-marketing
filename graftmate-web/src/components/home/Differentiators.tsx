@@ -1,19 +1,30 @@
-const comparisons = [
+const usps = [
   {
-    us: "Quote by speaking",
-    them: "Type on a tiny keyboard after a 10-hour day",
+    title: "AI quote generation",
+    description:
+      "Describe the job, get a professional quote in seconds — from text or voice notes.",
   },
   {
-    us: "£9.99 for 3 months — one plan, everything included",
-    them: "Three tiers, features locked behind upgrades",
+    title: "Unified inbox",
+    description:
+      "Emails and WhatsApp in one place, automatically linked to clients.",
   },
   {
-    us: "AI receipt scanning built in",
-    them: "Manual data entry or a separate app",
+    title: "Inbound email parsing",
+    description:
+      "Clients email your GraftMate address — messages appear automatically.",
   },
   {
-    us: "Built for UK sole traders only",
-    them: "Enterprise software shrunk down",
+    title: "Client management",
+    description: "Full history, follow-ups, and contact tracking in one view.",
+  },
+  {
+    title: "Jobs & invoicing",
+    description: "From quote to paid in minutes — no re-typing line items.",
+  },
+  {
+    title: "Built for UK trades",
+    description: "£GBP, UK VAT, and British English throughout.",
   },
 ];
 
@@ -23,30 +34,31 @@ export function Differentiators() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-            Why Graftmate
+            Why GraftMate
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Not another generic business app
+            Built for how UK trades actually work
           </h2>
         </div>
 
-        <div className="mt-12 space-y-4">
-          {comparisons.map((row) => (
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {usps.map((usp) => (
             <div
-              key={row.us}
-              className="grid gap-4 rounded-xl border border-border bg-surface p-5 sm:grid-cols-2 sm:gap-8 sm:p-6"
+              key={usp.title}
+              className="rounded-xl border border-border bg-surface p-5 sm:p-6"
             >
               <div className="flex items-start gap-3">
-                <span className="mt-1 text-secondary" aria-hidden>
+                <span className="mt-0.5 text-lg text-secondary" aria-hidden>
                   ✓
                 </span>
-                <p className="font-medium text-foreground">{row.us}</p>
-              </div>
-              <div className="flex items-start gap-3 sm:border-l sm:border-border-subtle sm:pl-8">
-                <span className="mt-1 text-muted-dim" aria-hidden>
-                  ✕
-                </span>
-                <p className="text-sm text-muted-dim">{row.them}</p>
+                <div>
+                  <p className="font-display font-semibold text-foreground">
+                    {usp.title}
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    {usp.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

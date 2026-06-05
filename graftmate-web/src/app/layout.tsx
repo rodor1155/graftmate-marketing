@@ -19,24 +19,30 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Graftmate — Business management for UK trades",
-    template: "%s | Graftmate",
+    default: "GraftMate — AI-powered job management for UK trades",
+    template: "%s | GraftMate",
   },
   description:
-    "Voice quotes, AI receipt scanning, and one-tap invoicing for UK sole traders. Plumbers, electricians, builders — £29.99/month, one simple plan.",
+    "AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
   keywords: [
     "trade business software UK",
     "sole trader invoicing",
-    "voice quotes trades",
+    "AI quotes trades",
     "plumber software",
     "electrician invoicing",
   ],
   openGraph: {
-    title: "Graftmate — Quote by speaking. Invoice in one tap.",
+    title: "GraftMate — AI-powered job management for UK trades",
     description:
-      "Business management built for UK sole traders. Voice quotes, AI receipts, £29.99/month.",
+      "AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
     type: "website",
     locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GraftMate — AI-powered job management for UK trades",
+    description:
+      "AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
   },
 };
 

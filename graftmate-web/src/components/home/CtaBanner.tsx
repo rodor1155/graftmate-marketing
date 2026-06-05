@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/Button";
 
+const SIGNUP_URL = "https://graftmate.net/signup";
+
 export function CtaBanner() {
   return (
     <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8">
@@ -10,19 +12,19 @@ export function CtaBanner() {
             Less desk. More tools.
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-lg text-muted">
-            Join UK tradespeople who quote by voice, scan receipts with AI, and
-            invoice in one tap — £9.99/month for 3 months, then £29.99 flat.
+            Join UK tradespeople who quote with AI, manage clients in one inbox,
+            and invoice in one tap — £9.99/month for 3 months, then £29.99 flat.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href="/pricing" size="lg">
-              Start your free trial
+            <Button href={SIGNUP_URL} size="lg">
+              Get started →
             </Button>
             <Button href="/features" variant="ghost" size="lg">
               Explore features
             </Button>
           </div>
           <p className="mt-4 text-sm text-muted-dim">
-            14-day free trial · Cancel anytime · UK support
+            Cancel anytime · UK support
           </p>
         </div>
       </div>

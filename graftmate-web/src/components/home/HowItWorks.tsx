@@ -9,13 +9,13 @@ const steps = [
     step: "02",
     title: "Quote from the van by voice",
     description:
-      "Say the job out loud. Graftmate builds a professional quote with VAT — ready to email before you've left site.",
+      "Say the job out loud. GraftMate builds a professional quote with VAT — ready to email before you've left site.",
   },
   {
     step: "03",
-    title: "Snap receipts, invoice, get paid",
+    title: "Stay on top of every client",
     description:
-      "AI scans expenses. One tap turns accepted quotes into invoices. Your calendar keeps site visits on track.",
+      "Unified inbox brings email and WhatsApp into one place. AI-powered quote generation from text or voice notes — then invoice and get paid.",
   },
 ];
 

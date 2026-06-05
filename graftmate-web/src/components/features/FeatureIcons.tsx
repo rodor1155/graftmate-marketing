@@ -86,6 +86,66 @@ export function CalendarIcon({ className = "h-7 w-7" }: IconProps) {
   );
 }
 
+export function InboxIcon({ className = "h-7 w-7" }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      aria-hidden
+    >
+      <path
+        d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z"
+        strokeLinejoin="round"
+      />
+      <path d="m4 7 8 6 8-6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function EmailIcon({ className = "h-7 w-7" }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      aria-hidden
+    >
+      <path
+        d="M22 12v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6"
+        strokeLinecap="round"
+      />
+      <path
+        d="M22 7 12 13 2 7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M2 7V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function ClientIcon({ className = "h-7 w-7" }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      aria-hidden
+    >
+      <circle cx="9" cy="7" r="3" />
+      <path d="M3 21v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1" strokeLinecap="round" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-1a4 4 0 0 0-3-3.87" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function UkIcon({ className = "h-7 w-7" }: IconProps) {
   return (
     <svg

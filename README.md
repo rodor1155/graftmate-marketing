@@ -1,1 +1,1 @@
-# Graftmate Marketing
+# GraftMate Marketing

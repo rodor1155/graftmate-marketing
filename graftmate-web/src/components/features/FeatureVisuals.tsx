@@ -121,6 +121,87 @@ export function CalendarVisual() {
   );
 }
 
+export function InboxVisual() {
+  const messages = [
+    { channel: "WhatsApp", from: "Dave Mitchell", preview: "Can you do Friday?" },
+    { channel: "Email", from: "Mrs Patel", preview: "Re: bathroom rewire quote" },
+    { channel: "WhatsApp", from: "Tom Richards", preview: "Thanks, go ahead" },
+  ];
+  return (
+    <div className="rounded-xl border border-border bg-background p-5">
+      <p className="text-xs font-medium uppercase tracking-wider text-secondary">
+        Unified inbox
+      </p>
+      <ul className="mt-3 space-y-2">
+        {messages.map((msg) => (
+          <li
+            key={msg.from}
+            className="flex items-start gap-3 rounded-lg bg-surface px-3 py-2.5 text-sm"
+          >
+            <span className="mt-0.5 shrink-0 rounded bg-primary/20 px-1.5 py-0.5 text-[10px] font-medium text-secondary">
+              {msg.channel}
+            </span>
+            <div>
+              <p className="font-medium text-foreground">{msg.from}</p>
+              <p className="text-xs text-muted">{msg.preview}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function EmailVisual() {
+  return (
+    <div className="rounded-xl border border-border bg-background p-5">
+      <div className="rounded-lg border border-border-subtle bg-surface p-3 text-sm">
+        <p className="text-xs text-muted-dim">To: you@graftmate.net</p>
+        <p className="mt-2 font-medium text-foreground">
+          From: sarah.jones@email.com
+        </p>
+        <p className="mt-1 text-muted">Kitchen extension — can you quote?</p>
+      </div>
+      <p className="my-3 text-center text-lg text-muted-dim" aria-hidden>
+        ↓
+      </p>
+      <div className="rounded-lg border border-primary/30 bg-primary/10 p-3 text-sm">
+        <p className="text-xs text-secondary">Auto-linked to client</p>
+        <p className="mt-1 font-medium text-foreground">Sarah Jones</p>
+        <p className="text-xs text-muted">New message in unified inbox</p>
+      </div>
+    </div>
+  );
+}
+
+export function ClientVisual() {
+  return (
+    <div className="rounded-xl border border-border bg-background p-5">
+      <div className="flex items-center gap-3">
+        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/25 font-display text-sm font-bold text-secondary">
+          DM
+        </span>
+        <div>
+          <p className="font-display font-semibold text-foreground">
+            Dave Mitchell
+          </p>
+          <p className="text-xs text-muted">Leeds · 3 jobs · Last contact 2d ago</p>
+        </div>
+      </div>
+      <ul className="mt-4 space-y-2 text-sm">
+        <li className="flex justify-between rounded-lg bg-surface px-3 py-2">
+          <span className="text-muted">Quote #1042</span>
+          <span className="text-emerald-400">Sent ✓</span>
+        </li>
+        <li className="flex justify-between rounded-lg bg-surface px-3 py-2">
+          <span className="text-muted">Follow-up</span>
+          <span className="text-muted-dim">Due Friday</span>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 export function UkVisual() {
   return (
     <div className="grid grid-cols-2 gap-3 rounded-xl border border-border bg-background p-5 text-sm">
