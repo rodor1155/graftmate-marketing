@@ -18,7 +18,7 @@ import {
   VoiceQuoteVisual,
 } from "@/components/features/FeatureVisuals";
 
-const SIGNUP_URL = "https://graftmate.net/signup";
+import { SIGNUP_URL } from "@/lib/urls";
 
 export const metadata: Metadata = {
   title: "Features",

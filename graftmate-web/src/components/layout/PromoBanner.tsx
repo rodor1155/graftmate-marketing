@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-const SIGNUP_URL = "https://graftmate.net/signup";
+import { SIGNUP_URL } from "@/lib/urls";
 
 export function PromoBanner() {
   return (
@@ -13,12 +11,12 @@ export function PromoBanner() {
         🚀 Launch Offer — £9.99/month for your first 3 months. Only 9 founder
         spots remaining.
       </p>
-      <Link
+      <a
         href={SIGNUP_URL}
         className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-primary-hover"
       >
         Claim your spot →
-      </Link>
+      </a>
     </div>
   );
 }

@@ -4,9 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/layout/Logo";
-
-const SIGNUP_URL = "https://graftmate.net/signup";
-const LOGIN_URL = "https://graftmate.net/login";
+import { LOGIN_URL, SIGNUP_URL } from "@/lib/urls";
 
 const navLinks = [
   { href: "/features", label: "Features" },

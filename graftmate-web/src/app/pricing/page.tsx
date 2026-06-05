@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { PricingFaq } from "@/components/pricing/PricingFaq";
 
-const SIGNUP_URL = "https://graftmate.net/signup";
+import { SIGNUP_URL } from "@/lib/urls";
 
 export const metadata: Metadata = {
   title: "Pricing",

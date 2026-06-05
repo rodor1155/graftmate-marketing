@@ -44,6 +44,11 @@ export function Button({
 
   if ("href" in props && props.href) {
     const { href, ...linkProps } = props;
+
+    if (href.startsWith("http://") || href.startsWith("https://")) {
+      return <a href={href} className={classes} {...linkProps} />;
+    }
+
     return <Link href={href} className={classes} {...linkProps} />;
   }
 

@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/Button";
-
-const SIGNUP_URL = "https://graftmate.net/signup";
+import { SIGNUP_URL } from "@/lib/urls";
 
 export function Hero() {
   return (
