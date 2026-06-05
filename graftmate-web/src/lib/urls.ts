@@ -1,2 +1,2 @@
-export const SIGNUP_URL = "https://graftmate.net/signup";
-export const LOGIN_URL = "https://graftmate.net/login";
+export const SIGNUP_URL = "https://app.graftmate.net/signup";
+export const LOGIN_URL = "https://app.graftmate.net/login";
