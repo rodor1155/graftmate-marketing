@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Outfit } from "next/font/google";
+import Script from "next/script";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { PromoBanner } from "@/components/layout/PromoBanner";
@@ -56,6 +57,20 @@ export default function RootLayout({
       lang="en-GB"
       className={`${outfit.variable} ${dmSans.variable} h-full`}
     >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z4N9PVFF88"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z4N9PVFF88');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col font-sans antialiased">
         <div className="sticky top-0 z-50">
           <PromoBanner />
