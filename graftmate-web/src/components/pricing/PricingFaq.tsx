@@ -10,9 +10,9 @@ const faqs = [
       "Yes. Cancel from your account settings whenever you like. There are no long-term contracts or cancellation fees.",
   },
   {
-    question: "What is the launch offer?",
+    question: "What is the current launch offer?",
     answer:
-      "Founding members get £9.99/month for their first 3 months, then £29.99/month. Only 9 founder spots remain — every feature is included from day one.",
+      "Free until 1st September 2026. Sign up now and get full access to GraftMate completely free until September, with no card required.",
   },
   {
     question: "Is VAT included?",
