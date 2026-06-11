@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { tradePages } from "@/lib/tradePages";
 import { SIGNUP_URL } from "@/lib/urls";
 
 export function Hero() {
@@ -41,6 +43,17 @@ export function Hero() {
               Cancel anytime
             </p>
 
+            <p className="mt-3 text-sm text-muted">
+              Built for{" "}
+              <TradeLink href={tradePages.electricians.route}>
+                electricians
+              </TradeLink>
+              ,{" "}
+              <TradeLink href={tradePages.plumbers.route}>plumbers</TradeLink>
+              , and{" "}
+              <TradeLink href={tradePages.builders.route}>builders</TradeLink>.
+            </p>
+
             <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted">
               <TrustBadge>AI quote generation</TrustBadge>
               <TrustBadge>Unified inbox</TrustBadge>
@@ -52,6 +65,23 @@ export function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+function TradeLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className="font-semibold text-secondary transition-colors hover:text-foreground"
+    >
+      {children}
+    </Link>
   );
 }
 

@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/layout/Logo";
+import { tradePageLinks } from "@/lib/tradePages";
 import { LOGIN_URL, SIGNUP_URL } from "@/lib/urls";
 
 const navLinks = [
+  ...tradePageLinks,
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
 ];

@@ -1,17 +1,13 @@
 import Link from "next/link";
 import { Logo } from "@/components/layout/Logo";
+import { tradePageLinks } from "@/lib/tradePages";
 
 const footerLinks = {
   Product: [
     { href: "/features", label: "Features" },
     { href: "/pricing", label: "Pricing" },
   ],
-  Trades: [
-    { href: "/features", label: "Plumbers" },
-    { href: "/features", label: "Electricians" },
-    { href: "/features", label: "Builders" },
-    { href: "/features", label: "Decorators" },
-  ],
+  Trades: tradePageLinks,
 };
 
 export function Footer() {
