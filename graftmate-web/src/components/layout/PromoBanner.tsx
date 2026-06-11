@@ -8,7 +8,7 @@ export function PromoBanner() {
       aria-label="Launch offer"
     >
       <p className="text-center text-sm font-bold leading-snug sm:text-base">
-        🚀 Launch Offer — £9.99/month for your first 3 months. Only 9 founder
+        🚀 Launch Offer — £9.99/month for 3 months, then £29.99. Only 9 founder
         spots remaining.
       </p>
       <a

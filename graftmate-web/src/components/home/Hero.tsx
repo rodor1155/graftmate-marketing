@@ -10,26 +10,25 @@ export function Hero() {
       <div className="pointer-events-none absolute -top-32 right-0 h-[480px] w-[480px] rounded-full bg-primary/15 blur-[120px]" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 rounded-full bg-secondary/10 blur-[80px]" />
 
-      <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-32 lg:pt-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="relative mx-auto max-w-6xl px-4 pb-10 pt-6 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-32 lg:pt-20">
+        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
               Built for UK sole traders &amp; small trades
             </p>
 
-            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem]">
-              Quote by speaking.{" "}
-              <span className="text-gradient-brand">Invoice in one tap.</span>
+            <h1 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-foreground sm:mt-6 sm:text-5xl lg:text-[3.25rem]">
+              Stop losing jobs because you forgot to reply
             </h1>
 
-            <p className="mt-5 max-w-lg text-lg leading-relaxed text-muted">
-              GraftMate handles quotes, client comms, and invoicing so plumbers,
-              electricians, and builders spend less time on admin and more time
-              on the tools.
+            <p className="mt-5 hidden max-w-lg text-lg leading-relaxed text-muted sm:block">
+              GraftMate pulls all your client messages into one place, generates
+              quotes in seconds, and invoices in one tap. Built for UK sole
+              traders.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center">
               <Button href={SIGNUP_URL} size="lg">
                 Get started →
               </Button>
@@ -38,7 +37,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <p className="mt-4 text-sm text-muted-dim">
+            <p className="mt-3 text-sm text-muted-dim sm:mt-4">
               £9.99/month for 3 months, then £29.99 · One plan · No tiers ·
               Cancel anytime
             </p>
@@ -54,7 +53,7 @@ export function Hero() {
               <TradeLink href={tradePages.builders.route}>builders</TradeLink>.
             </p>
 
-            <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted">
+            <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted sm:mt-10">
               <TrustBadge>AI quote generation</TrustBadge>
               <TrustBadge>Unified inbox</TrustBadge>
               <TrustBadge>UK VAT ready</TrustBadge>

@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What happens after the 3-month promotional period?",
     answer:
-      "Your subscription moves to £29.99/month. We'll remind you before the launch offer ends so there are no surprises. Every feature stays included — the price is the only thing that changes.",
+      "The launch offer is £9.99/month for 3 months, then £29.99. We'll remind you before it changes so there are no surprises. Every feature stays included — the price is the only thing that changes.",
   },
   {
     question: "Can I cancel anytime?",

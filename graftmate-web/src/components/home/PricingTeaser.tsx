@@ -24,7 +24,7 @@ export function PricingTeaser() {
               <span className="text-xl font-medium text-muted">/month</span>
             </p>
             <p className="mt-3 text-sm text-muted">
-              For your first 3 months, then £29.99/month.
+              £9.99/month for 3 months, then £29.99.
             </p>
             <p className="mt-2 text-muted">
               One plan. Every feature. No tiers, no upsells, no per-seat fees.
