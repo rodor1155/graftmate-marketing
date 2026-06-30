@@ -120,43 +120,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <blockquote className="rounded-2xl border border-primary/35 bg-gradient-to-br from-primary/15 to-surface p-8">
-            <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-              Social proof
-            </p>
-            <p className="mt-5 font-display text-2xl font-semibold leading-snug text-foreground">
-              &ldquo;{page.socialProof.quote}&rdquo;
-            </p>
-            <footer className="mt-5 text-sm text-muted">
-              {page.socialProof.attribution}
-            </footer>
-          </blockquote>
-
-          <div className="rounded-2xl border border-border bg-surface p-8">
-            <p className="font-display text-2xl font-bold text-foreground">
-              Trusted by UK tradespeople
-            </p>
-            <p className="mt-4 leading-relaxed text-muted">
-              {page.socialProof.note}
-            </p>
-            <div className="mt-6 grid grid-cols-3 gap-3 text-center">
-              {["Quotes", "Inbox", "Invoices"].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-xl border border-border-subtle bg-background px-3 py-4"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-wide text-secondary">
-                    {item}
-                  </p>
-                  <p className="mt-1 text-sm text-muted">Placeholder</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Testimonials - add real ones when available */}
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <div className="rounded-2xl border border-primary/35 bg-gradient-to-b from-surface-raised to-surface p-8 text-center sm:p-10">

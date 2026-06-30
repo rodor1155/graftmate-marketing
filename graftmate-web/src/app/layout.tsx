@@ -19,6 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://graftmate.net"),
   title: {
     default: "GraftMate — AI-powered job management for UK trades",
     template: "%s | GraftMate",
@@ -32,18 +33,34 @@ export const metadata: Metadata = {
     "plumber software",
     "electrician invoicing",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     title: "GraftMate — AI-powered job management for UK trades",
     description:
       "AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
     type: "website",
     locale: "en_GB",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GraftMate — AI-powered job management for UK trades",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "GraftMate — AI-powered job management for UK trades",
     description:
       "AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
+    images: ["/og-image.png"],
   },
 };
 
