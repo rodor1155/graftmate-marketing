@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "plumber software",
     "electrician invoicing",
   ],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

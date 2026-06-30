@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Pricing",
   description:
     "£9.99/month for your first 3 months, then £29.99/month. One plan with every feature for UK sole traders.",
+  alternates: {
+    canonical: "https://graftmate.net/pricing",
+  },
 };
 
 const features = [
