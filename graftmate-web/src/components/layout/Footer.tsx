@@ -61,15 +61,12 @@ export function Footer() {
             © 2026 GraftMate. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-muted-dim">
-            <a
-              href="https://graftmate.net/privacy"
-              className="hover:text-muted"
-            >
+            <Link href="/privacy" className="hover:text-muted">
               Privacy
-            </a>
-            <a href="https://graftmate.net/terms" className="hover:text-muted">
+            </Link>
+            <Link href="/terms" className="hover:text-muted">
               Terms
-            </a>
+            </Link>
           </div>
         </div>
       </div>
