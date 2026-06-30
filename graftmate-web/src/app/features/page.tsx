@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Features",
   description:
     "AI quote generation, unified inbox, inbound email parsing, client management, and UK VAT — built for sole traders.",
+  alternates: {
+    canonical: "https://graftmate.net/features",
+  },
 };
 
 export default function FeaturesPage() {

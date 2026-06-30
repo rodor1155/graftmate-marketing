@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     absolute: page.title,
   },
   description: page.description,
+  alternates: {
+    canonical: "https://graftmate.net/for-plumbers",
+  },
 };
 
 export default function ForPlumbersPage() {

@@ -19,6 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://graftmate.net"),
   title: {
     default: "GraftMate — AI-powered job management for UK trades",
     template: "%s | GraftMate",
@@ -32,6 +33,9 @@ export const metadata: Metadata = {
     "plumber software",
     "electrician invoicing",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "GraftMate — AI-powered job management for UK trades",
     description:
