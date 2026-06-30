@@ -22,11 +22,6 @@ export type TradePageData = {
     title: string;
     description: string;
   }[];
-  socialProof: {
-    quote: string;
-    attribution: string;
-    note: string;
-  };
   pricingCopy: string;
   faqs: {
     question: string;
@@ -96,12 +91,6 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
           "Turn an accepted quote into an invoice without retyping the same work. VAT-ready PDFs help you look organised and make payment chasing simpler.",
       },
     ],
-    socialProof: {
-      quote:
-        "Placeholder testimonial: GraftMate gives us one place for quotes, client messages, and invoices. It feels built for how trades actually work.",
-      attribution: "UK electrician testimonial coming soon",
-      note: "Trusted by UK tradespeople - more verified trade stories are being added as customers go live. This placeholder is here so the page has the right shape now, with room for named electricians, locations, and real results once testimonials are approved.",
-    },
     pricingCopy:
       "One simple plan at £9.99/month. No hidden fees, no complicated tiers, and no paying extra just because you want quotes, messages, clients, and invoices in one place. Start free and see whether it earns back the monthly cost before the next weekend paperwork session.",
     faqs: [
@@ -188,12 +177,6 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
           "Convert accepted quotes into clean invoices without copying the same information again. Send the invoice promptly and keep payment status visible.",
       },
     ],
-    socialProof: {
-      quote:
-        "Placeholder testimonial: I can quote a job from the van and keep the customer thread with the invoice. That is the admin headache sorted.",
-      attribution: "UK plumber testimonial coming soon",
-      note: "Trusted by UK tradespeople - real customer proof will be added as testimonials are collected. The layout is ready for named plumbers, service areas, and practical results such as faster quote turnaround, fewer missed messages, and invoices sent before the next callout.",
-    },
     pricingCopy:
       "GraftMate is £9.99/month for one straightforward plan. No hidden fees, no feature maze, and no need to bolt together separate tools for quotes, messages, and invoices. If it saves one evening of catch-up admin, it has already done the job.",
     faqs: [
@@ -280,12 +263,6 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
           "Turn accepted work into invoices quickly, including staged or final-payment records in your job notes so the money side stays visible.",
       },
     ],
-    socialProof: {
-      quote:
-        "Placeholder testimonial: GraftMate keeps the quote, client messages, and invoices together, so I am not hunting through five apps after site.",
-      attribution: "UK builder testimonial coming soon",
-      note: "Trusted by UK tradespeople - verified builder stories will be added here soon. This space is set up for real customer proof, including project types, locations, and practical outcomes such as quicker follow-ups, cleaner staged invoices, and fewer lost decisions.",
-    },
     pricingCopy:
       "Simple pricing at £9.99/month. No hidden fees, no bloated office software, and no separate charge for the features builders need to keep work moving. Start free, put a real quote through it, and see whether it makes the next payment chase easier.",
     faqs: [
