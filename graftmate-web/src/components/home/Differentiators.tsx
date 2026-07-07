@@ -12,7 +12,7 @@ const usps = [
   {
     title: "Inbound email parsing",
     description:
-      "Clients email your GraftMate address — messages appear automatically.",
+      "Clients email your GraftMate AI address — messages appear automatically.",
   },
   {
     title: "Client management",
@@ -34,7 +34,7 @@ export function Differentiators() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-            Why GraftMate
+            Why GraftMate AI
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Built for how UK trades actually work

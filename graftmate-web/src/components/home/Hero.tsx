@@ -23,7 +23,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-5 hidden max-w-lg text-lg leading-relaxed text-muted sm:block">
-              GraftMate pulls all your client messages into one place, generates
+              GraftMate AI pulls all your client messages into one place, generates
               quotes in seconds, and invoices in one tap. Built for UK sole
               traders.
             </p>
@@ -95,7 +95,7 @@ function QuoteMockup() {
           <div className="overflow-hidden rounded-[1.5rem] border border-border-subtle bg-background">
             <div className="flex items-center justify-between border-b border-border-subtle bg-surface px-4 py-2.5">
               <span className="font-display text-xs font-semibold text-foreground">
-                GraftMate
+                GraftMate AI
               </span>
               <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-semibold text-emerald-400">
                 Sent ✓

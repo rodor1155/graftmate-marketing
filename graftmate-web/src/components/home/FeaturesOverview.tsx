@@ -5,7 +5,7 @@ const features = [
     tag: "AI quotes",
     title: "Describe the job, get a quote in seconds",
     description:
-      "Tell GraftMate the job while you're in the van — by voice or text. It builds a professional quote with VAT, ready to send before you've started the engine.",
+      "Tell GraftMate AI the job while you're in the van — by voice or text. It builds a professional quote with VAT, ready to send before you've started the engine.",
     highlight: true,
   },
   {
@@ -19,7 +19,7 @@ const features = [
     tag: "Inbound email",
     title: "Clients email you, messages appear automatically",
     description:
-      "Give clients your GraftMate address. Their emails land in your inbox — parsed and linked to the right client.",
+      "Give clients your GraftMate AI address. Their emails land in your inbox — parsed and linked to the right client.",
     highlight: false,
   },
   {

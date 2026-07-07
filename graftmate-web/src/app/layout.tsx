@@ -21,11 +21,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://graftmate.net"),
   title: {
-    default: "GraftMate — AI-powered job management for UK trades",
-    template: "%s | GraftMate",
+    default: "GraftMate AI — AI-powered job management for UK trades",
+    template: "%s | GraftMate AI",
   },
   description:
-    "AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
+    "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
   keywords: [
     "trade business software UK",
     "sole trader invoicing",
@@ -44,9 +44,10 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   openGraph: {
-    title: "GraftMate — AI-powered job management for UK trades",
+    siteName: "GraftMate AI",
+    title: "GraftMate AI — AI-powered job management for UK trades",
     description:
-      "AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
+      "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
     type: "website",
     locale: "en_GB",
     images: [
@@ -54,15 +55,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "GraftMate — AI-powered job management for UK trades",
+        alt: "GraftMate AI — AI-powered job management for UK trades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GraftMate — AI-powered job management for UK trades",
+    title: "GraftMate AI — AI-powered job management for UK trades",
     description:
-      "AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
+      "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
     images: ["/og-image.png"],
   },
 };

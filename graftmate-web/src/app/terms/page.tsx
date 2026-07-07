@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | GraftMate",
+  title: "Terms & Conditions | GraftMate AI",
   description:
-    "Terms and Conditions for using GraftMate, operated by Rodor Technologies Ltd. Governing law: England and Wales.",
+    "Terms and Conditions for using GraftMate AI, operated by Rodor Technologies Ltd. Governing law: England and Wales.",
 };
 
 export default function TermsPage() {
@@ -20,14 +20,14 @@ export default function TermsPage() {
           <h2>1. About These Terms</h2>
           <p>
             These Terms &amp; Conditions (&ldquo;Terms&rdquo;) govern your use
-            of GraftMate, a software-as-a-service platform for UK
+            of GraftMate AI, a software-as-a-service platform for UK
             tradespeople, operated by{" "}
             <strong>Rodor Technologies Ltd</strong> (&ldquo;we&rdquo;,
             &ldquo;us&rdquo;, or &ldquo;our&rdquo;), a company registered in
             England and Wales.
           </p>
           <p>
-            By creating an account or using GraftMate, you agree to be bound by
+            By creating an account or using GraftMate AI, you agree to be bound by
             these Terms. If you do not agree, you must not use the service.
             Please also read our{" "}
             <Link href="/privacy">Privacy Policy</Link>, which forms part of
@@ -42,12 +42,12 @@ export default function TermsPage() {
         <section>
           <h2>2. Service Description</h2>
           <p>
-            GraftMate is an AI-powered job management platform designed for UK
+            GraftMate AI is an AI-powered job management platform designed for UK
             sole traders and small trade businesses. The service includes:
           </p>
           <ul>
             <li>
-              AI-assisted quote generation — describe a job and GraftMate
+              AI-assisted quote generation — describe a job and GraftMate AI
               produces a professional draft quote you can review and send.
             </li>
             <li>
@@ -72,12 +72,12 @@ export default function TermsPage() {
         <section>
           <h2>3. Subscription and Pricing</h2>
           <p>
-            GraftMate is offered on a subscription basis at{" "}
+            GraftMate AI is offered on a subscription basis at{" "}
             <strong>£9.99 per month</strong> (excluding VAT where applicable),
             giving access to all current features on a single plan.
           </p>
           <p>
-            <strong>Free access period:</strong> GraftMate is currently
+            <strong>Free access period:</strong> GraftMate AI is currently
             provided free of charge until <strong>1 September 2026</strong>.
             From that date, a paid subscription will be required to continue
             using the service. We will notify registered users by email before
@@ -106,7 +106,7 @@ export default function TermsPage() {
 
         <section>
           <h2>4. Account Registration</h2>
-          <p>To use GraftMate, you must:</p>
+          <p>To use GraftMate AI, you must:</p>
           <ul>
             <li>Be at least 18 years old.</li>
             <li>
@@ -127,7 +127,7 @@ export default function TermsPage() {
         <section>
           <h2>5. Acceptable Use</h2>
           <p>
-            You agree to use GraftMate only for lawful purposes and in
+            You agree to use GraftMate AI only for lawful purposes and in
             accordance with these Terms. You must not:
           </p>
           <ul>
@@ -137,7 +137,7 @@ export default function TermsPage() {
               objectionable.
             </li>
             <li>
-              Attempt to gain unauthorised access to any part of GraftMate or
+              Attempt to gain unauthorised access to any part of GraftMate AI or
               its underlying systems.
             </li>
             <li>
@@ -150,7 +150,7 @@ export default function TermsPage() {
               users.
             </li>
             <li>
-              Resell, sublicense, or otherwise transfer access to GraftMate
+              Resell, sublicense, or otherwise transfer access to GraftMate AI
               without our prior written consent.
             </li>
             <li>
@@ -167,13 +167,13 @@ export default function TermsPage() {
         <section>
           <h2>6. Intellectual Property</h2>
           <p>
-            All intellectual property in the GraftMate platform — including
+            All intellectual property in the GraftMate AI platform — including
             software, design, trademarks, and content created by us — belongs to
             Rodor Technologies Ltd or our licensors.
           </p>
           <p>
             You retain ownership of any content you create and store in
-            GraftMate (such as your quotes, invoices, client records, and job
+            GraftMate AI (such as your quotes, invoices, client records, and job
             notes). By using the service, you grant us a limited licence to
             process and store that content solely to provide the service to you.
           </p>
@@ -182,7 +182,7 @@ export default function TermsPage() {
         <section>
           <h2>7. Availability and Downtime</h2>
           <p>
-            We aim to keep GraftMate available at all times but we do not
+            We aim to keep GraftMate AI available at all times but we do not
             guarantee uninterrupted access. Planned maintenance, third-party
             service outages (e.g. Supabase, Vercel), or circumstances beyond
             our control may cause temporary unavailability. We will endeavour to
@@ -200,7 +200,7 @@ export default function TermsPage() {
             <li>
               Indirect, incidental, special, or consequential losses (including
               loss of revenue, profit, contracts, or data) arising from your use
-              of, or inability to use, GraftMate.
+              of, or inability to use, GraftMate AI.
             </li>
             <li>
               Loss or damage caused by errors or inaccuracies in AI-generated
@@ -214,7 +214,7 @@ export default function TermsPage() {
           </ul>
           <p>
             Our total aggregate liability to you for any claims arising out of
-            or related to these Terms or your use of GraftMate shall not exceed
+            or related to these Terms or your use of GraftMate AI shall not exceed
             the total subscription fees paid by you in the three months
             immediately preceding the claim.
           </p>
@@ -235,7 +235,7 @@ export default function TermsPage() {
             discontinue the service (with reasonable notice).
           </p>
           <p>
-            On termination, your right to access GraftMate ceases. We will
+            On termination, your right to access GraftMate AI ceases. We will
             retain your data for a limited period after termination in
             accordance with our Privacy Policy, after which it will be deleted.
           </p>
@@ -247,7 +247,7 @@ export default function TermsPage() {
             We may update these Terms from time to time. We will post the
             revised Terms on this page with an updated &ldquo;last updated&rdquo;
             date and, for material changes, notify you by email at least 14 days
-            in advance. Continued use of GraftMate after the effective date of
+            in advance. Continued use of GraftMate AI after the effective date of
             updated Terms constitutes acceptance.
           </p>
         </section>
@@ -257,7 +257,7 @@ export default function TermsPage() {
           <p>
             These Terms are governed by and construed in accordance with the
             laws of <strong>England and Wales</strong>. Any disputes arising
-            from or related to these Terms or your use of GraftMate shall be
+            from or related to these Terms or your use of GraftMate AI shall be
             subject to the exclusive jurisdiction of the courts of England and
             Wales.
           </p>
@@ -285,7 +285,7 @@ export default function TermsPage() {
           </Link>{" "}
           &middot;{" "}
           <Link href="/" className="text-secondary hover:underline">
-            Back to GraftMate
+            Back to GraftMate AI
           </Link>
         </p>
       </div>

@@ -2,7 +2,7 @@ const faqs = [
   {
     question: "How does the voice quoting work?",
     answer:
-      "Open GraftMate on your phone and describe the job out loud — customer, work, and price. The app turns your words into a professional quote with UK VAT, ready to send in seconds. It works hands-free from the van, so you're not typing on a small screen after a long day.",
+      "Open GraftMate AI on your phone and describe the job out loud — customer, work, and price. The app turns your words into a professional quote with UK VAT, ready to send in seconds. It works hands-free from the van, so you're not typing on a small screen after a long day.",
   },
   {
     question: "What happens after the 3-month promotional period?",

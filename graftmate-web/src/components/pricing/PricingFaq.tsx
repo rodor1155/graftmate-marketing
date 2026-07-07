@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What is the current launch offer?",
     answer:
-      "Free until 1st September 2026. Sign up now and get full access to GraftMate completely free until September, with no card required.",
+      "Free until 1st September 2026. Sign up now and get full access to GraftMate AI completely free until September, with no card required.",
   },
   {
     question: "Is VAT included?",

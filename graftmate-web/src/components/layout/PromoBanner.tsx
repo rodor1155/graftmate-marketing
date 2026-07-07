@@ -32,7 +32,7 @@ export function PromoBanner() {
     >
       <p className="max-w-4xl text-center text-sm font-bold leading-snug sm:text-base">
         🎉 Free until 1st September 2026 — Sign up now and get full access to
-        GraftMate completely free until September. No card required.
+        GraftMate AI completely free until September. No card required.
       </p>
       <a
         href={SIGNUP_URL}

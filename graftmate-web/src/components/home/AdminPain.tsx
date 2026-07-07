@@ -62,7 +62,7 @@ export function AdminPain() {
         </ul>
 
         <p className="mt-12 text-center font-display text-xl font-semibold text-foreground sm:text-2xl">
-          GraftMate was built so you don&apos;t have to.
+          GraftMate AI was built so you don&apos;t have to.
         </p>
       </div>
     </section>

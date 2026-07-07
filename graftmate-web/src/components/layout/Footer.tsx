@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border-subtle pt-8 sm:flex-row">
           <p className="text-xs text-muted-dim">
-            © 2026 GraftMate. All rights reserved.
+            © 2026 GraftMate AI. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-muted-dim">
             <Link href="/privacy" className="hover:text-muted">

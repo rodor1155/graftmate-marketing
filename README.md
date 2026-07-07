@@ -1,1 +1,1 @@
-# GraftMate Marketing
+# GraftMate AI Marketing

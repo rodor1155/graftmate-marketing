@@ -46,7 +46,7 @@ export function PricingTeaser() {
             <div className="flex flex-col justify-center gap-4">
               <p className="text-sm leading-relaxed text-muted">
                 Competitors charge £30–40/month and still lock features behind
-                higher tiers. GraftMate gives you everything for one honest
+                higher tiers. GraftMate AI gives you everything for one honest
                 price.
               </p>
               <Button href="/pricing" size="lg" className="w-full sm:w-auto">

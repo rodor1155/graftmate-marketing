@@ -9,7 +9,7 @@ const steps = [
     step: "02",
     title: "Quote from the van by voice",
     description:
-      "Say the job out loud. GraftMate builds a professional quote with VAT — ready to email before you've left site.",
+      "Say the job out loud. GraftMate AI builds a professional quote with VAT — ready to email before you've left site.",
   },
   {
     step: "03",

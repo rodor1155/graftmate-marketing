@@ -89,7 +89,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-              How GraftMate helps
+              How GraftMate AI helps
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Quote, message, manage, and invoice from one place
@@ -178,7 +178,7 @@ function HeroCard({ page }: TradeLandingPageProps) {
         <div className="flex items-center justify-between border-b border-border-subtle pb-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-dim">
-              GraftMate workspace
+              GraftMate AI workspace
             </p>
             <p className="mt-1 font-display text-lg font-semibold text-foreground">
               {page.tradeSingular} job admin

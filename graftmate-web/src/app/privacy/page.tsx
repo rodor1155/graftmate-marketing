@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | GraftMate",
+  title: "Privacy Policy | GraftMate AI",
   description:
-    "Privacy Policy for GraftMate by Rodor Technologies Ltd. How we collect, use, and protect your personal data under UK GDPR.",
+    "Privacy Policy for GraftMate AI by Rodor Technologies Ltd. How we collect, use, and protect your personal data under UK GDPR.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2>1. Who We Are</h2>
           <p>
-            GraftMate is operated by <strong>Rodor Technologies Ltd</strong>, a
+            GraftMate AI is operated by <strong>Rodor Technologies Ltd</strong>, a
             company registered in England and Wales. References to
             &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo; in this
             policy refer to Rodor Technologies Ltd.
@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2>2. Personal Data We Collect</h2>
           <p>
-            When you register for or use GraftMate, we may collect the following
+            When you register for or use GraftMate AI, we may collect the following
             categories of personal data:
           </p>
           <ul>
@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
               via Stripe (we do not store card details ourselves).
             </li>
             <li>
-              <strong>Usage data</strong> — how you interact with the GraftMate
+              <strong>Usage data</strong> — how you interact with the GraftMate AI
               application, including pages visited, features used, and session
               activity.
             </li>
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
             </li>
           </ul>
           <p>
-            We only collect data that is necessary to provide the GraftMate
+            We only collect data that is necessary to provide the GraftMate AI
             service or to comply with a legal obligation.
           </p>
         </section>
@@ -73,9 +73,9 @@ export default function PrivacyPolicyPage() {
           <h2>3. How We Use Your Data</h2>
           <p>We use your personal data for the following purposes:</p>
           <ul>
-            <li>To create and manage your GraftMate account.</li>
+            <li>To create and manage your GraftMate AI account.</li>
             <li>
-              To provide the GraftMate service, including AI-assisted quote
+              To provide the GraftMate AI service, including AI-assisted quote
               generation, unified inbox, client management, and invoicing.
             </li>
             <li>
@@ -88,7 +88,7 @@ export default function PrivacyPolicyPage() {
               provider, Resend.
             </li>
             <li>
-              To improve and develop the GraftMate platform, using aggregated
+              To improve and develop the GraftMate AI platform, using aggregated
               and anonymised analytics data.
             </li>
             <li>To respond to support queries and account requests.</li>
@@ -96,7 +96,7 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>
             The legal basis for processing is primarily the performance of a
-            contract with you (providing the GraftMate service), our legitimate
+            contract with you (providing the GraftMate AI service), our legitimate
             interests in improving the service, and your consent where
             applicable.
           </p>
@@ -157,7 +157,7 @@ export default function PrivacyPolicyPage() {
             </li>
             <li>
               <strong>Vercel</strong> — hosting and deployment of both the
-              marketing site and the GraftMate application.
+              marketing site and the GraftMate AI application.
             </li>
           </ul>
           <p>
@@ -170,8 +170,8 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2>6. Cookies</h2>
           <p>
-            GraftMate uses cookies and similar technologies for authentication,
-            session management, and analytics. By continuing to use GraftMate
+            GraftMate AI uses cookies and similar technologies for authentication,
+            session management, and analytics. By continuing to use GraftMate AI
             you consent to essential cookies required for the service to
             function. Analytics cookies (Google Analytics) may be set on the
             marketing site; you can opt out via your browser settings or a
@@ -247,7 +247,7 @@ export default function PrivacyPolicyPage() {
             We may update this Privacy Policy from time to time. We will post
             any changes on this page with an updated &ldquo;last updated&rdquo;
             date. For significant changes, we will notify you by email or via a
-            notice in the GraftMate application.
+            notice in the GraftMate AI application.
           </p>
         </section>
 
@@ -278,7 +278,7 @@ export default function PrivacyPolicyPage() {
           </Link>{" "}
           &middot;{" "}
           <Link href="/" className="text-secondary hover:underline">
-            Back to GraftMate
+            Back to GraftMate AI
           </Link>
         </p>
       </div>
