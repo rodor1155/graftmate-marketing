@@ -5,9 +5,9 @@ const faqs = [
       "Open GraftMate AI on your phone and describe the job out loud — customer, work, and price. The app turns your words into a professional quote with UK VAT, ready to send in seconds. It works hands-free from the van, so you're not typing on a small screen after a long day.",
   },
   {
-    question: "What happens after the 3-month promotional period?",
+    question: "What happens after the first free month?",
     answer:
-      "The launch offer is £9.99/month for 3 months, then £29.99. We'll remind you before it changes so there are no surprises. Every feature stays included — the price is the only thing that changes.",
+      "Your subscription continues at £29.99/month. We'll remind you before it starts so there are no surprises. Every feature stays included — the price is the only thing that changes.",
   },
   {
     question: "Can I cancel anytime?",

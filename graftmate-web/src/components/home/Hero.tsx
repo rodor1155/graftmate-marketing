@@ -38,8 +38,8 @@ export function Hero() {
             </div>
 
             <p className="mt-3 text-sm text-muted-dim sm:mt-4">
-              £9.99/month for 3 months, then £29.99 · One plan · No tiers ·
-              Cancel anytime
+              £29.99/month · First month free · One plan · No tiers · Cancel
+              anytime
             </p>
 
             <p className="mt-3 text-sm text-muted">

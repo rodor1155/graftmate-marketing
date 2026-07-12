@@ -12,7 +12,7 @@ export function CtaBanner() {
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-lg text-muted">
             Join UK tradespeople who quote with AI, manage clients in one inbox,
-            and invoice in one tap — £9.99/month for 3 months, then £29.99.
+            and invoice in one tap — £29.99/month, first month free.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button href={SIGNUP_URL} size="lg">

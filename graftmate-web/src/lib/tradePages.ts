@@ -92,7 +92,7 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
       },
     ],
     pricingCopy:
-      "One simple plan at £9.99/month. No hidden fees, no complicated tiers, and no paying extra just because you want quotes, messages, clients, and invoices in one place. Start free and see whether it earns back the monthly cost before the next weekend paperwork session.",
+      "One simple plan at £29.99/month, with your first month free. No hidden fees, no complicated tiers, and no paying extra just because you want quotes, messages, clients, and invoices in one place. Start free and see whether it earns back the monthly cost before the next weekend paperwork session.",
     faqs: [
       {
         question: "Can GraftMate AI help with Part P paperwork?",
@@ -178,7 +178,7 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
       },
     ],
     pricingCopy:
-      "GraftMate AI is £9.99/month for one straightforward plan. No hidden fees, no feature maze, and no need to bolt together separate tools for quotes, messages, and invoices. If it saves one evening of catch-up admin, it has already done the job.",
+      "GraftMate AI is £29.99/month for one straightforward plan, with your first month free. No hidden fees, no feature maze, and no need to bolt together separate tools for quotes, messages, and invoices. If it saves one evening of catch-up admin, it has already done the job.",
     faqs: [
       {
         question: "Can GraftMate AI handle CIS deductions for plumbing work?",
@@ -264,7 +264,7 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
       },
     ],
     pricingCopy:
-      "Simple pricing at £9.99/month. No hidden fees, no bloated office software, and no separate charge for the features builders need to keep work moving. Start free, put a real quote through it, and see whether it makes the next payment chase easier.",
+      "Simple pricing at £29.99/month, with your first month free. No hidden fees, no bloated office software, and no separate charge for the features builders need to keep work moving. Start free, put a real quote through it, and see whether it makes the next payment chase easier.",
     faqs: [
       {
         question: "Can GraftMate AI help with CIS jobs?",

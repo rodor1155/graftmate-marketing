@@ -73,15 +73,15 @@ export default function TermsPage() {
           <h2>3. Subscription and Pricing</h2>
           <p>
             GraftMate AI is offered on a subscription basis at{" "}
-            <strong>£9.99 per month</strong> (excluding VAT where applicable),
+            <strong>£29.99 per month</strong> (excluding VAT where applicable),
             giving access to all current features on a single plan.
           </p>
           <p>
-            <strong>Free access period:</strong> GraftMate AI is currently
-            provided free of charge until <strong>1 September 2026</strong>.
-            From that date, a paid subscription will be required to continue
-            using the service. We will notify registered users by email before
-            the free period ends.
+            <strong>First month free:</strong> New subscribers currently receive
+            their first month of GraftMate AI free of charge. From the second
+            month, a paid subscription is required to continue using the
+            service. We will notify registered users by email before billing
+            begins.
           </p>
           <ul>
             <li>

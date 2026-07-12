@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | GraftMate AI",
   },
   description:
-    "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
+    "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
   keywords: [
     "trade business software UK",
     "sole trader invoicing",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "GraftMate AI",
     title: "GraftMate AI — AI-powered job management for UK trades",
     description:
-      "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
+      "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
     type: "website",
     locale: "en_GB",
     images: [
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GraftMate AI — AI-powered job management for UK trades",
     description:
-      "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. From £9.99/month.",
+      "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
     images: ["/og-image.png"],
   },
 };

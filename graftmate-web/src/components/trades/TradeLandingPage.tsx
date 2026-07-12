@@ -128,7 +128,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
             Simple pricing
           </p>
           <p className="mt-5 font-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
-            £9.99
+            £29.99
             <span className="text-xl font-medium text-muted">/month</span>
           </p>
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-muted">

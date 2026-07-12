@@ -1,8 +1,8 @@
 const faqs = [
   {
-    question: "What happens after 3 months?",
+    question: "What happens after the first free month?",
     answer:
-      "Your subscription moves to the standard rate of £29.99/month. We'll remind you before the promotional period ends — no surprises.",
+      "Your subscription continues at the standard rate of £29.99/month. We'll remind you before your free month ends — no surprises.",
   },
   {
     question: "Can I cancel anytime?",
@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What is the current launch offer?",
     answer:
-      "Free until 1st September 2026. Sign up now and get full access to GraftMate AI completely free until September, with no card required.",
+      "First month free. Sign up now and get full access to GraftMate AI completely free for your first month, with no card required.",
   },
   {
     question: "Is VAT included?",

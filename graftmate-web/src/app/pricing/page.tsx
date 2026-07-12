@@ -7,7 +7,7 @@ import { SIGNUP_URL } from "@/lib/urls";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "£9.99/month for your first 3 months, then £29.99/month. One plan with every feature for UK sole traders.",
+    "£29.99/month with your first month free. One plan with every feature for UK sole traders.",
   alternates: {
     canonical: "https://graftmate.net/pricing",
   },
@@ -43,16 +43,17 @@ export default function PricingPage() {
         <div className="mt-10 rounded-2xl border border-primary/35 bg-gradient-to-b from-surface-raised to-surface p-8 sm:p-10">
           <div className="text-center">
             <span className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-secondary">
-              Launch offer
+              First month free
             </span>
             <p className="mt-6 font-display text-6xl font-bold tracking-tight text-foreground sm:text-7xl">
-              £9.99
+              £29.99
               <span className="text-2xl font-medium text-muted sm:text-3xl">
                 /month
               </span>
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              Launch offer: First 3 months at £9.99, then £29.99/month
+              First month free, then £29.99/month. One plan, every feature
+              included.
             </p>
           </div>
 
