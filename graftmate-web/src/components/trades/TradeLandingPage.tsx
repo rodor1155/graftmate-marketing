@@ -1,3 +1,4 @@
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Button } from "@/components/ui/Button";
 import {
   ClientIcon,
@@ -20,7 +21,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
         <div className="pointer-events-none absolute -top-28 right-0 h-80 w-80 rounded-full bg-primary/15 blur-[110px]" />
         <div className="pointer-events-none absolute bottom-0 left-8 h-64 w-64 rounded-full bg-accent/10 blur-[90px]" />
 
-        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-24">
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
           <div>
             <p className="text-sm font-medium uppercase tracking-wider text-secondary">
               {page.eyebrow}
@@ -34,24 +35,27 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
               {page.heroCopy}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href={SIGNUP_URL} size="lg">
-                Start Free
-              </Button>
-              <Button href="#features" variant="secondary" size="lg">
-                See how it works
-              </Button>
+            <div className="mt-8 flex flex-col gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Button href={SIGNUP_URL} size="lg">
+                  Start free
+                </Button>
+                <Button href="#example-quote" variant="secondary" size="lg">
+                  See example quote
+                </Button>
+              </div>
+              <AppStoreBadge />
             </div>
           </div>
 
-          <HeroCard page={page} />
+          <ExampleQuoteCard quote={page.exampleQuote} />
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-            The admin that slows you down
+            Sound familiar?
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Built around the problems {page.tradePlural} face every week
@@ -89,10 +93,10 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-              How GraftMate AI helps
+              How GraftMate helps
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Quote, message, manage, and invoice from one place
+              Quote, manage clients, and invoice from one place
             </h2>
             <p className="mt-4 leading-relaxed text-muted">
               {page.featureIntro}
@@ -120,7 +124,26 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
         </div>
       </section>
 
-      {/* Testimonials - add real ones when available */}
+      <section
+        id="example-quote"
+        className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      >
+        <div className="max-w-2xl">
+          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+            Example quote
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            What a {page.tradeSingular} quote looks like in GraftMate
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted">
+            Describe the job in plain English. GraftMate drafts line items, VAT,
+            and totals — you review everything before it goes to the customer.
+          </p>
+        </div>
+        <div className="mt-10 max-w-2xl">
+          <ExampleQuoteCard quote={page.exampleQuote} />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <div className="rounded-2xl border border-primary/35 bg-gradient-to-b from-surface-raised to-surface p-8 text-center sm:p-10">
@@ -131,12 +154,18 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
             £29.99
             <span className="text-xl font-medium text-muted">/month</span>
           </p>
+          <p className="mt-2 text-sm font-medium text-secondary">
+            First month free
+          </p>
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-muted">
             {page.pricingCopy}
           </p>
-          <Button href={SIGNUP_URL} size="lg" className="mt-8">
-            Start Free
-          </Button>
+          <div className="mt-8 flex flex-col items-center gap-4">
+            <Button href={SIGNUP_URL} size="lg">
+              Start free
+            </Button>
+            <AppStoreBadge />
+          </div>
         </div>
       </section>
 
@@ -171,55 +200,75 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
   );
 }
 
-function HeroCard({ page }: TradeLandingPageProps) {
+function ExampleQuoteCard({ quote }: { quote: TradePageData["exampleQuote"] }) {
   return (
-    <div className="rounded-[2rem] border border-border bg-surface p-5 shadow-2xl shadow-black/40">
-      <div className="rounded-[1.5rem] border border-border-subtle bg-background p-5">
-        <div className="flex items-center justify-between border-b border-border-subtle pb-4">
+    <div className="rounded-[1.75rem] border border-border bg-surface p-4 shadow-2xl shadow-black/40 sm:p-5">
+      <div className="rounded-[1.25rem] border border-border-subtle bg-background p-4 sm:p-5">
+        <div className="flex items-start justify-between gap-3 border-b border-border-subtle pb-4">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-muted-dim">
-              GraftMate AI workspace
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-dim">
+              Quote preview
             </p>
             <p className="mt-1 font-display text-lg font-semibold text-foreground">
-              {page.tradeSingular} job admin
+              {quote.title}
+            </p>
+            <p className="mt-0.5 text-xs text-muted">
+              {quote.client} · {quote.location}
             </p>
           </div>
-          <span className="rounded-full bg-primary/25 px-3 py-1 text-xs font-semibold text-secondary">
-            Live
+          <span className="shrink-0 rounded-full bg-accent/20 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-accent-bright">
+            {quote.status}
           </span>
         </div>
 
-        <div className="mt-5 space-y-3">
-          {page.features.slice(0, 3).map((feature) => (
+        <div className="mt-4 space-y-3">
+          {quote.lines.map((line) => (
             <div
-              key={feature.title}
-              className="rounded-xl border border-border bg-surface p-4"
+              key={line.item}
+              className="rounded-lg border border-border-subtle bg-surface px-3 py-3"
             >
-              <p className="text-xs font-semibold uppercase tracking-wider text-secondary">
-                {feature.title}
+              <div className="flex items-start justify-between gap-3">
+                <p className="text-xs font-semibold text-foreground">
+                  {line.item}
+                </p>
+                <p className="shrink-0 text-xs font-semibold text-foreground">
+                  {line.total}
+                </p>
+              </div>
+              <p className="mt-1 text-[11px] leading-relaxed text-muted">
+                {line.description}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {feature.description}
+              <p className="mt-1 text-[10px] text-muted-dim">
+                {line.qty} × {line.unitPrice}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-5 rounded-xl bg-primary/15 p-4">
-          <p className="text-xs font-semibold uppercase tracking-wider text-secondary">
-            Next action
-          </p>
-          <p className="mt-2 text-sm text-muted">
-            Send quote, keep the client thread, and invoice when the work is
-            accepted.
-          </p>
+        <div className="mt-4 space-y-1 border-t border-border-subtle pt-4 text-xs">
+          <div className="flex justify-between text-muted">
+            <span>Subtotal</span>
+            <span>{quote.subtotal}</span>
+          </div>
+          <div className="flex justify-between text-muted">
+            <span>{quote.vatLabel}</span>
+            <span>{quote.vat}</span>
+          </div>
+          <div className="flex justify-between pt-2 font-display text-base font-bold text-secondary">
+            <span>Total</span>
+            <span>{quote.total}</span>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-function FeatureIcon({ icon }: { icon: TradePageData["features"][number]["icon"] }) {
+function FeatureIcon({
+  icon,
+}: {
+  icon: TradePageData["features"][number]["icon"];
+}) {
   switch (icon) {
     case "quote":
       return <VoiceIcon />;

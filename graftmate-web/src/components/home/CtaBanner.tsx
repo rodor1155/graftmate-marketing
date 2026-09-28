@@ -1,4 +1,6 @@
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Button } from "@/components/ui/Button";
+import { PRO_PLAN_PRICE_FULL } from "@/lib/config";
 import { SIGNUP_URL } from "@/lib/urls";
 
 export function CtaBanner() {
@@ -8,19 +10,17 @@ export function CtaBanner() {
         <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
         <div className="relative">
           <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Less desk. More tools.
+            Send your next quote from your phone
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-lg text-muted">
-            Join UK tradespeople who quote with AI, manage clients in one inbox,
-            and invoice in one tap — £29.99/month, first month free.
+            Start free — {PRO_PLAN_PRICE_FULL}, first month on us. Describe a
+            real job and see how fast you can quote it.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4">
             <Button href={SIGNUP_URL} size="lg">
-              Get started →
+              Start free →
             </Button>
-            <Button href="/features" variant="ghost" size="lg">
-              Explore features
-            </Button>
+            <AppStoreBadge />
           </div>
           <p className="mt-4 text-sm text-muted-dim">
             Cancel anytime · UK support

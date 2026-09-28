@@ -1,4 +1,28 @@
-export type TradeSlug = "electricians" | "plumbers" | "builders";
+export type TradeSlug =
+  | "electricians"
+  | "plumbers"
+  | "builders"
+  | "heatingGas";
+
+export type ExampleQuoteLine = {
+  item: string;
+  description: string;
+  qty: string;
+  unitPrice: string;
+  total: string;
+};
+
+export type ExampleQuote = {
+  title: string;
+  client: string;
+  location: string;
+  status: string;
+  subtotal: string;
+  vat: string;
+  vatLabel: string;
+  total: string;
+  lines: ExampleQuoteLine[];
+};
 
 export type TradePageData = {
   slug: TradeSlug;
@@ -22,6 +46,7 @@ export type TradePageData = {
     title: string;
     description: string;
   }[];
+  exampleQuote: ExampleQuote;
   pricingCopy: string;
   faqs: {
     question: string;
@@ -35,84 +60,110 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
     route: "/for-electricians",
     tradeSingular: "electrician",
     tradePlural: "electricians",
-    title: "Electrician Software UK | GraftMate AI",
+    title: "Electrician Quoting Software UK | GraftMate AI",
     description:
-      "Electrician software for UK sparkies to quote faster, manage clients, track jobs, send VAT-ready invoices, and cut admin from one phone-friendly app now.",
-    eyebrow: "Electrician software UK",
-    heroTitle: "Electricians: Stop Losing Sundays to Paperwork",
+      "Quote consumer unit swaps, EICRs, and callouts from your phone in about two minutes. AI quoting, clients, jobs, and VAT-ready invoices for UK electricians.",
+    eyebrow: "For UK electricians",
+    heroTitle: "Quote electrical jobs from the van in about two minutes",
     subheading:
-      "GraftMate AI helps UK electricians quote faster, chase less, and get paid sooner.",
+      "Describe the work once. GraftMate drafts a professional quote you can review and send before you leave site.",
     heroCopy:
-      "After a week of consumer unit swaps, EICR follow-ups, EV charger enquiries, and callouts squeezed between bigger jobs, the admin still waits. GraftMate AI keeps the paperwork moving while you are on site, in the van, or back home with five minutes spare. It is not trying to replace your judgement; it just keeps the admin tidy enough that the work you have already priced does not turn into another unpaid evening.",
+      "After a week of board changes, fault finds, and EICR follow-ups, the admin still waits. GraftMate helps you turn a voice note or quick message into a clear quote with line items and VAT — then keeps the client, job, and invoice in one place.",
     painIntro:
-      "Electrical work already carries enough detail. Your software should help you stay clear, quick, and professional without turning every quote into a spreadsheet session. That matters when a customer expects a clear paper trail, a landlord wants a fast update, or you need to show exactly what was included in the price.",
+      "Electrical work already carries enough detail. Your quoting tool should help you stay clear and professional without turning every estimate into a spreadsheet session.",
     painPoints: [
       {
-        title: "Quotes taking too long",
+        title: "Quotes eating your evenings",
         description:
-          "Type the job once, or dictate it from the van. GraftMate AI turns the details into a tidy quote with line items, VAT, and client information ready to send.",
+          "Dictate the job from the van — consumer unit swap, lighting circuit, EV charger install — and send a tidy quote with VAT before you get home.",
+      },
+      {
+        title: "Details lost between WhatsApp and email",
+        description:
+          "Keep customer messages, site photos, and quote history tied to the right job so you are not scrolling back through threads at 10pm.",
       },
       {
         title: "Chasing unpaid invoices",
         description:
-          "See what has been quoted, accepted, invoiced, and paid without digging through email threads or hoping you remembered to update a notebook.",
-      },
-      {
-        title: "Losing track of jobs",
-        description:
-          "Keep each customer, site address, message, quote, and invoice together so small works and follow-ups do not disappear between WhatsApp and email.",
+          "See what has been quoted, accepted, invoiced, and paid without digging through notebooks or hoping you remembered to update a spreadsheet.",
       },
     ],
     featureIntro:
-      "GraftMate AI is built around the everyday admin jobs electricians actually repeat: quote the work, keep the conversation straight, manage the client, and get the invoice out. Use it for callouts, remedials, installation work, and repeat clients - the same workflow stays simple whether the job is small or a multi-day project.",
+      "GraftMate is built around the admin electricians repeat every week: quote the work, keep the conversation straight, manage the client, and get the invoice out.",
     features: [
       {
         icon: "quote",
         title: "AI quote generation",
         description:
-          "Describe a board change, lighting upgrade, fault find, or remedial work in plain English. GraftMate AI shapes it into a professional quote you can check, adjust, and send in minutes.",
+          "Describe a board change, lighting upgrade, fault find, or remedial list in plain English. GraftMate shapes it into a professional quote you can check and send in minutes.",
       },
       {
         icon: "inbox",
-        title: "Unified inbox",
+        title: "Client messages in one place",
         description:
-          "Email and WhatsApp sit in one place, tied to the right client and job. When a customer sends photos, access notes, or a last-minute change, the thread stays with the work.",
+          "Email and WhatsApp sit together, linked to the right client and job. Access notes, photos, and last-minute changes stay with the work.",
       },
       {
         icon: "client",
-        title: "Client management",
+        title: "Client and job records",
         description:
-          "Store contact details, site addresses, job history, follow-ups, and notes. When a landlord or homeowner calls back, you know what was agreed last time.",
+          "Store contact details, site addresses, quote history, and follow-ups. When a landlord calls back, you know what was agreed last time.",
       },
       {
         icon: "invoice",
-        title: "Invoicing",
+        title: "VAT-ready invoicing",
         description:
-          "Turn an accepted quote into an invoice without retyping the same work. VAT-ready PDFs help you look organised and make payment chasing simpler.",
+          "Turn an accepted quote into an invoice without retyping line items. Send a clean PDF and keep payment status visible.",
       },
     ],
+    exampleQuote: {
+      title: "Consumer unit replacement",
+      client: "Dave Mitchell",
+      location: "Leeds",
+      status: "Sent",
+      subtotal: "£291.67",
+      vat: "£58.33",
+      vatLabel: "VAT (20%)",
+      total: "£350.00",
+      lines: [
+        {
+          item: "Labour",
+          description: "Remove existing board, install 10-way RCBO consumer unit, test and certify.",
+          qty: "1",
+          unitPrice: "£220.00",
+          total: "£220.00",
+        },
+        {
+          item: "Materials",
+          description: "Consumer unit, RCBOs, tails, labelling, and sundries.",
+          qty: "1",
+          unitPrice: "£71.67",
+          total: "£71.67",
+        },
+      ],
+    },
     pricingCopy:
-      "One simple plan at £29.99/month, with your first month free. No hidden fees, no complicated tiers, and no paying extra just because you want quotes, messages, clients, and invoices in one place. Start free and see whether it earns back the monthly cost before the next weekend paperwork session.",
+      "GraftMate Pro is £29.99/month with your first month free. One plan — quotes, clients, jobs, and invoices included. Pay by card on the web, or subscribe through Apple on iPhone when the app is live.",
     faqs: [
       {
-        question: "Can GraftMate AI help with Part P paperwork?",
+        question: "Can GraftMate help with Part P paperwork?",
         answer:
-          "GraftMate AI helps organise quotes, messages, client details, job notes, and invoices around the work. It is not a certification tool, so you should still use your usual Part P notification and compliance process where required.",
+          "GraftMate helps organise quotes, messages, client details, job notes, and invoices around the work. It is not a certification tool — use your usual Part P notification and compliance process where required.",
       },
       {
         question: "Does it work for CIS jobs?",
         answer:
-          "Yes. You can keep CIS-related client and job notes with the quote and invoice record so deductions and contractor details are easier to track. Always follow HMRC guidance or your accountant's advice for final CIS treatment.",
+          "Yes. Keep CIS-related client and job notes with the quote and invoice record. Always follow HMRC guidance or your accountant's advice for final CIS treatment.",
       },
       {
         question: "Can I add VAT to electrician quotes and invoices?",
         answer:
-          "Yes. GraftMate AI is built for UK trades and supports VAT-ready quoting and invoicing, so your documents can show the right VAT clearly before you send them.",
+          "Yes. GraftMate supports VAT-ready quoting and invoicing for UK trades, so your documents can show VAT clearly before you send them.",
       },
       {
-        question: "Is it useful for small jobs as well as rewires?",
+        question: "Is it useful for small callouts as well as rewires?",
         answer:
-          "Yes. It is designed for everyday trade admin: a quick callout, a remedial list, an EV charger quote, or a larger project can all live in the same simple workflow. You can keep the small jobs profitable by getting the quote out quickly, then still use the same client record when that customer comes back with more work.",
+          "Yes. A quick fault find, a socket add, or a larger project can all use the same workflow — the point is getting a professional quote out fast.",
       },
     ],
   },
@@ -121,84 +172,110 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
     route: "/for-plumbers",
     tradeSingular: "plumber",
     tradePlural: "plumbers",
-    title: "Plumber Software UK | GraftMate AI",
+    title: "Plumber Quoting Software UK | GraftMate AI",
     description:
-      "Plumber software for UK tradespeople to create quotes, manage WhatsApp and email, track clients, and send invoices faster from one phone-friendly app.",
-    eyebrow: "Plumber software UK",
-    heroTitle: "Plumbers: Run Your Plumbing Business From Your Phone",
+      "Quote bathroom installs, leaks, and boiler-related plumbing from your phone in about two minutes. AI quoting, clients, jobs, and invoicing for UK plumbers.",
+    eyebrow: "For UK plumbers",
+    heroTitle: "Send plumbing quotes before the customer calls someone else",
     subheading:
-      "AI-generated quotes, client management and invoicing - built for UK plumbers.",
+      "From leaking taps to bathroom refurbs — describe the job and get a professional quote you can review and send from your phone.",
     heroCopy:
-      "A normal day can jump from a leaking tap to a bathroom quote, then into a boiler-related customer message you need to answer before the evening. GraftMate AI gives you a simple way to capture the details, respond professionally, and keep the job moving without sitting down to a pile of admin. It works best when you use it as the place every customer request lands, so you are not relying on memory after six stops and a merchants run.",
+      "A normal day can jump from a leaking tap to a bathroom quote, then into a message you need to answer before the evening. GraftMate gives you one place to capture the details, respond professionally, and keep the job moving without a pile of weekend admin.",
     painIntro:
-      "Plumbing customers expect quick answers, clear prices, and updates when things change. GraftMate AI helps you stay on top without carrying the whole business in your head. From a ten-minute repair to a bathroom refurb quote, the goal is the same: capture the detail once, keep the customer informed, and avoid typing it all again later.",
+      "Plumbing customers expect quick answers and clear prices. GraftMate helps you stay on top without carrying the whole business in your head.",
     painPoints: [
       {
-        title: "Jobs falling through the cracks",
+        title: "Quote requests going cold",
         description:
-          "Quote requests, site notes, and customer details stay connected to the right job, so the small repair you priced last week does not vanish under newer messages.",
+          "Turn a site visit or phone call into a sent quote in minutes — not after you've finished three other jobs and forgotten the measurements.",
       },
       {
-        title: "Customers asking for updates",
+        title: "Messages scattered everywhere",
         description:
-          "Keep WhatsApp and email together, then find the conversation quickly when someone asks when you are arriving or whether parts have been ordered.",
+          "Keep WhatsApp and email together, linked to the client. When someone asks when you are arriving, you find the thread quickly.",
       },
       {
         title: "Weekend admin",
         description:
-          "Generate quotes and invoices as you go, instead of sacrificing Saturday morning to catch up on every message, estimate, and payment reminder.",
+          "Generate quotes and invoices as you go, instead of sacrificing Saturday morning to catch up on every estimate and payment reminder.",
       },
     ],
     featureIntro:
-      "GraftMate AI keeps the plumbing admin flow simple: get the request, quote the job, manage the customer, invoice the work, and move on. You can still edit everything before it goes out, but the boring first draft and the chasing trail are handled in one place.",
+      "GraftMate keeps the plumbing admin flow simple: get the request, quote the job, manage the customer, invoice the work, and move on.",
     features: [
       {
         icon: "quote",
         title: "AI quote generation",
         description:
-          "Describe the repair, install, bathroom work, or pipework in plain English. GraftMate AI drafts a professional quote you can review, adjust, and send from your phone.",
+          "Describe the repair, install, bathroom work, or pipework in plain English. GraftMate drafts a professional quote you can review and send from your phone.",
       },
       {
         icon: "inbox",
-        title: "Unified inbox",
+        title: "Client messages in one place",
         description:
-          "Email and WhatsApp messages live together, linked to clients and jobs. Photos, measurements, access details, and updates stay easy to find.",
+          "Email and WhatsApp messages live together, linked to clients and jobs. Photos, measurements, and access details stay easy to find.",
       },
       {
         icon: "client",
-        title: "Client management",
+        title: "Client and job records",
         description:
-          "Store customer records, addresses, quote history, job notes, and follow-ups in one place. No more scrolling back months to remember what was agreed.",
+          "Store customer records, addresses, quote history, and follow-ups in one place. No scrolling back months to remember what was agreed.",
       },
       {
         icon: "invoice",
         title: "Invoicing",
         description:
-          "Convert accepted quotes into clean invoices without copying the same information again. Send the invoice promptly and keep payment status visible.",
+          "Convert accepted quotes into clean invoices without copying the same information again. Send promptly and keep payment status visible.",
       },
     ],
+    exampleQuote: {
+      title: "Basin and tap replacement",
+      client: "Sarah Connolly",
+      location: "Manchester",
+      status: "Sent",
+      subtotal: "£237.50",
+      vat: "£47.50",
+      vatLabel: "VAT (20%)",
+      total: "£285.00",
+      lines: [
+        {
+          item: "Labour",
+          description: "Isolate supply, remove old basin and taps, fit new basin suite and mixer tap, test for leaks.",
+          qty: "1",
+          unitPrice: "£165.00",
+          total: "£165.00",
+        },
+        {
+          item: "Materials",
+          description: "Basin, mixer tap, waste, flexible connectors, and sundries.",
+          qty: "1",
+          unitPrice: "£72.50",
+          total: "£72.50",
+        },
+      ],
+    },
     pricingCopy:
-      "GraftMate AI is £29.99/month for one straightforward plan, with your first month free. No hidden fees, no feature maze, and no need to bolt together separate tools for quotes, messages, and invoices. If it saves one evening of catch-up admin, it has already done the job.",
+      "GraftMate Pro is £29.99/month with your first month free. One straightforward plan — no feature maze, no bolt-on tools for quotes and invoices.",
     faqs: [
       {
-        question: "Can GraftMate AI handle CIS deductions for plumbing work?",
+        question: "Can GraftMate handle CIS deductions for plumbing work?",
         answer:
-          "GraftMate AI helps you keep job records, invoices, client details, and notes organised for CIS jobs. You should still apply deductions according to HMRC rules and your accountant's guidance.",
+          "GraftMate helps you keep job records, invoices, client details, and notes organised for CIS jobs. Apply deductions according to HMRC rules and your accountant's guidance.",
       },
       {
-        question: "Is GraftMate AI a Gas Safe record system?",
+        question: "Is GraftMate a Gas Safe record system?",
         answer:
-          "No. GraftMate AI is for quotes, client messages, job management, and invoicing. Use your normal Gas Safe tools and compliance process for gas safety records and certificates.",
+          "No. GraftMate is for quotes, client messages, job management, and invoicing. Use your normal Gas Safe tools and compliance process for gas safety records and certificates.",
       },
       {
         question: "Does it work for emergency callouts?",
         answer:
-          "Yes. You can create a client, capture the callout details, keep the message history, and send an invoice quickly after the work is complete.",
+          "Yes. Create a client, capture the callout details, keep the message history, and send an invoice quickly after the work is complete.",
       },
       {
         question: "Can I use it on site from my phone?",
         answer:
-          "Yes. The workflow is built to be phone-friendly, so you can create quotes, check customer notes, and send invoices while you are between jobs. If a customer sends a photo, confirms access, or asks for a revised price, you can keep that update with the job instead of trying to remember it later.",
+          "Yes. The workflow is phone-first — create quotes, check customer notes, and send invoices between jobs.",
       },
     ],
   },
@@ -207,17 +284,17 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
     route: "/for-builders",
     tradeSingular: "builder",
     tradePlural: "builders",
-    title: "Builder Software UK | GraftMate AI",
+    title: "Builder Quoting Software UK | GraftMate AI",
     description:
-      "Builder software for UK trades to manage quotes, clients, messages, subcontractor notes, staged invoices, and payment chasing without spreadsheet admin.",
-    eyebrow: "Builder software UK",
-    heroTitle: "Builders: Less Admin. More Building.",
+      "Quote extensions, refurbs, and repair work from your phone in about two minutes. AI quoting, clients, jobs, and invoicing for UK builders and general trades.",
+    eyebrow: "For UK builders",
+    heroTitle: "Quote building work without rebuilding the paperwork at night",
     subheading:
-      "GraftMate AI handles the paperwork so you can focus on the work.",
+      "Describe the scope in plain English. GraftMate drafts a professional quote with labour, materials, and VAT ready to send.",
     heroCopy:
-      "Building work creates moving parts: customer decisions, material changes, subcontractor notes, staged payments, and quotes that need following up before they go cold. GraftMate AI gives you a clear place to manage the admin so you can spend more energy running the job and less time rebuilding paperwork at night. It helps you keep the commercial side visible without turning a small building business into a desk job.",
+      "Building work creates moving parts: customer decisions, material changes, staged payments, and quotes that need following up before they go cold. GraftMate gives you a clear place to manage the commercial side so you can spend more energy on site.",
     painIntro:
-      "Whether you are pricing a small extension, managing a refurb, or juggling repair work between bigger jobs, clear admin keeps the project moving and the customer confident. The sooner a quote is sent, a decision is recorded, or an invoice is issued, the less chance there is for confusion to turn into delay.",
+      "Whether you are pricing a small extension, managing a refurb, or juggling repair work between bigger jobs, clear admin keeps the project moving and the customer confident.",
     painPoints: [
       {
         title: "Quotes going cold",
@@ -225,66 +302,204 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
           "Create professional quotes faster and keep follow-ups visible, so good leads do not disappear while you are busy on site.",
       },
       {
-        title: "Managing multiple clients at once",
+        title: "Multiple clients at once",
         description:
-          "Keep every client, message, quote, site note, and invoice together. When two projects overlap, you can still see what each customer needs next.",
+          "Keep every client, message, quote, site note, and invoice together. When two projects overlap, you still see what each customer needs next.",
       },
       {
-        title: "Chasing payments",
+        title: "Chasing staged payments",
         description:
-          "Track what has been invoiced and what is still outstanding, with clear records when deposits, staged invoices, or final balances need attention.",
+          "Track what has been invoiced and what is still outstanding, with clear records when deposits or final balances need attention.",
       },
     ],
     featureIntro:
-      "GraftMate AI supports the core admin around building work: fast quotes, one place for conversations, clear client records, and invoices that do not need retyping. It is deliberately simple, so you can keep a grip on clients, stages, and payments without training the whole team on heavyweight project software.",
+      "GraftMate supports the core admin around building work: fast quotes, one place for conversations, clear client records, and invoices that do not need retyping.",
     features: [
       {
         icon: "quote",
         title: "AI quote generation",
         description:
-          "Describe the scope, labour, materials, and stages in plain English. GraftMate AI drafts a quote you can refine before sending to the client.",
+          "Describe the scope, labour, materials, and stages in plain English. GraftMate drafts a quote you can refine before sending to the client.",
       },
       {
         icon: "inbox",
-        title: "Unified inbox",
+        title: "Client messages in one place",
         description:
-          "Keep email and WhatsApp together, so photos, decisions, access details, and change requests are attached to the right client and job.",
+          "Keep email and WhatsApp together, so photos, decisions, access details, and change requests stay with the right client and job.",
       },
       {
         icon: "client",
-        title: "Client management",
+        title: "Client and job records",
         description:
-          "See customer details, project history, quotes, notes, and follow-ups in one record. It is easier to stay professional when the information is not scattered.",
+          "See customer details, project history, quotes, notes, and follow-ups in one record.",
       },
       {
         icon: "invoice",
         title: "Invoicing",
         description:
-          "Turn accepted work into invoices quickly, including staged or final-payment records in your job notes so the money side stays visible.",
+          "Turn accepted work into invoices quickly, with job notes for deposits, stages, and final balances.",
       },
     ],
+    exampleQuote: {
+      title: "Garden wall rebuild",
+      client: "Tom & Helen Wright",
+      location: "Sheffield",
+      status: "Sent",
+      subtotal: "£2,000.00",
+      vat: "£400.00",
+      vatLabel: "VAT (20%)",
+      total: "£2,400.00",
+      lines: [
+        {
+          item: "Labour",
+          description: "Dismantle damaged wall, rebuild 12m boundary wall in matching brick, repoint, and clear site.",
+          qty: "1",
+          unitPrice: "£1,450.00",
+          total: "£1,450.00",
+        },
+        {
+          item: "Materials",
+          description: "Bricks, sand, cement, DPC, and waste disposal.",
+          qty: "1",
+          unitPrice: "£550.00",
+          total: "£550.00",
+        },
+      ],
+    },
     pricingCopy:
-      "Simple pricing at £29.99/month, with your first month free. No hidden fees, no bloated office software, and no separate charge for the features builders need to keep work moving. Start free, put a real quote through it, and see whether it makes the next payment chase easier.",
+      "GraftMate Pro is £29.99/month with your first month free. No bloated office software and no separate charge for the features builders need to keep work moving.",
     faqs: [
       {
-        question: "Can GraftMate AI help with CIS jobs?",
+        question: "Can GraftMate help with CIS jobs?",
         answer:
-          "Yes. You can keep CIS-related client, contractor, job, and invoice notes together. GraftMate AI helps with organisation, while deductions and reporting should follow HMRC guidance.",
+          "Yes. Keep CIS-related client, contractor, job, and invoice notes together. GraftMate helps with organisation — deductions and reporting should follow HMRC guidance.",
       },
       {
         question: "Can I track subcontractor details?",
         answer:
-          "You can store subcontractor notes, contact details, messages, and job context alongside the client record. That makes it easier to see who is doing what and what has been agreed.",
+          "Store subcontractor notes, contact details, and job context alongside the client record so you can see who is doing what.",
       },
       {
         question: "Does it support staged invoicing?",
         answer:
-          "GraftMate AI helps you create and track invoices from accepted work, with job notes for deposits, stages, and final balances so payment progress is easier to follow. You can keep the agreed stages visible beside the client record, which makes it easier to explain what has been billed and what is still outstanding.",
+          "GraftMate helps you create and track invoices from accepted work, with job notes for deposits, stages, and final balances.",
       },
       {
         question: "Is it only for big building firms?",
         answer:
-          "No. GraftMate AI is built for UK sole traders and small trade businesses that need clear admin without a heavy project-management system. If you are the person pricing the job, answering the client, organising materials, and sending the invoice, the app is designed to keep that workload manageable.",
+          "No. GraftMate is built for UK sole traders and small trade businesses — if you are the person pricing the job, answering the client, and sending the invoice, it is designed for you.",
+      },
+    ],
+  },
+  heatingGas: {
+    slug: "heatingGas",
+    route: "/for-heating-gas-engineers",
+    tradeSingular: "heating & gas engineer",
+    tradePlural: "heating & gas engineers",
+    title: "Heating & Gas Engineer Quoting Software UK | GraftMate AI",
+    description:
+      "Quote boiler installs, services, and heating repairs from your phone in about two minutes. AI quoting, clients, jobs, and invoicing for UK heating engineers.",
+    eyebrow: "For UK heating & gas engineers",
+    heroTitle: "Quote heating jobs clearly — without the paperwork backlog",
+    subheading:
+      "From annual services to boiler swaps and radiator installs — describe the job and send a professional quote from your phone.",
+    heroCopy:
+      "Heating engineers juggle service reminders, breakdown callouts, landlord enquiries, and install quotes — often while customers expect a fast reply. GraftMate helps you turn job details into a clear quote with VAT, then keeps the client record, messages, and invoice together. It is not a Gas Safe certificate system; it handles the quoting and admin around the work you already do properly.",
+    painIntro:
+      "Customers want a clear price and a professional paper trail. GraftMate helps you respond quickly without sitting down to rebuild the same quote from scratch every evening.",
+    painPoints: [
+      {
+        title: "Service and install quotes piling up",
+        description:
+          "Turn a site visit or phone call into a sent quote in minutes — boiler service, power flush, radiator swap, or full install.",
+      },
+      {
+        title: "Landlord and agent follow-ups",
+        description:
+          "Keep tenant details, access notes, and quote history with the client so repeat work and annual reminders are easier to manage.",
+      },
+      {
+        title: "Invoices delayed after the job",
+        description:
+          "Convert accepted quotes to invoices on the day — no retyping labour, parts, and VAT when you are already onto the next callout.",
+      },
+    ],
+    featureIntro:
+      "GraftMate supports the commercial admin heating engineers repeat: quote the work, keep customer messages straight, manage clients and jobs, and invoice promptly.",
+    features: [
+      {
+        icon: "quote",
+        title: "AI quote generation",
+        description:
+          "Describe a boiler service, repair, power flush, or install in plain English. GraftMate drafts a professional quote you can review and send before you leave.",
+      },
+      {
+        icon: "inbox",
+        title: "Client messages in one place",
+        description:
+          "Email and WhatsApp linked to the right client. Tenant access details, boiler model photos, and agent updates stay with the job.",
+      },
+      {
+        icon: "client",
+        title: "Client and job records",
+        description:
+          "Store landlord, tenant, and site details with quote and job history — useful when the same property comes back next year.",
+      },
+      {
+        icon: "invoice",
+        title: "VAT-ready invoicing",
+        description:
+          "Turn accepted quotes into invoices without retyping line items. Keep payment status visible for services, repairs, and installs.",
+      },
+    ],
+    exampleQuote: {
+      title: "Annual boiler service",
+      client: "Greenfield Lettings",
+      location: "Bristol",
+      status: "Sent",
+      subtotal: "£79.17",
+      vat: "£15.83",
+      vatLabel: "VAT (20%)",
+      total: "£95.00",
+      lines: [
+        {
+          item: "Labour",
+          description: "Annual boiler service — visual inspection, flue check, combustion analysis, safety devices tested.",
+          qty: "1",
+          unitPrice: "£65.00",
+          total: "£65.00",
+        },
+        {
+          item: "Materials",
+          description: "Service consumables and replacement seals as required.",
+          qty: "1",
+          unitPrice: "£14.17",
+          total: "£14.17",
+        },
+      ],
+    },
+    pricingCopy:
+      "GraftMate Pro is £29.99/month with your first month free. One plan for quotes, clients, jobs, and invoices — subscribe on the web by card or via Apple in-app purchase on iPhone.",
+    faqs: [
+      {
+        question: "Is GraftMate a Gas Safe record or certificate system?",
+        answer:
+          "No. GraftMate is for quotes, client messages, job management, and invoicing. Continue using your normal Gas Safe tools and processes for gas safety records and certificates.",
+      },
+      {
+        question: "Can I quote boiler installs and repairs?",
+        answer:
+          "Yes. Describe the scope — labour, boiler, flue, controls, sundries — and GraftMate drafts a line-item quote you can adjust before sending.",
+      },
+      {
+        question: "Does it work for landlord and letting-agent clients?",
+        answer:
+          "Yes. Keep landlord or agent details, tenant access notes, and property history together so repeat services and follow-up quotes are easier.",
+      },
+      {
+        question: "Can I add VAT to heating quotes and invoices?",
+        answer:
+          "Yes. GraftMate supports VAT-ready quoting and invoicing for UK trades.",
       },
     ],
   },
@@ -302,5 +517,9 @@ export const tradePageLinks = [
   {
     href: tradePages.builders.route,
     label: "Builders",
+  },
+  {
+    href: tradePages.heatingGas.route,
+    label: "Heating & gas",
   },
 ];

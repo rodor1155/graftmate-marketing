@@ -1,18 +1,10 @@
-import type { Metadata } from "next";
 import { TradeLandingPage } from "@/components/trades/TradeLandingPage";
+import { buildTradePageMetadata } from "@/lib/tradePageMetadata";
 import { tradePages } from "@/lib/tradePages";
 
 const page = tradePages.electricians;
 
-export const metadata: Metadata = {
-  title: {
-    absolute: page.title,
-  },
-  description: page.description,
-  alternates: {
-    canonical: "https://graftmate.net/for-electricians",
-  },
-};
+export const metadata = buildTradePageMetadata(page);
 
 export default function ForElectriciansPage() {
   return <TradeLandingPage page={page} />;

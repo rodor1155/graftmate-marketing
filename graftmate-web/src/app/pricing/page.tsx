@@ -52,8 +52,9 @@ export default function PricingPage() {
               </span>
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              First month free, then £29.99/month. One plan, every feature
-              included.
+              GraftMate Pro — first month free, then £29.99/month. One plan,
+              every feature included. Pay by card on the web, or subscribe via
+              Apple in-app purchase on iPhone (30-day free trial).
             </p>
           </div>
 
