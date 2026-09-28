@@ -1,22 +1,92 @@
 import Image from "next/image";
 
-const screens = [
+type Screen = {
+  src: string;
+  alt: string;
+  caption: string;
+  /** Colour behind the faux iOS status bar, matched to the top of the screenshot */
+  statusBar: string;
+};
+
+const screens: Screen[] = [
   {
-    src: "/social/quote.jpg",
-    alt: "GraftMate quote screen showing a professional itemised quote ready to send",
-    caption: "Professional quotes in minutes",
+    src: "/app/home.webp",
+    alt: "GraftMate home screen with today's briefing: two jobs scheduled today and two quotes awaiting a reply",
+    caption: "Today's jobs and chasers at a glance",
+    statusBar: "#a9b8c0",
   },
   {
-    src: "/social/inbox.jpg",
-    alt: "GraftMate unified inbox with client messages linked to jobs",
+    src: "/app/quote-builder.webp",
+    alt: "GraftMate quote builder: site notes for a cloakroom refit turned into itemised line items totalling £1,310",
+    caption: "Describe the job, get the line items",
+    statusBar: "#f5f3ed",
+  },
+  {
+    src: "/app/quotes.webp",
+    alt: "GraftMate quotes list showing accepted, draft and sent quotes with GBP totals",
+    caption: "Every quote, from draft to accepted",
+    statusBar: "#f5f3ed",
+  },
+  {
+    src: "/app/jobs.webp",
+    alt: "GraftMate jobs list with a patio in progress and upcoming boiler swap and bathroom refit",
+    caption: "Accepted quotes become booked jobs",
+    statusBar: "#f5f3ed",
+  },
+  {
+    src: "/app/clients.webp",
+    alt: "GraftMate clients list with the latest message from each client",
     caption: "Clients and messages in one place",
-  },
-  {
-    src: "/social/invoice.jpg",
-    alt: "GraftMate invoice screen converted from an accepted quote",
-    caption: "Quote to invoice in one tap",
+    statusBar: "#f5f3ed",
   },
 ];
+
+function StatusBar({ background }: { background: string }) {
+  return (
+    <div
+      className="relative flex h-[7%] items-center justify-between px-[9%] text-[0.6rem] font-semibold text-neutral-900 sm:text-[0.65rem]"
+      style={{ background }}
+      aria-hidden="true"
+    >
+      <span>9:41</span>
+      <span className="absolute left-1/2 top-1/2 h-[55%] w-[32%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black" />
+      <span className="flex items-center gap-1">
+        <svg viewBox="0 0 18 12" className="h-2 w-auto" fill="currentColor">
+          <rect x="0" y="8" width="3" height="4" rx="0.8" />
+          <rect x="5" y="5.5" width="3" height="6.5" rx="0.8" />
+          <rect x="10" y="3" width="3" height="9" rx="0.8" />
+          <rect x="15" y="0" width="3" height="12" rx="0.8" />
+        </svg>
+        <svg viewBox="0 0 26 12" className="h-2 w-auto" fill="none" stroke="currentColor">
+          <rect x="0.5" y="0.5" width="22" height="11" rx="3" strokeOpacity="0.5" />
+          <rect x="2.5" y="2.5" width="16" height="7" rx="1.5" fill="currentColor" stroke="none" />
+          <path d="M24.5 4v4" strokeLinecap="round" strokeOpacity="0.5" />
+        </svg>
+      </span>
+    </div>
+  );
+}
+
+function PhoneFrame({ screen }: { screen: Screen }) {
+  return (
+    <div className="rounded-[2.25rem] bg-gradient-to-b from-neutral-700 to-neutral-900 p-[3px] shadow-2xl shadow-black/50">
+      <div className="rounded-[2.1rem] bg-black p-[6px]">
+        <div className="flex aspect-[390/907] flex-col overflow-hidden rounded-[1.75rem] bg-[#f5f3ed]">
+          <StatusBar background={screen.statusBar} />
+          <div className="relative flex-1">
+            <Image
+              src={screen.src}
+              alt={screen.alt}
+              fill
+              sizes="(min-width: 1024px) 210px, (min-width: 640px) 30vw, 70vw"
+              className="object-cover object-top"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function ProductShowcase() {
   return (
@@ -36,34 +106,25 @@ export function ProductShowcase() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {screens.map((screen) => (
-            <figure key={screen.src} className="group">
-              <div className="overflow-hidden rounded-2xl border border-border bg-background shadow-lg shadow-black/30">
-                <Image
-                  src={screen.src}
-                  alt={screen.alt}
-                  width={390}
-                  height={844}
-                  className="h-auto w-full transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </div>
-              <figcaption className="mt-3 text-center text-sm font-medium text-muted">
+        <div className="-mx-4 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5">
+          {screens.map((screen, i) => (
+            <figure
+              key={screen.src}
+              className={`w-[70%] shrink-0 snap-center sm:w-auto ${
+                i === 1 ? "lg:-translate-y-4" : ""
+              } ${i > 2 ? "sm:hidden lg:block" : ""}`}
+            >
+              <PhoneFrame screen={screen} />
+              <figcaption className="mt-4 text-center text-sm font-medium text-muted">
                 {screen.caption}
               </figcaption>
             </figure>
           ))}
         </div>
 
-        {/* Placeholder: Ross to supply iOS App Store screenshots when available */}
-        <div className="mt-10 rounded-xl border border-dashed border-border bg-surface-raised/50 px-6 py-5 text-center">
-          <p className="text-xs font-semibold uppercase tracking-wider text-muted-dim">
-            Coming soon
-          </p>
-          <p className="mt-2 text-sm text-muted">
-            iPhone App Store screenshots — placeholder slot for launch assets
-          </p>
-        </div>
+        <p className="mt-8 text-center text-xs text-muted-dim">
+          Real screens from the GraftMate iPhone app. Sample client data shown.
+        </p>
       </div>
     </section>
   );
