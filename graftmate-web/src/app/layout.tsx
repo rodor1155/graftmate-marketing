@@ -21,11 +21,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://graftmate.net"),
   title: {
-    default: "GraftMate AI — AI-powered job management for UK trades",
+    default: "GraftMate AI — Professional quotes from your phone in two minutes",
     template: "%s | GraftMate AI",
   },
   description:
-    "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
+    "Describe a job and get a professional quote you can review and send from your phone in about two minutes. £29.99/month, first month free. Built for UK sole traders.",
   keywords: [
     "trade business software UK",
     "sole trader invoicing",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     siteName: "GraftMate AI",
-    title: "GraftMate AI — AI-powered job management for UK trades",
+    title: "GraftMate AI — Professional quotes from your phone in two minutes",
     description:
       "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
     type: "website",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GraftMate AI — AI-powered job management for UK trades",
+    title: "GraftMate AI — Professional quotes from your phone in two minutes",
     description:
       "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
     images: ["/og-image.png"],

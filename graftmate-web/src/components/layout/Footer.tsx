@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Logo } from "@/components/layout/Logo";
 import { tradePageLinks } from "@/lib/tradePages";
 
@@ -18,10 +19,13 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              AI-powered job management built for UK sole traders. Quote
-              generation, unified inbox, and client management — without the
-              spreadsheet headache.
+              Describe a job and get a professional quote you can review and
+              send from your phone in about two minutes. Clients, jobs, and
+              invoicing included.
             </p>
+            <div className="mt-5">
+              <AppStoreBadge />
+            </div>
             <p className="mt-4 text-xs text-muted-dim">
               Prices in GBP · VAT-ready · Made for UK trades
             </p>

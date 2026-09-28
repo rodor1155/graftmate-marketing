@@ -1,33 +1,36 @@
 const steps = [
   {
     step: "01",
-    title: "Sign up in two minutes",
+    title: "Describe the job",
     description:
-      "Pick your trade, add your details, and you're in. No spreadsheets to import, no training videos required.",
+      "Tell GraftMate what the customer needs — by voice or text. Mention labour, materials, and anything that affects the price.",
   },
   {
     step: "02",
-    title: "Quote from the van by voice",
+    title: "Review and send the quote",
     description:
-      "Say the job out loud. GraftMate AI builds a professional quote with VAT — ready to email before you've left site.",
+      "GraftMate drafts a professional quote with line items and UK VAT. Check it, tweak anything you need, and send it from your phone.",
   },
   {
     step: "03",
-    title: "Stay on top of every client",
+    title: "Manage the job and invoice",
     description:
-      "Unified inbox brings email and WhatsApp into one place. AI-powered quote generation from text or voice notes — then invoice and get paid.",
+      "Keep the client, messages, and job in one place. When the work is accepted, turn the quote into an invoice in one tap.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section className="border-t border-border-subtle bg-surface py-16 sm:py-24">
+    <section
+      id="how-it-works"
+      className="border-t border-border-subtle bg-surface py-16 sm:py-24"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-medium uppercase tracking-wider text-secondary">
           How it works
         </p>
-        <h2 className="mt-3 max-w-lg font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Up and running before your brew goes cold
+        <h2 className="mt-3 max-w-xl font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          From job description to sent quote in about two minutes
         </h2>
 
         <ol className="mt-12 grid gap-8 sm:grid-cols-3">
