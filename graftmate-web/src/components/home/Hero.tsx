@@ -70,47 +70,82 @@ export function Hero() {
 
 function ProductVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-md pb-28 sm:pb-32 lg:max-w-lg lg:pb-36">
-      <div className="relative overflow-hidden rounded-lg border-2 border-border shadow-[var(--card-shadow)]">
-        <Image
-          src="/brand/desktop-home-hero-scene.webp"
-          alt=""
-          width={1280}
-          height={720}
-          priority
-          className="hidden h-auto w-full sm:block"
-          aria-hidden
-        />
-        <Image
-          src="/brand/mobile-home-hero-scene.webp"
-          alt=""
-          width={780}
-          height={420}
-          priority
-          className="h-auto w-full sm:hidden"
-          aria-hidden
-        />
+    <div className="relative mx-auto w-full lg:max-w-none">
+      {/* Desktop: large painted scene card with phone + pills */}
+      <div className="relative hidden lg:block">
+        <div className="relative aspect-[1280/720] overflow-hidden rounded-2xl border-2 border-border shadow-[var(--card-shadow)]">
+          <Image
+            src="/brand/desktop-home-hero-scene.webp"
+            alt=""
+            fill
+            priority
+            sizes="(min-width: 1024px) 560px, 100vw"
+            className="object-cover object-center"
+            aria-hidden
+          />
 
-        <div className="absolute right-3 top-3 hidden flex-col gap-2 sm:flex">
-          <MetricPill icon={<QuoteIcon />}>2 quotes</MetricPill>
-          <MetricPill icon={<MoneyIcon />}>£3,540.00 quoted</MetricPill>
+          <div className="absolute right-4 top-4 z-20 flex flex-col items-end gap-2">
+            <MetricPill icon={<QuoteIcon />}>2 quotes</MetricPill>
+            <MetricPill icon={<MoneyIcon />}>£3,540.00 quoted</MetricPill>
+          </div>
+
+          <div className="absolute bottom-0 left-4 z-30 w-[42%] max-w-[240px] translate-y-[18%]">
+            <PhoneFrame
+              src="/app/home.webp"
+              alt="GraftMate home screen showing today's briefing, jobs due, and quotes awaiting reply"
+              statusBar="#a9b8c0"
+              priority
+            />
+          </div>
         </div>
       </div>
 
-      <div className="absolute -bottom-6 left-1/2 w-[58%] max-w-[220px] -translate-x-1/2 sm:-bottom-8 sm:w-[52%] sm:max-w-[240px]">
-        <PhoneFrame
-          src="/app/home.webp"
-          alt="GraftMate home screen showing today's briefing, jobs due, and quotes awaiting reply"
-          statusBar="#a9b8c0"
-          priority
-        />
+      {/* Mobile: full-width scene under copy, phone overlapping */}
+      <div className="relative lg:hidden">
+        <div className="relative aspect-[1280/720] overflow-hidden rounded-xl border-2 border-border shadow-[var(--card-shadow)] sm:rounded-2xl">
+          <Image
+            src="/brand/mobile-home-hero-scene.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+            aria-hidden
+          />
+
+          <div className="absolute right-2 top-2 z-20 flex flex-col items-end gap-1.5 sm:right-3 sm:top-3 sm:gap-2">
+            <MetricPill icon={<QuoteIcon />} className="scale-[0.92] sm:scale-100">
+              2 quotes
+            </MetricPill>
+            <MetricPill icon={<MoneyIcon />} className="scale-[0.92] sm:scale-100">
+              £3,540.00 quoted
+            </MetricPill>
+          </div>
+        </div>
+
+        <div className="absolute -bottom-2 left-1/2 z-30 w-[52%] max-w-[220px] -translate-x-1/2 sm:-bottom-4 sm:w-[48%] sm:max-w-[240px]">
+          <PhoneFrame
+            src="/app/home.webp"
+            alt="GraftMate home screen showing today's briefing, jobs due, and quotes awaiting reply"
+            statusBar="#a9b8c0"
+            priority
+          />
+        </div>
+
+        <div className="pointer-events-none absolute -bottom-1 right-0 z-10 w-[38%] max-w-[140px] sm:hidden">
+          <Image
+            src="/brand/mobile-home-hero-van.webp"
+            alt=""
+            width={304}
+            height={140}
+            className="h-auto w-full"
+            aria-hidden
+          />
+        </div>
       </div>
 
-      <div className="absolute -right-1 top-[42%] sm:hidden">
-        <MetricPill icon={<QuoteIcon />} className="scale-90">
-          2 quotes
-        </MetricPill>
-      </div>
+      {/* Spacer for overlapping phone on mobile */}
+      <div className="h-24 sm:h-28 lg:hidden" aria-hidden />
     </div>
   );
 }
