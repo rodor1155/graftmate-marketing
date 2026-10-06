@@ -17,7 +17,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-border-subtle bg-background/80 backdrop-blur-xl">
+    <header className="border-b border-border bg-[#f5f3ed]/90 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo priority />
 
@@ -26,7 +26,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted transition-colors hover:text-secondary"
+              className="text-sm font-medium text-muted transition-colors hover:text-accent"
             >
               {link.label}
             </Link>
@@ -44,7 +44,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-border text-muted md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-border text-muted md:hidden"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label="Toggle menu"
@@ -54,13 +54,13 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border-subtle bg-surface px-4 py-4 md:hidden">
+        <div className="border-t border-border-subtle bg-surface-raised px-4 py-4 md:hidden">
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted hover:bg-surface-raised hover:text-foreground"
+                className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted hover:bg-background hover:text-accent"
                 onClick={() => setOpen(false)}
               >
                 {link.label}

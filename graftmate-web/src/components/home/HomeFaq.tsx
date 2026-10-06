@@ -1,33 +1,23 @@
 const faqs = [
   {
-    question: "How does the voice quoting work?",
+    question: "How does AI quoting work?",
     answer:
-      "Open GraftMate AI on your phone and describe the job out loud — customer, work, and price. The app turns your words into a professional quote with UK VAT, ready to send in seconds. It works hands-free from the van, so you're not typing on a small screen after a long day.",
+      "Describe the job in plain English — in site notes or typed text. GraftMate drafts a professional quote with line items and UK VAT. You review everything before it goes to the customer.",
   },
   {
     question: "What happens after the first free month?",
     answer:
-      "Your subscription continues at £29.99/month. We'll remind you before it starts so there are no surprises. Every feature stays included — the price is the only thing that changes.",
+      "GraftMate Pro continues at £29.99/month. We remind you before billing starts. Every feature stays included — one plan, no tiers.",
+  },
+  {
+    question: "Can I subscribe on iPhone?",
+    answer:
+      "Yes. On the web you pay by card via Stripe. On iPhone you can subscribe through Apple in-app purchase (GraftMate Pro Monthly, 30-day free trial) when the iOS app is live on the App Store.",
   },
   {
     question: "Can I cancel anytime?",
     answer:
-      "Yes. Cancel from your account whenever you like. There are no long-term contracts, cancellation fees, or awkward phone calls.",
-  },
-  {
-    question: "Is my data secure?",
-    answer:
-      "Your business data is encrypted in transit and at rest, and stored on secure UK/EU infrastructure. We never sell your data, and you can export or delete it at any time.",
-  },
-  {
-    question: "Do you offer refunds?",
-    answer:
-      "If something isn't right, contact us within 14 days of a charge and we'll sort it out fairly. We'd rather fix the problem than argue about it.",
-  },
-  {
-    question: "What if I need help?",
-    answer:
-      "Email support is included with your subscription — real humans who understand trades, not a chatbot reading a script. We aim to reply within one working day.",
+      "Yes. Cancel from your account whenever you like. No long-term contracts or cancellation fees.",
   },
 ];
 
@@ -41,7 +31,7 @@ export function HomeFaq() {
         {faqs.map((faq) => (
           <details
             key={faq.question}
-            className="group rounded-xl border border-border bg-surface transition-colors open:border-primary/30 open:bg-surface-raised"
+            className="group graftmate-card transition-colors open:border-accent/30"
           >
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-display text-base font-semibold text-foreground marker:content-none [&::-webkit-details-marker]:hidden">
               {faq.question}
@@ -60,7 +50,7 @@ export function HomeFaq() {
 function ChevronIcon() {
   return (
     <svg
-      className="h-5 w-5 shrink-0 text-secondary transition-transform group-open:rotate-180"
+      className="h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
       viewBox="0 0 20 20"
       fill="none"
       stroke="currentColor"

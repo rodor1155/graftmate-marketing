@@ -6,16 +6,16 @@ import {
   EmailIcon,
   InboxIcon,
   InvoiceIcon,
+  QuoteIcon,
   UkIcon,
-  VoiceIcon,
 } from "@/components/features/FeatureIcons";
 import {
   ClientVisual,
   EmailVisual,
   InboxVisual,
   InvoiceVisual,
+  QuoteBuilderVisual,
   UkVisual,
-  VoiceQuoteVisual,
 } from "@/components/features/FeatureVisuals";
 
 import { SIGNUP_URL } from "@/lib/urls";
@@ -33,10 +33,8 @@ export default function FeaturesPage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-border-subtle">
-        <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" />
-        <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-primary/15 blur-[100px]" />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">
             Features
           </p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
@@ -60,17 +58,17 @@ export default function FeaturesPage() {
       <section className="mx-auto max-w-6xl space-y-6 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <FeatureSection
           id="ai-quotes"
-          icon={<VoiceIcon />}
+          icon={<QuoteIcon />}
           label="AI quote generation"
           title="Describe the job, get a quote in seconds"
-          description="After a long day on site, the last thing you want is to peck out line items on your phone. Tell GraftMate AI the job in plain English — by voice or text — and get a professional quote with VAT, ready to email."
+          description="After a long day on site, the last thing you want is to peck out line items on your phone. Tell GraftMate the job in plain English — in site notes or typed text — and get a professional quote with VAT, ready to email."
           bullets={[
-            "Speak naturally or type: job scope, price, and materials in one go",
-            "Hands-free from the van — no typing on a small screen",
+            "Add site notes or type the job scope, price, and materials in one go",
+            "Works from the van — no retyping on a small screen",
             "Professional PDF quotes with UK VAT included",
             "Send to your customer before you pull away",
           ]}
-          visual={<VoiceQuoteVisual />}
+          visual={<QuoteBuilderVisual />}
         />
 
         <FeatureSection
@@ -78,7 +76,7 @@ export default function FeaturesPage() {
           icon={<InboxIcon />}
           label="Unified inbox"
           title="Email and WhatsApp in one place"
-          description="Stop scrolling through hundreds of messages to find a job detail. GraftMate AI brings every client conversation into one inbox — automatically linked to the right contact and job."
+          description="Stop scrolling through hundreds of messages to find a job detail. GraftMate brings every client conversation into one inbox — automatically linked to the right contact and job."
           bullets={[
             "WhatsApp and email messages in a single view",
             "Conversations auto-linked to clients and jobs",
@@ -94,9 +92,9 @@ export default function FeaturesPage() {
           icon={<EmailIcon />}
           label="Inbound email parsing"
           title="Clients email you, messages appear automatically"
-          description="Give clients your GraftMate AI email address. When they send a message, it lands in your unified inbox — parsed, linked to the right client, and ready to action."
+          description="Give clients your GraftMate email address. When they send a message, it lands in your unified inbox — parsed, linked to the right client, and ready to action."
           bullets={[
-            "Dedicated GraftMate AI address for your business",
+            "Dedicated GraftMate address for your business",
             "Inbound emails parsed and linked automatically",
             "No manual forwarding or copy-paste",
             "Works alongside your existing email habits",
@@ -140,7 +138,7 @@ export default function FeaturesPage() {
           icon={<UkIcon />}
           label="Built for UK trades"
           title="£GBP, UK VAT, British English"
-          description="Generic US software doesn't understand VAT, pounds, or how UK sole traders actually work. GraftMate AI is built from the ground up for British tradespeople."
+          description="Generic US software doesn't understand VAT, pounds, or how UK sole traders actually work. GraftMate is built from the ground up for British tradespeople."
           bullets={[
             "Multi-rate VAT: 20%, 5%, and 0% on quotes and invoices",
             "All amounts in £ sterling — no currency confusion",
@@ -153,7 +151,7 @@ export default function FeaturesPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/15 to-surface px-6 py-12 text-center sm:px-12">
+        <div className="graftmate-card px-6 py-12 text-center sm:px-12">
           <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
             All features. One plan.
           </h2>

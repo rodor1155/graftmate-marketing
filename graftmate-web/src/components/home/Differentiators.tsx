@@ -1,8 +1,11 @@
+import { Card } from "@/components/ui/Card";
+import { IconChip } from "@/components/ui/IconChip";
+
 const usps = [
   {
     title: "AI quote generation",
     description:
-      "Describe the job, get a professional quote in seconds — from text or voice notes.",
+      "Describe the job, get a professional quote in seconds — from site notes or typed text.",
   },
   {
     title: "Unified inbox",
@@ -12,7 +15,7 @@ const usps = [
   {
     title: "Inbound email parsing",
     description:
-      "Clients email your GraftMate AI address — messages appear automatically.",
+      "Clients email your GraftMate address — messages appear automatically.",
   },
   {
     title: "Client management",
@@ -28,13 +31,21 @@ const usps = [
   },
 ];
 
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 20 20" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M4 10.5 8 14.5 16 6.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function Differentiators() {
   return (
     <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-            Why GraftMate AI
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">
+            Why GraftMate
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Built for how UK trades actually work
@@ -43,24 +54,17 @@ export function Differentiators() {
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {usps.map((usp) => (
-            <div
-              key={usp.title}
-              className="rounded-xl border border-border bg-surface p-5 sm:p-6"
-            >
+            <Card key={usp.title} className="p-5 sm:p-6">
               <div className="flex items-start gap-3">
-                <span className="mt-0.5 text-lg text-secondary" aria-hidden>
-                  ✓
-                </span>
+                <IconChip variant="green" size="sm">
+                  <CheckIcon />
+                </IconChip>
                 <div>
-                  <p className="font-display font-semibold text-foreground">
-                    {usp.title}
-                  </p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                    {usp.description}
-                  </p>
+                  <p className="font-display font-semibold text-foreground">{usp.title}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">{usp.description}</p>
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

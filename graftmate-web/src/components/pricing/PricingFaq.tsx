@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What is the current launch offer?",
     answer:
-      "First month free. Sign up now and get full access to GraftMate AI completely free for your first month, with no card required.",
+      "First month free. Sign up now and get full access to GraftMate completely free for your first month, with no card required.",
   },
   {
     question: "Is VAT included?",

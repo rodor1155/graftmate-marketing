@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { IconChip } from "@/components/ui/IconChip";
 import { PricingFaq } from "@/components/pricing/PricingFaq";
 
 import { SIGNUP_URL } from "@/lib/urls";
@@ -24,15 +26,20 @@ const features = [
   "No user limits",
 ];
 
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M4 10.5 8 14.5 16 6.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function PricingPage() {
   return (
     <div className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-40" />
-      <div className="pointer-events-none absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
-
       <div className="relative mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <header className="text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">
             Simple pricing
           </p>
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground">
@@ -40,20 +47,21 @@ export default function PricingPage() {
           </h1>
         </header>
 
-        <div className="mt-10 rounded-2xl border border-primary/35 bg-gradient-to-b from-surface-raised to-surface p-8 sm:p-10">
+        <Card className="mt-10 p-8 sm:p-10">
           <div className="text-center">
-            <span className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-secondary">
+            <span className="inline-flex rounded-full border-2 border-primary/20 bg-primary/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
               First month free
             </span>
             <p className="mt-6 font-display text-6xl font-bold tracking-tight text-foreground sm:text-7xl">
-              £29.99
+              <span className="font-mono tabular-nums">£29.99</span>
               <span className="text-2xl font-medium text-muted sm:text-3xl">
                 /month
               </span>
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              First month free, then £29.99/month. One plan, every feature
-              included.
+              GraftMate Pro — first month free, then £29.99/month. One plan,
+              every feature included. Pay by card on the web, or subscribe via
+              Apple in-app purchase on iPhone (30-day free trial).
             </p>
           </div>
 
@@ -70,17 +78,14 @@ export default function PricingPage() {
                 key={feature}
                 className="flex items-center gap-3 text-sm text-foreground"
               >
-                <span
-                  className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/25 text-sm font-bold text-secondary"
-                  aria-hidden
-                >
-                  ✓
-                </span>
+                <IconChip variant="green" size="sm">
+                  <CheckIcon />
+                </IconChip>
                 {feature}
               </li>
             ))}
           </ul>
-        </div>
+        </Card>
 
         <div className="mt-16">
           <PricingFaq />

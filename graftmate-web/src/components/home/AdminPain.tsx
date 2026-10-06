@@ -1,3 +1,5 @@
+import { Card } from "@/components/ui/Card";
+
 const painPoints = [
   {
     title: "Spreadsheets at 11pm",
@@ -30,7 +32,7 @@ export function AdminPain() {
     <section className="border-y border-border-subtle bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">
             Sound familiar?
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -45,9 +47,9 @@ export function AdminPain() {
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {painPoints.map((point) => (
             <li key={point.title}>
-              <article className="group h-full rounded-xl border border-border bg-background p-5 transition-colors hover:border-primary/30 hover:bg-surface-raised">
+              <Card as="article" className="group h-full p-5 transition-colors hover:border-accent/25">
                 <span
-                  className="mb-3 block h-0.5 w-8 rounded-full bg-secondary transition-all group-hover:w-12"
+                  className="mb-3 block h-0.5 w-8 rounded-full bg-accent transition-all group-hover:w-12"
                   aria-hidden
                 />
                 <h3 className="font-display text-lg font-semibold leading-snug text-foreground">
@@ -56,13 +58,13 @@ export function AdminPain() {
                 <p className="mt-2 text-sm leading-relaxed text-muted">
                   {point.description}
                 </p>
-              </article>
+              </Card>
             </li>
           ))}
         </ul>
 
         <p className="mt-12 text-center font-display text-xl font-semibold text-foreground sm:text-2xl">
-          GraftMate AI was built so you don&apos;t have to.
+          GraftMate was built so you don&apos;t have to.
         </p>
       </div>
     </section>

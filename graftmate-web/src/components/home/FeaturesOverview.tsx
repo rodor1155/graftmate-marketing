@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const features = [
   {
     tag: "AI quotes",
     title: "Describe the job, get a quote in seconds",
     description:
-      "Tell GraftMate AI the job while you're in the van — by voice or text. It builds a professional quote with VAT, ready to send before you've started the engine.",
+      "Tell GraftMate the job while you're in the van — in site notes or typed text. It builds a professional quote with VAT, ready to send before you've started the engine.",
     highlight: true,
   },
   {
@@ -19,7 +20,7 @@ const features = [
     tag: "Inbound email",
     title: "Clients email you, messages appear automatically",
     description:
-      "Give clients your GraftMate AI address. Their emails land in your inbox — parsed and linked to the right client.",
+      "Give clients your GraftMate address. Their emails land in your inbox — parsed and linked to the right client.",
     highlight: false,
   },
   {
@@ -47,11 +48,11 @@ const features = [
 
 export function FeaturesOverview() {
   return (
-    <section className="relative bg-background py-16 sm:py-24">
+    <section className="relative py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-xl">
-            <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+            <p className="text-sm font-medium uppercase tracking-wider text-accent">
               Everything you need
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -65,15 +66,16 @@ export function FeaturesOverview() {
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <article
+            <Card
               key={feature.tag}
-              className={`group rounded-xl border p-6 transition-colors ${
+              as="article"
+              className={`p-6 transition-colors ${
                 feature.highlight
-                  ? "border-primary/40 bg-gradient-to-br from-primary/15 to-surface lg:col-span-2 lg:row-span-1"
-                  : "border-border bg-surface hover:border-primary/25"
+                  ? "border-accent/25 bg-surface-raised lg:col-span-2"
+                  : "hover:border-accent/20"
               }`}
             >
-              <span className="text-xs font-semibold uppercase tracking-wider text-secondary">
+              <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                 {feature.tag}
               </span>
               <h3 className="mt-3 font-display text-lg font-semibold leading-snug text-foreground">
@@ -82,7 +84,7 @@ export function FeaturesOverview() {
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {feature.description}
               </p>
-            </article>
+            </Card>
           ))}
         </div>
       </div>

@@ -1,9 +1,13 @@
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { IconChip } from "@/components/ui/IconChip";
+import { PhoneFrame } from "@/components/ui/PhoneFrame";
 import {
   ClientIcon,
   InboxIcon,
   InvoiceIcon,
-  VoiceIcon,
+  QuoteIcon,
 } from "@/components/features/FeatureIcons";
 import { SIGNUP_URL } from "@/lib/urls";
 import type { TradePageData } from "@/lib/tradePages";
@@ -16,13 +20,9 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
   return (
     <div className="relative overflow-hidden">
       <section className="relative overflow-hidden border-b border-border-subtle">
-        <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" />
-        <div className="pointer-events-none absolute -top-28 right-0 h-80 w-80 rounded-full bg-primary/15 blur-[110px]" />
-        <div className="pointer-events-none absolute bottom-0 left-8 h-64 w-64 rounded-full bg-accent/10 blur-[90px]" />
-
-        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-24">
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
           <div>
-            <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+            <p className="text-sm font-medium uppercase tracking-wider text-accent">
               {page.eyebrow}
             </p>
             <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-[3.35rem]">
@@ -34,24 +34,33 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
               {page.heroCopy}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href={SIGNUP_URL} size="lg">
-                Start Free
-              </Button>
-              <Button href="#features" variant="secondary" size="lg">
-                See how it works
-              </Button>
+            <div className="mt-8 flex flex-col gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Button href={SIGNUP_URL} size="lg">
+                  Start free
+                </Button>
+                <Button href="#example-quote" variant="secondary" size="lg">
+                  See example quote
+                </Button>
+              </div>
+              <AppStoreBadge />
             </div>
           </div>
 
-          <HeroCard page={page} />
+          <div className="mx-auto w-full max-w-xs sm:max-w-sm">
+            <PhoneFrame
+              src={page.heroScreenshot.src}
+              alt={page.heroScreenshot.alt}
+              statusBar={page.heroScreenshot.statusBar}
+            />
+          </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-            The admin that slows you down
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">
+            Sound familiar?
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Built around the problems {page.tradePlural} face every week
@@ -61,88 +70,108 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {page.painPoints.map((painPoint) => (
-            <article
-              key={painPoint.title}
-              className="rounded-xl border border-border bg-surface p-6"
-            >
-              <span
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-lg font-bold text-accent-bright"
-                aria-hidden
-              >
-                !
-              </span>
+            <Card key={painPoint.title} as="article" className="p-6">
+              <IconChip variant="orange" size="sm">
+                <AlertIcon />
+              </IconChip>
               <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
                 {painPoint.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
                 {painPoint.description}
               </p>
-            </article>
+            </Card>
           ))}
         </div>
       </section>
 
       <section
         id="features"
-        className="border-y border-border-subtle bg-surface-raised py-16 sm:py-20"
+        className="border-y border-border-subtle bg-surface py-16 sm:py-20"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-wider text-secondary">
-              How GraftMate AI helps
+            <p className="text-sm font-medium uppercase tracking-wider text-accent">
+              How GraftMate helps
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Quote, message, manage, and invoice from one place
+              Quote, manage clients, and invoice from one place
             </h2>
-            <p className="mt-4 leading-relaxed text-muted">
-              {page.featureIntro}
-            </p>
+            <p className="mt-4 leading-relaxed text-muted">{page.featureIntro}</p>
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {page.features.map((feature) => (
-              <article
+              <Card
                 key={feature.title}
-                className="rounded-xl border border-border bg-background p-6 transition-colors hover:border-primary/35"
+                as="article"
+                className="p-6 transition-colors hover:border-accent/25"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20 text-secondary">
+                <IconChip variant="orange">
                   <FeatureIcon icon={feature.icon} />
-                </div>
+                </IconChip>
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
                   {feature.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">
                   {feature.description}
                 </p>
-              </article>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials - add real ones when available */}
+      <section
+        id="example-quote"
+        className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      >
+        <div className="max-w-2xl">
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">
+            Example quote
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            What a {page.tradeSingular} quote looks like in GraftMate
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted">
+            Describe the job in plain English. GraftMate drafts line items, VAT,
+            and totals — you review everything before it goes to the customer.
+          </p>
+        </div>
+        <div className="mt-10 max-w-xs sm:max-w-sm">
+          <PhoneFrame
+            src={page.heroScreenshot.src}
+            alt={page.heroScreenshot.alt}
+            statusBar={page.heroScreenshot.statusBar}
+          />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
-        <div className="rounded-2xl border border-primary/35 bg-gradient-to-b from-surface-raised to-surface p-8 text-center sm:p-10">
-          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+        <Card className="p-8 text-center sm:p-10">
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">
             Simple pricing
           </p>
           <p className="mt-5 font-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
-            £29.99
+            <span className="font-mono tabular-nums">£29.99</span>
             <span className="text-xl font-medium text-muted">/month</span>
           </p>
+          <p className="mt-2 text-sm font-medium text-primary">First month free</p>
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-muted">
             {page.pricingCopy}
           </p>
-          <Button href={SIGNUP_URL} size="lg" className="mt-8">
-            Start Free
-          </Button>
-        </div>
+          <div className="mt-8 flex flex-col items-center gap-4">
+            <Button href={SIGNUP_URL} size="lg">
+              Start free
+            </Button>
+            <AppStoreBadge />
+          </div>
+        </Card>
       </section>
 
       <section className="mx-auto max-w-3xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">
             FAQ
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -154,7 +183,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
           {page.faqs.map((faq) => (
             <details
               key={faq.question}
-              className="group rounded-xl border border-border bg-surface transition-colors open:border-primary/30 open:bg-surface-raised"
+              className="group graftmate-card transition-colors open:border-accent/30"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-display text-base font-semibold text-foreground marker:content-none [&::-webkit-details-marker]:hidden">
                 {faq.question}
@@ -171,71 +200,35 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
   );
 }
 
-function HeroCard({ page }: TradeLandingPageProps) {
-  return (
-    <div className="rounded-[2rem] border border-border bg-surface p-5 shadow-2xl shadow-black/40">
-      <div className="rounded-[1.5rem] border border-border-subtle bg-background p-5">
-        <div className="flex items-center justify-between border-b border-border-subtle pb-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-muted-dim">
-              GraftMate AI workspace
-            </p>
-            <p className="mt-1 font-display text-lg font-semibold text-foreground">
-              {page.tradeSingular} job admin
-            </p>
-          </div>
-          <span className="rounded-full bg-primary/25 px-3 py-1 text-xs font-semibold text-secondary">
-            Live
-          </span>
-        </div>
-
-        <div className="mt-5 space-y-3">
-          {page.features.slice(0, 3).map((feature) => (
-            <div
-              key={feature.title}
-              className="rounded-xl border border-border bg-surface p-4"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wider text-secondary">
-                {feature.title}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-5 rounded-xl bg-primary/15 p-4">
-          <p className="text-xs font-semibold uppercase tracking-wider text-secondary">
-            Next action
-          </p>
-          <p className="mt-2 text-sm text-muted">
-            Send quote, keep the client thread, and invoice when the work is
-            accepted.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function FeatureIcon({ icon }: { icon: TradePageData["features"][number]["icon"] }) {
+function FeatureIcon({
+  icon,
+}: {
+  icon: TradePageData["features"][number]["icon"];
+}) {
   switch (icon) {
     case "quote":
-      return <VoiceIcon />;
+      return <QuoteIcon className="h-5 w-5" />;
     case "inbox":
-      return <InboxIcon />;
+      return <InboxIcon className="h-5 w-5" />;
     case "client":
-      return <ClientIcon />;
+      return <ClientIcon className="h-5 w-5" />;
     case "invoice":
-      return <InvoiceIcon />;
+      return <InvoiceIcon className="h-5 w-5" />;
   }
+}
+
+function AlertIcon() {
+  return (
+    <svg viewBox="0 0 20 20" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M10 4v6M10 14h.01" strokeLinecap="round" />
+    </svg>
+  );
 }
 
 function ChevronIcon() {
   return (
     <svg
-      className="h-5 w-5 shrink-0 text-secondary transition-transform group-open:rotate-180"
+      className="h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
       viewBox="0 0 20 20"
       fill="none"
       stroke="currentColor"
