@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0b;
-  --foreground: #f5f5f4;
-  --surface: #141413;
-  --surface-raised: #1c1c1a;
-  --border: #2e2d2a;
-  --border-subtle: #232220;
-  --muted: #a8a29e;
-  --muted-dim: #78716c;
+  --background: #f5f3ed;
+  --foreground: #1a1a1a;
+  --surface: #e8e4dc;
+  --surface-raised: #fbfaf6;
+  --card: #f5f3ed;
+  --border: rgba(26, 26, 26, 0.1);
+  --border-subtle: rgba(26, 26, 26, 0.06);
+  --muted: #4a4a4a;
+  --muted-dim: #6b6b6b;
   --primary: #2d5016;
   --primary-hover: #1f3a0f;
   --primary-bright: #3d6b1f;
   --secondary: #5a7c3e;
   --accent: #d45d00;
-  --accent-bright: #e86f1a;
+  --accent-bright: #e87014;
   --accent-dim: #b84f00;
-  --primary-glow: rgba(45, 80, 22, 0.2);
-  --accent-glow: rgba(212, 93, 0, 0.2);
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --card-border: 2px solid rgba(26, 26, 26, 0.1);
 }
 
 @theme inline {
@@ -25,6 +26,7 @@
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
   --color-surface-raised: var(--surface-raised);
+  --color-card: var(--card);
   --color-border: var(--border);
   --color-border-subtle: var(--border-subtle);
   --color-muted: var(--muted);
@@ -36,10 +38,9 @@
   --color-accent: var(--accent);
   --color-accent-bright: var(--accent-bright);
   --color-accent-dim: var(--accent-dim);
-  --color-primary-glow: var(--primary-glow);
-  --color-accent-glow: var(--accent-glow);
-  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-outfit), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
   --font-family-display: var(--font-outfit), system-ui, sans-serif;
 }
 
@@ -50,34 +51,54 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 500;
 }
 
 ::selection {
   background: var(--secondary);
-  color: #0a0a0b;
+  color: var(--background);
 }
 
-/* Subtle workshop grid texture */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(90, 124, 62, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(90, 124, 62, 0.06) 1px, transparent 1px);
-  background-size: 48px 48px;
+/* App-style faint plus-sign pattern */
+.bg-plus-pattern {
+  background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2h6Z' fill='%231a1a1a' fill-opacity='0.02'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
 }
 
-.bg-noise {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+.graftmate-card {
+  background: var(--card);
+  border: var(--card-border);
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
 }
 
-.text-gradient-brand {
-  background-image: linear-gradient(
-    135deg,
-    var(--secondary) 0%,
-    #7a9f5c 40%,
-    var(--primary) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.section-dark {
+  --background: #121510;
+  --foreground: #f5f3ed;
+  --surface: #1a1f16;
+  --surface-raised: #1e2419;
+  --card: #1e2419;
+  --border: rgba(245, 243, 237, 0.12);
+  --border-subtle: rgba(245, 243, 237, 0.08);
+  --muted: #c4c0b8;
+  --muted-dim: #a8a59c;
+  --primary: #3d6b1f;
+  --primary-hover: #2d5016;
+  --primary-bright: #5a7c3e;
+  --secondary: #6d9250;
+  --accent: #e87014;
+  --accent-bright: #ff8c32;
+  --accent-dim: #d45d00;
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.25), 0 2px 4px -2px rgb(0 0 0 / 0.15);
+  --card-border: 2px solid rgba(245, 243, 237, 0.1);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.font-mono-price {
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  color: var(--primary);
 }

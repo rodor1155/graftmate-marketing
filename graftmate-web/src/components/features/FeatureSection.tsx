@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import { Card } from "@/components/ui/Card";
+import { IconChip } from "@/components/ui/IconChip";
 
 type FeatureSectionProps = {
   id: string;
@@ -22,18 +24,17 @@ export function FeatureSection({
   reversed = false,
 }: FeatureSectionProps) {
   return (
-    <article
+    <Card
+      as="article"
       id={id}
-      className="scroll-mt-28 rounded-2xl border border-border bg-surface p-6 sm:p-8 lg:p-10"
+      className="scroll-mt-28 p-6 sm:p-8 lg:p-10"
     >
       <div
         className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-12 ${reversed ? "lg:[direction:rtl]" : ""}`}
       >
         <div className={reversed ? "lg:[direction:ltr]" : ""}>
-          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/20 text-secondary">
-            {icon}
-          </div>
-          <p className="mt-5 text-sm font-medium uppercase tracking-wider text-secondary">
+          <IconChip variant="orange">{icon}</IconChip>
+          <p className="mt-5 text-sm font-medium uppercase tracking-wider text-accent">
             {label}
           </p>
           <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
@@ -44,7 +45,7 @@ export function FeatureSection({
             {bullets.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm text-muted">
                 <span
-                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary"
+                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
                   aria-hidden
                 />
                 {item}
@@ -57,6 +58,6 @@ export function FeatureSection({
           <div className={reversed ? "lg:[direction:ltr]" : ""}>{visual}</div>
         ) : null}
       </div>
-    </article>
+    </Card>
   );
 }

@@ -52,6 +52,11 @@ export type TradePageData = {
     question: string;
     answer: string;
   }[];
+  heroScreenshot: {
+    src: string;
+    alt: string;
+    statusBar?: string;
+  };
 };
 
 export const tradePages: Record<TradeSlug, TradePageData> = {
@@ -60,7 +65,7 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
     route: "/for-electricians",
     tradeSingular: "electrician",
     tradePlural: "electricians",
-    title: "Electrician Quoting Software UK | GraftMate AI",
+    title: "Electrician Quoting Software UK | GraftMate",
     description:
       "Quote consumer unit swaps, EICRs, and callouts from your phone in about two minutes. AI quoting, clients, jobs, and VAT-ready invoices for UK electricians.",
     eyebrow: "For UK electricians",
@@ -68,14 +73,14 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
     subheading:
       "Describe the work once. GraftMate drafts a professional quote you can review and send before you leave site.",
     heroCopy:
-      "After a week of board changes, fault finds, and EICR follow-ups, the admin still waits. GraftMate helps you turn a voice note or quick message into a clear quote with line items and VAT — then keeps the client, job, and invoice in one place.",
+      "After a week of board changes, fault finds, and EICR follow-ups, the admin still waits. GraftMate helps you turn site notes or a quick typed message into a clear quote with line items and VAT — then keeps the client, job, and invoice in one place.",
     painIntro:
       "Electrical work already carries enough detail. Your quoting tool should help you stay clear and professional without turning every estimate into a spreadsheet session.",
     painPoints: [
       {
         title: "Quotes eating your evenings",
         description:
-          "Dictate the job from the van — consumer unit swap, lighting circuit, EV charger install — and send a tidy quote with VAT before you get home.",
+          "Add site notes from the van — consumer unit swap, lighting circuit, EV charger install — and send a tidy quote with VAT before you get home.",
       },
       {
         title: "Details lost between WhatsApp and email",
@@ -166,13 +171,18 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
           "Yes. A quick fault find, a socket add, or a larger project can all use the same workflow — the point is getting a professional quote out fast.",
       },
     ],
+    heroScreenshot: {
+      src: "/app/quote-builder.webp",
+      alt: "GraftMate quote builder showing consumer unit and EV charger line items",
+      statusBar: "#f5f3ed",
+    },
   },
   plumbers: {
     slug: "plumbers",
     route: "/for-plumbers",
     tradeSingular: "plumber",
     tradePlural: "plumbers",
-    title: "Plumber Quoting Software UK | GraftMate AI",
+    title: "Plumber Quoting Software UK | GraftMate",
     description:
       "Quote bathroom installs, leaks, and boiler-related plumbing from your phone in about two minutes. AI quoting, clients, jobs, and invoicing for UK plumbers.",
     eyebrow: "For UK plumbers",
@@ -278,13 +288,18 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
           "Yes. The workflow is phone-first — create quotes, check customer notes, and send invoices between jobs.",
       },
     ],
+    heroScreenshot: {
+      src: "/app/jobs.webp",
+      alt: "GraftMate jobs list showing plumbing work in progress and upcoming jobs",
+      statusBar: "#f5f3ed",
+    },
   },
   builders: {
     slug: "builders",
     route: "/for-builders",
     tradeSingular: "builder",
     tradePlural: "builders",
-    title: "Builder Quoting Software UK | GraftMate AI",
+    title: "Builder Quoting Software UK | GraftMate",
     description:
       "Quote extensions, refurbs, and repair work from your phone in about two minutes. AI quoting, clients, jobs, and invoicing for UK builders and general trades.",
     eyebrow: "For UK builders",
@@ -390,13 +405,18 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
           "No. GraftMate is built for UK sole traders and small trade businesses — if you are the person pricing the job, answering the client, and sending the invoice, it is designed for you.",
       },
     ],
+    heroScreenshot: {
+      src: "/app/quotes.webp",
+      alt: "GraftMate quotes list showing builder quotes from draft to accepted",
+      statusBar: "#f5f3ed",
+    },
   },
   heatingGas: {
     slug: "heatingGas",
     route: "/for-heating-gas-engineers",
     tradeSingular: "heating & gas engineer",
     tradePlural: "heating & gas engineers",
-    title: "Heating & Gas Engineer Quoting Software UK | GraftMate AI",
+    title: "Heating & Gas Engineer Quoting Software UK | GraftMate",
     description:
       "Quote boiler installs, services, and heating repairs from your phone in about two minutes. AI quoting, clients, jobs, and invoicing for UK heating engineers.",
     eyebrow: "For UK heating & gas engineers",
@@ -502,6 +522,11 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
           "Yes. GraftMate supports VAT-ready quoting and invoicing for UK trades.",
       },
     ],
+    heroScreenshot: {
+      src: "/app/home.webp",
+      alt: "GraftMate home screen with today's briefing for heating engineers",
+      statusBar: "#a9b8c0",
+    },
   },
 };
 

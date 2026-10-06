@@ -23,7 +23,7 @@ export function buildTradePageMetadata(page: TradePageData): Metadata {
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: `${page.tradePlural} quoting software — GraftMate AI`,
+          alt: `${page.tradePlural} quoting software — GraftMate`,
         },
       ],
     },

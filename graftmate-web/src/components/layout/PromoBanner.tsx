@@ -26,24 +26,24 @@ export function PromoBanner() {
 
   return (
     <div
-      className="relative flex w-full shrink-0 flex-col items-center justify-center gap-3 bg-accent px-4 py-3 pr-12 text-white sm:flex-row sm:gap-5 sm:py-3.5 sm:pr-14"
+      className="relative flex w-full shrink-0 flex-col items-center justify-center gap-3 bg-primary px-4 py-3 pr-12 text-[#f5f3ed] sm:flex-row sm:gap-5 sm:py-3.5 sm:pr-14"
       role="region"
       aria-label="First month free announcement"
     >
-      <p className="max-w-4xl text-center text-sm font-bold leading-snug sm:text-base">
-        🎉 First month free — Sign up now and get full access to GraftMate AI
+      <p className="max-w-4xl text-center text-sm font-medium leading-snug sm:text-base">
+        First month free — Sign up now and get full access to GraftMate
         completely free for your first month. No card required.
       </p>
       <a
         href={SIGNUP_URL}
-        className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-white/70 px-4 py-2 text-sm font-bold text-white underline decoration-white/80 underline-offset-4 transition-colors hover:bg-white hover:text-accent"
+        className="inline-flex shrink-0 items-center gap-1.5 rounded-full border-2 border-[rgba(245,243,237,0.5)] px-4 py-2 text-sm font-semibold text-[#f5f3ed] transition-colors hover:bg-[#f5f3ed] hover:text-primary"
       >
         Get free access →
       </a>
       <button
         type="button"
         onClick={dismissBanner}
-        className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-white transition-colors hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[#f5f3ed] transition-colors hover:bg-[rgba(245,243,237,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f5f3ed]"
         aria-label="Dismiss first month free announcement"
       >
         <span aria-hidden>×</span>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Outfit } from "next/font/google";
+import { Inter, JetBrains_Mono, Outfit } from "next/font/google";
 import Script from "next/script";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -12,8 +12,15 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: "500",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -21,8 +28,8 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://graftmate.net"),
   title: {
-    default: "GraftMate AI — Professional quotes from your phone in two minutes",
-    template: "%s | GraftMate AI",
+    default: "GraftMate — Professional quotes from your phone in two minutes",
+    template: "%s | GraftMate",
   },
   description:
     "Describe a job and get a professional quote you can review and send from your phone in about two minutes. £29.99/month, first month free. Built for UK sole traders.",
@@ -44,10 +51,10 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   openGraph: {
-    siteName: "GraftMate AI",
-    title: "GraftMate AI — Professional quotes from your phone in two minutes",
+    siteName: "GraftMate",
+    title: "GraftMate — Professional quotes from your phone in two minutes",
     description:
-      "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
+      "GraftMate — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
     type: "website",
     locale: "en_GB",
     images: [
@@ -55,15 +62,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "GraftMate AI — AI-powered job management for UK trades",
+        alt: "GraftMate — job management for UK trades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GraftMate AI — Professional quotes from your phone in two minutes",
+    title: "GraftMate — Professional quotes from your phone in two minutes",
     description:
-      "GraftMate AI — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
+      "GraftMate — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
     images: ["/og-image.png"],
   },
 };
@@ -76,7 +83,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-GB"
-      className={`${outfit.variable} ${dmSans.variable} h-full`}
+      className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
       <head>
         <Script
@@ -92,7 +99,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="min-h-full flex flex-col font-sans antialiased">
+      <body className="min-h-full flex flex-col bg-plus-pattern font-sans antialiased">
         <div className="sticky top-0 z-50">
           <PromoBanner />
           <Header />

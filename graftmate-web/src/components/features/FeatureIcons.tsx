@@ -2,7 +2,7 @@ type IconProps = {
   className?: string;
 };
 
-export function VoiceIcon({ className = "h-7 w-7" }: IconProps) {
+export function QuoteIcon({ className = "h-7 w-7" }: IconProps) {
   return (
     <svg
       className={className}
@@ -12,11 +12,14 @@ export function VoiceIcon({ className = "h-7 w-7" }: IconProps) {
       strokeWidth="1.75"
       aria-hidden
     >
-      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-      <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8" strokeLinecap="round" />
+      <path d="M7 3h10l4 4v14H7V3Z" strokeLinejoin="round" />
+      <path d="M17 3v4h4M9 13h8M9 17h5" strokeLinecap="round" />
     </svg>
   );
 }
+
+/** @deprecated Use QuoteIcon */
+export const VoiceIcon = QuoteIcon;
 
 export function ReceiptIcon({ className = "h-7 w-7" }: IconProps) {
   return (

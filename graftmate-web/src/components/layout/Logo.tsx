@@ -10,7 +10,7 @@ export function Logo({ className = "", priority = false }: LogoProps) {
   return (
     <Link
       href="/"
-      aria-label="GraftMate AI home"
+      aria-label="GraftMate home"
       className={`inline-flex shrink-0 items-center gap-2 sm:gap-2.5 ${className}`}
     >
       <Image
@@ -23,7 +23,7 @@ export function Logo({ className = "", priority = false }: LogoProps) {
         aria-hidden
       />
       <span className="font-display text-base font-bold tracking-tight text-foreground sm:text-lg">
-        GraftMate AI
+        GraftMate
       </span>
     </Link>
   );

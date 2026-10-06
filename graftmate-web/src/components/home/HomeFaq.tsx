@@ -2,7 +2,7 @@ const faqs = [
   {
     question: "How does AI quoting work?",
     answer:
-      "Describe the job in plain English — by voice or text. GraftMate drafts a professional quote with line items and UK VAT. You review everything before it goes to the customer.",
+      "Describe the job in plain English — in site notes or typed text. GraftMate drafts a professional quote with line items and UK VAT. You review everything before it goes to the customer.",
   },
   {
     question: "What happens after the first free month?",
@@ -31,7 +31,7 @@ export function HomeFaq() {
         {faqs.map((faq) => (
           <details
             key={faq.question}
-            className="group rounded-xl border border-border bg-surface transition-colors open:border-primary/30 open:bg-surface-raised"
+            className="group graftmate-card transition-colors open:border-accent/30"
           >
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-display text-base font-semibold text-foreground marker:content-none [&::-webkit-details-marker]:hidden">
               {faq.question}
@@ -50,7 +50,7 @@ export function HomeFaq() {
 function ChevronIcon() {
   return (
     <svg
-      className="h-5 w-5 shrink-0 text-secondary transition-transform group-open:rotate-180"
+      className="h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
       viewBox="0 0 20 20"
       fill="none"
       stroke="currentColor"
