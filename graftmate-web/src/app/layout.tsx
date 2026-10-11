@@ -25,14 +25,22 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const homepageDescription =
+  "Describe the job, send a professional quote in about two minutes, then invoice in one tap. AI quoting for UK trades. £29.99/month, first month free.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://graftmate.net"),
   title: {
-    default: "GraftMate — Professional quotes from your phone in two minutes",
+    default: "Quote & Invoice App for UK Tradesmen | GraftMate",
     template: "%s | GraftMate",
   },
-  description:
-    "Describe a job and get a professional quote you can review and send from your phone in about two minutes. £29.99/month, first month free. Built for UK sole traders.",
+  description: homepageDescription,
+  itunes: {
+    appId: "6811976725",
+  },
+  other: {
+    "apple-itunes-app": "app-id=6811976725",
+  },
   keywords: [
     "trade business software UK",
     "sole trader invoicing",
@@ -52,9 +60,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     siteName: "GraftMate",
-    title: "GraftMate — Professional quotes from your phone in two minutes",
-    description:
-      "GraftMate — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
+    title: "Quote & Invoice App for UK Tradesmen | GraftMate",
+    description: homepageDescription,
     type: "website",
     locale: "en_GB",
     images: [
@@ -68,9 +75,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GraftMate — Professional quotes from your phone in two minutes",
-    description:
-      "GraftMate — AI quote generation, unified inbox, and client management for UK tradespeople. £29.99/month, first month free.",
+    title: "Quote & Invoice App for UK Tradesmen | GraftMate",
+    description: homepageDescription,
     images: ["/og-image.png"],
   },
 };

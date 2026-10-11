@@ -8,16 +8,18 @@ import { ProductShowcase } from "@/components/home/ProductShowcase";
 import { TradesStrip } from "@/components/home/TradesStrip";
 
 export const metadata: Metadata = {
-  title: "GraftMate — Professional quotes from your phone in two minutes",
+  title: {
+    absolute: "Quote & Invoice App for UK Tradesmen | GraftMate",
+  },
   description:
-    "Describe a job and get a professional quote you can review and send from your phone in about two minutes. £29.99/month, first month free. Built for UK sole traders.",
+    "Describe the job, send a professional quote in about two minutes, then invoice in one tap. AI quoting for UK trades. £29.99/month, first month free.",
   alternates: {
     canonical: "https://graftmate.net",
   },
   openGraph: {
-    title: "GraftMate — Professional quotes from your phone in two minutes",
+    title: "Quote & Invoice App for UK Tradesmen | GraftMate",
     description:
-      "Describe a job and get a professional quote you can review and send from your phone in about two minutes. £29.99/month, first month free.",
+      "Describe the job, send a professional quote in about two minutes, then invoice in one tap. AI quoting for UK trades. £29.99/month, first month free.",
     url: "https://graftmate.net",
   },
 };

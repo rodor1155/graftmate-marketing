@@ -1,8 +1,29 @@
-export type TradeSlug =
+export type CoreTradeSlug =
   | "electricians"
   | "plumbers"
   | "builders"
   | "heatingGas";
+
+export type TradeSlug =
+  | CoreTradeSlug
+  | "roofers"
+  | "paintersDecorators"
+  | "carpentersJoiners"
+  | "plasterers"
+  | "landscapers"
+  | "kitchenBathroomFitters"
+  | "handymen";
+
+export type TradeTemplateSection = {
+  title: string;
+  body: string;
+  downloads: {
+    label: string;
+    href: string;
+    /** Placeholder until real template files are published */
+    placeholder: boolean;
+  }[];
+};
 
 export type ExampleQuoteLine = {
   item: string;
@@ -57,12 +78,16 @@ export type TradePageData = {
     alt: string;
     statusBar?: string;
   };
+  templateSection?: TradeTemplateSection;
+  /** Short label for footer / trade strip navigation */
+  linkLabel: string;
 };
 
-export const tradePages: Record<TradeSlug, TradePageData> = {
+export const tradePages: Record<CoreTradeSlug, TradePageData> = {
   electricians: {
     slug: "electricians",
     route: "/for-electricians",
+    linkLabel: "Electricians",
     tradeSingular: "electrician",
     tradePlural: "electricians",
     title: "Electrician Quoting Software UK | GraftMate",
@@ -176,10 +201,27 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
       alt: "GraftMate quote builder showing consumer unit and EV charger line items",
       statusBar: "#f5f3ed",
     },
+    templateSection: {
+      title: "Free electrician invoice template (UK)",
+      body: "Still invoicing in Word? Download a simple UK electrician invoice layout with line items and VAT — then send the same job as a professional quote from your phone in about two minutes with GraftMate.",
+      downloads: [
+        {
+          label: "Word (.docx)",
+          href: "#todo-electrician-invoice-word",
+          placeholder: true,
+        },
+        {
+          label: "PDF",
+          href: "#todo-electrician-invoice-pdf",
+          placeholder: true,
+        },
+      ],
+    },
   },
   plumbers: {
     slug: "plumbers",
     route: "/for-plumbers",
+    linkLabel: "Plumbers",
     tradeSingular: "plumber",
     tradePlural: "plumbers",
     title: "Plumber Quoting Software UK | GraftMate",
@@ -293,10 +335,27 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
       alt: "GraftMate jobs list showing plumbing work in progress and upcoming jobs",
       statusBar: "#f5f3ed",
     },
+    templateSection: {
+      title: "Free plumber invoice & quote template",
+      body: "A tidy plumbing quote template for repairs, bathroom work, and callouts — labour, materials, and VAT. Use it as-is or skip the copy-paste and quote the job in GraftMate before you leave site.",
+      downloads: [
+        {
+          label: "Word (.docx)",
+          href: "#todo-plumber-invoice-word",
+          placeholder: true,
+        },
+        {
+          label: "PDF",
+          href: "#todo-plumber-invoice-pdf",
+          placeholder: true,
+        },
+      ],
+    },
   },
   builders: {
     slug: "builders",
     route: "/for-builders",
+    linkLabel: "Builders",
     tradeSingular: "builder",
     tradePlural: "builders",
     title: "Builder Quoting Software UK | GraftMate",
@@ -410,10 +469,27 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
       alt: "GraftMate quotes list showing builder quotes from draft to accepted",
       statusBar: "#f5f3ed",
     },
+    templateSection: {
+      title: "Free builders quote template (UK)",
+      body: "Price extensions, refurbs, and repair work with a clear labour and materials layout. Download the template for now — or describe the scope once in GraftMate and send a VAT-ready quote from your phone.",
+      downloads: [
+        {
+          label: "Word (.docx)",
+          href: "#todo-builder-quote-word",
+          placeholder: true,
+        },
+        {
+          label: "PDF",
+          href: "#todo-builder-quote-pdf",
+          placeholder: true,
+        },
+      ],
+    },
   },
   heatingGas: {
     slug: "heatingGas",
     route: "/for-heating-gas-engineers",
+    linkLabel: "Heating & gas",
     tradeSingular: "heating & gas engineer",
     tradePlural: "heating & gas engineers",
     title: "Heating & Gas Engineer Quoting Software UK | GraftMate",
@@ -527,24 +603,22 @@ export const tradePages: Record<TradeSlug, TradePageData> = {
       alt: "GraftMate home screen with today's briefing for heating engineers",
       statusBar: "#a9b8c0",
     },
+    templateSection: {
+      title: "Free gas engineer invoice template",
+      body: "A simple UK invoice layout for boiler services, repairs, and installs — not a Gas Safe certificate, but a clear paper trail for labour, parts, and VAT. Real template files are on the way; quote and invoice in GraftMate today.",
+      downloads: [
+        {
+          label: "Word (.docx)",
+          href: "#todo-gas-engineer-invoice-word",
+          placeholder: true,
+        },
+        {
+          label: "PDF",
+          href: "#todo-gas-engineer-invoice-pdf",
+          placeholder: true,
+        },
+      ],
+    },
   },
 };
 
-export const tradePageLinks = [
-  {
-    href: tradePages.electricians.route,
-    label: "Electricians",
-  },
-  {
-    href: tradePages.plumbers.route,
-    label: "Plumbers",
-  },
-  {
-    href: tradePages.builders.route,
-    label: "Builders",
-  },
-  {
-    href: tradePages.heatingGas.route,
-    label: "Heating & gas",
-  },
-];
