@@ -147,6 +147,54 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
         </div>
       </section>
 
+      {page.templateSection ? (
+        <section
+          id="free-template"
+          className="border-y border-border-subtle bg-surface py-16 sm:py-20"
+        >
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <p className="text-sm font-medium uppercase tracking-wider text-accent">
+                Free template
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                {page.templateSection.title}
+              </h2>
+              <p className="mt-4 leading-relaxed text-muted">
+                {page.templateSection.body}
+              </p>
+            </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              {page.templateSection.downloads.map((download) => (
+                <Button
+                  key={download.label}
+                  href={download.href}
+                  variant="secondary"
+                  size="lg"
+                  className="sm:min-w-[10rem]"
+                >
+                  {download.label}
+                  {download.placeholder ? " (placeholder)" : ""}
+                </Button>
+              ))}
+            </div>
+            {page.templateSection.downloads.some((d) => d.placeholder) ? (
+              <p className="mt-4 text-xs text-muted-dim">
+                TODO(verify): replace placeholder download links with real Word/PDF
+                template files.
+              </p>
+            ) : null}
+            <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted">
+              Prefer to skip Word?{" "}
+              <a href={SIGNUP_URL} className="font-medium text-accent hover:underline">
+                Start free in GraftMate
+              </a>{" "}
+              — describe the job and send a professional quote in about two minutes.
+            </p>
+          </div>
+        </section>
+      ) : null}
+
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <Card className="p-8 text-center sm:p-10">
           <p className="text-sm font-medium uppercase tracking-wider text-accent">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { tradePageLinks } from "@/lib/tradePages";
+import { tradePageLinks } from "@/lib/tradePageCatalog";
 
 export function TradesStrip() {
   return (

@@ -1,13 +1,17 @@
 import Link from "next/link";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Logo } from "@/components/layout/Logo";
-import { tradePageLinks } from "@/lib/tradePages";
+import {
+  resourcePageLinks,
+  tradePageLinks,
+} from "@/lib/tradePageCatalog";
 
 const footerLinks = {
   Product: [
     { href: "/features", label: "Features" },
     { href: "/pricing", label: "Pricing" },
   ],
+  Resources: resourcePageLinks,
   Trades: tradePageLinks,
 };
 

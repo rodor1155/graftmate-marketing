@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { tradePageLinks } from "@/lib/tradePages";
+import { resourcePageLinks, tradePageLinks } from "@/lib/tradePageCatalog";
 
 const staticRoutes = [
   "",
@@ -7,6 +7,7 @@ const staticRoutes = [
   "/pricing",
   "/terms",
   "/privacy",
+  ...resourcePageLinks.map((link) => link.href),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
