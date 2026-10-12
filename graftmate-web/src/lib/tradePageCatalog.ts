@@ -31,6 +31,7 @@ export const tradePageLinks = allTradePages.map((page) => ({
 }));
 
 export const resourcePageLinks = [
+  { href: "/guides", label: "Guides" },
   { href: "/cis-invoice-template", label: "CIS invoice template" },
   { href: "/invoice-app-for-tradesmen", label: "Invoice app for trades" },
   { href: "/tradify-alternative", label: "Tradify alternative" },
