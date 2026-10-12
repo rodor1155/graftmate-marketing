@@ -53,7 +53,7 @@ export const cisInvoiceTemplatePage: CommercialPageContent = {
       title: "Do the same in GraftMate in two minutes",
       body: [
         "Template seekers are often one step away from quoting and invoicing in an app. GraftMate lets you describe the job, generate line items with AI, keep CIS-related notes with the client, and invoice without copying rows between documents.",
-        "GraftMate Pro is £29.99/month with your first month free — one plan for quotes, clients, jobs, and invoices.",
+        "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month — one plan for quotes, clients, jobs, and invoices.",
       ],
     },
   ],

@@ -39,7 +39,7 @@ const features = [
   },
   {
     tag: "Dead simple pricing",
-    title: "One plan. £29.99/month. First month free.",
+    title: "One plan. Free until Christmas, then £29.99/month.",
     description:
       "No Bronze/Silver/Gold nonsense. Every feature included. No per-seat surprises when you're working alone.",
     highlight: false,

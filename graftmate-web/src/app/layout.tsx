@@ -4,7 +4,10 @@ import Script from "next/script";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { PromoBanner } from "@/components/layout/PromoBanner";
+import { getSiteDescription } from "@/lib/promo";
 import "./globals.css";
+
+export const dynamic = "force-dynamic";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -25,10 +28,10 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const homepageDescription =
-  "Describe the job, send a professional quote in about two minutes, then invoice in one tap. AI quoting for UK trades. £29.99/month, first month free.";
+export async function generateMetadata(): Promise<Metadata> {
+  const homepageDescription = getSiteDescription();
 
-export const metadata: Metadata = {
+  return {
   metadataBase: new URL("https://graftmate.net"),
   title: {
     default: "Quote & Invoice App for UK Tradesmen | GraftMate",
@@ -80,6 +83,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
 };
+}
 
 export default function RootLayout({
   children,

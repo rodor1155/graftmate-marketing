@@ -173,7 +173,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
       ],
     },
     pricingCopy:
-      "GraftMate Pro is £29.99/month with your first month free. One plan — quotes, clients, jobs, and invoices included. Pay by card on the web, or subscribe through Apple on iPhone when the app is live.",
+      "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan — quotes, clients, jobs, and invoices included. Pay by card on the web, or subscribe through Apple on iPhone when the app is live.",
     faqs: [
       {
         question: "Can GraftMate help with Part P paperwork?",
@@ -307,7 +307,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
       ],
     },
     pricingCopy:
-      "GraftMate Pro is £29.99/month with your first month free. One straightforward plan — no feature maze, no bolt-on tools for quotes and invoices.",
+      "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One straightforward plan — no feature maze, no bolt-on tools for quotes and invoices.",
     faqs: [
       {
         question: "Can GraftMate handle CIS deductions for plumbing work?",
@@ -441,7 +441,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
       ],
     },
     pricingCopy:
-      "GraftMate Pro is £29.99/month with your first month free. No bloated office software and no separate charge for the features builders need to keep work moving.",
+      "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. No bloated office software and no separate charge for the features builders need to keep work moving.",
     faqs: [
       {
         question: "Can GraftMate help with CIS jobs?",
@@ -575,7 +575,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
       ],
     },
     pricingCopy:
-      "GraftMate Pro is £29.99/month with your first month free. One plan for quotes, clients, jobs, and invoices — subscribe on the web by card or via Apple in-app purchase on iPhone.",
+      "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan for quotes, clients, jobs, and invoices — subscribe on the web by card or via Apple in-app purchase on iPhone.",
     faqs: [
       {
         question: "Is GraftMate a Gas Safe record or certificate system?",

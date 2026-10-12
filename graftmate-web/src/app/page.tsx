@@ -6,23 +6,28 @@ import { HowItWorks } from "@/components/home/HowItWorks";
 import { PricingTeaser } from "@/components/home/PricingTeaser";
 import { ProductShowcase } from "@/components/home/ProductShowcase";
 import { TradesStrip } from "@/components/home/TradesStrip";
+import { getSiteDescription } from "@/lib/promo";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Quote & Invoice App for UK Tradesmen | GraftMate",
-  },
-  description:
-    "Describe the job, send a professional quote in about two minutes, then invoice in one tap. AI quoting for UK trades. £29.99/month, first month free.",
-  alternates: {
-    canonical: "https://graftmate.net",
-  },
-  openGraph: {
-    title: "Quote & Invoice App for UK Tradesmen | GraftMate",
-    description:
-      "Describe the job, send a professional quote in about two minutes, then invoice in one tap. AI quoting for UK trades. £29.99/month, first month free.",
-    url: "https://graftmate.net",
-  },
-};
+export const dynamic = "force-dynamic";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const description = getSiteDescription();
+
+  return {
+    title: {
+      absolute: "Quote & Invoice App for UK Tradesmen | GraftMate",
+    },
+    description,
+    alternates: {
+      canonical: "https://graftmate.net",
+    },
+    openGraph: {
+      title: "Quote & Invoice App for UK Tradesmen | GraftMate",
+      description,
+      url: "https://graftmate.net",
+    },
+  };
+}
 
 export default function Home() {
   return (

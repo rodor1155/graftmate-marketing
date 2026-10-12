@@ -106,7 +106,7 @@ export const forLandscapersPage: TradePageData = {
     ],
   },
   pricingCopy:
-    "GraftMate Pro is £29.99/month with your first month free. One plan for quotes, clients, jobs, and invoices.",
+    "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan for quotes, clients, jobs, and invoices.",
   faqs: [
     {
       question: "Can I quote maintenance contracts?",

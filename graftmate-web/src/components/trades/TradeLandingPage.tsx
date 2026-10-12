@@ -1,3 +1,4 @@
+import { PricingHighlightLine } from "@/components/pricing/PricingHighlightLine";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -204,7 +205,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
             <span className="font-mono tabular-nums">£29.99</span>
             <span className="text-xl font-medium text-muted">/month</span>
           </p>
-          <p className="mt-2 text-sm font-medium text-primary">First month free</p>
+          <PricingHighlightLine className="mt-2 text-sm font-medium text-primary" />
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-muted">
             {page.pricingCopy}
           </p>

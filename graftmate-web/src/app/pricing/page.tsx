@@ -3,17 +3,22 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { IconChip } from "@/components/ui/IconChip";
 import { PricingFaq } from "@/components/pricing/PricingFaq";
+import { PricingOfferCopy } from "@/components/pricing/PricingOfferCopy";
+import { getPricingPageMetaDescription } from "@/lib/promo";
 
 import { SIGNUP_URL } from "@/lib/urls";
 
-export const metadata: Metadata = {
-  title: "Pricing",
-  description:
-    "£29.99/month with your first month free. One plan with every feature for UK sole traders.",
-  alternates: {
-    canonical: "https://graftmate.net/pricing",
-  },
-};
+export const dynamic = "force-dynamic";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Pricing",
+    description: getPricingPageMetaDescription(),
+    alternates: {
+      canonical: "https://graftmate.net/pricing",
+    },
+  };
+}
 
 const features = [
   "AI quote generation",
@@ -49,20 +54,7 @@ export default function PricingPage() {
 
         <Card className="mt-10 p-8 sm:p-10">
           <div className="text-center">
-            <span className="inline-flex rounded-full border-2 border-primary/20 bg-primary/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-              First month free
-            </span>
-            <p className="mt-6 font-display text-6xl font-bold tracking-tight text-foreground sm:text-7xl">
-              <span className="font-mono tabular-nums">£29.99</span>
-              <span className="text-2xl font-medium text-muted sm:text-3xl">
-                /month
-              </span>
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-muted">
-              GraftMate Pro — first month free, then £29.99/month. One plan,
-              every feature included. Pay by card on the web, or subscribe via
-              Apple in-app purchase on iPhone (30-day free trial).
-            </p>
+            <PricingOfferCopy />
           </div>
 
           <Button href={SIGNUP_URL} size="lg" className="mt-8 w-full">

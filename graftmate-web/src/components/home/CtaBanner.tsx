@@ -1,7 +1,6 @@
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { PRO_PLAN_PRICE_FULL } from "@/lib/config";
 import { SIGNUP_URL } from "@/lib/urls";
 
 export function CtaBanner() {
@@ -12,8 +11,8 @@ export function CtaBanner() {
           Send your next quote from your phone
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-lg text-muted">
-          Start free — {PRO_PLAN_PRICE_FULL}, first month on us. Describe a real
-          job and see how fast you can quote it.
+          Free until Christmas – no card needed. From 26 Dec, £29.99/month.
+          Describe a real job and see how fast you can quote it.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4">
           <Button href={SIGNUP_URL} size="lg">

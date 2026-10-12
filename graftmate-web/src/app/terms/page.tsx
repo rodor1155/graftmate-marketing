@@ -77,11 +77,11 @@ export default function TermsPage() {
             giving access to all current features on a single plan.
           </p>
           <p>
-            <strong>First month free:</strong> New subscribers currently receive
-            their first month of GraftMate free of charge. From the second
-            month, a paid subscription is required to continue using the
-            service. We will notify registered users by email before billing
-            begins.
+            <strong>Free until Christmas:</strong> GraftMate is free for everyone
+            until 25 December 2026, with no card required. From 26 December 2026,
+            GraftMate Pro is £29.99 per month if you choose to subscribe. You
+            will not be charged unless you subscribe — we will notify registered
+            users before any paid billing begins.
           </p>
           <ul>
             <li>
