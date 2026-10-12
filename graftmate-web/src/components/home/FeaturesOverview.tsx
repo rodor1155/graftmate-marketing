@@ -39,9 +39,9 @@ const features = [
   },
   {
     tag: "Dead simple pricing",
-    title: "One plan. Free until Christmas, then £29.99/month.",
+    title: "One plan. 14-day free trial, then £29.99/month.",
     description:
-      "No Bronze/Silver/Gold nonsense. Every feature included. No per-seat surprises when you're working alone.",
+      "No Bronze/Silver/Gold nonsense. Every feature included. One price for sole traders and small teams.",
     highlight: false,
   },
 ];

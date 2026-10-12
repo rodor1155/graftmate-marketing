@@ -1,4 +1,5 @@
 import type { TradePageData } from "@/lib/tradePages";
+import { CONTENT_PRICING_COPY } from "@/lib/promo";
 
 export const forCarpentersJoinersPage: TradePageData = {
   slug: "carpentersJoiners",
@@ -105,8 +106,7 @@ export const forCarpentersJoinersPage: TradePageData = {
       },
     ],
   },
-  pricingCopy:
-    "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan with quotes, clients, jobs, and invoices included.",
+  pricingCopy: `${CONTENT_PRICING_COPY} One plan with quotes, clients, jobs, and invoices included.`,
   faqs: [
     {
       question: "Is GraftMate suitable for CIS subcontractors?",

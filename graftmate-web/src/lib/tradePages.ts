@@ -1,3 +1,5 @@
+import { CONTENT_PRICING_COPY } from "@/lib/promo";
+
 export type CoreTradeSlug =
   | "electricians"
   | "plumbers"
@@ -172,8 +174,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
         },
       ],
     },
-    pricingCopy:
-      "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan — quotes, clients, jobs, and invoices included. Pay by card on the web, or subscribe through Apple on iPhone when the app is live.",
+    pricingCopy: `${CONTENT_PRICING_COPY} One plan — quotes, clients, jobs, and invoices included.`,
     faqs: [
       {
         question: "Can GraftMate help with Part P paperwork?",
@@ -306,8 +307,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
         },
       ],
     },
-    pricingCopy:
-      "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One straightforward plan — no feature maze, no bolt-on tools for quotes and invoices.",
+    pricingCopy: `${CONTENT_PRICING_COPY} One straightforward plan — no feature maze, no bolt-on tools for quotes and invoices.`,
     faqs: [
       {
         question: "Can GraftMate handle CIS deductions for plumbing work?",
@@ -440,8 +440,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
         },
       ],
     },
-    pricingCopy:
-      "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. No bloated office software and no separate charge for the features builders need to keep work moving.",
+    pricingCopy: `${CONTENT_PRICING_COPY} No bloated office software and no separate charge for the features builders need to keep work moving.`,
     faqs: [
       {
         question: "Can GraftMate help with CIS jobs?",
@@ -461,7 +460,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
       {
         question: "Is it only for big building firms?",
         answer:
-          "No. GraftMate is built for UK sole traders and small trade businesses — if you are the person pricing the job, answering the client, and sending the invoice, it is designed for you.",
+          "No. GraftMate is built for UK sole traders and small teams — if you are the person pricing the job, answering the client, and sending the invoice, it is designed for you.",
       },
     ],
     heroScreenshot: {
@@ -574,8 +573,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
         },
       ],
     },
-    pricingCopy:
-      "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan for quotes, clients, jobs, and invoices — subscribe on the web by card or via Apple in-app purchase on iPhone.",
+    pricingCopy: `${CONTENT_PRICING_COPY} One plan for quotes, clients, jobs, and invoices.`,
     faqs: [
       {
         question: "Is GraftMate a Gas Safe record or certificate system?",

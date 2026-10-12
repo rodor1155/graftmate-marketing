@@ -16,7 +16,7 @@ export function Hero() {
           <div>
             <p className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-surface-raised px-3 py-1 text-xs font-medium text-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              AI quoting for UK sole traders
+              AI quoting for UK sole traders and small teams
             </p>
 
             <h1 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-foreground sm:mt-6 sm:text-5xl lg:text-[3.25rem]">

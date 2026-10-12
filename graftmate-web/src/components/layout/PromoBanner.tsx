@@ -1,18 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { isChristmasPromoActive, PROMO_STRIP_TEXT } from "@/lib/promo";
+import { PROMO_STRIP_TEXT } from "@/lib/promo";
 import { SIGNUP_URL } from "@/lib/urls";
 
-const DISMISSAL_KEY = "graftmate-christmas-promo-banner-dismissed";
+const DISMISSAL_KEY = "graftmate-trial-promo-banner-dismissed";
 
 export function PromoBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (!isChristmasPromoActive()) {
-      return;
-    }
     const shouldShow = localStorage.getItem(DISMISSAL_KEY) !== "true";
     const frame = window.requestAnimationFrame(() => setIsVisible(shouldShow));
 
@@ -44,7 +41,7 @@ export function PromoBanner() {
         type="button"
         onClick={dismissBanner}
         className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[#f5f3ed] transition-colors hover:bg-[rgba(245,243,237,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f5f3ed]"
-        aria-label="Dismiss Christmas offer announcement"
+        aria-label="Dismiss trial offer announcement"
       >
         <span aria-hidden>×</span>
       </button>

@@ -1,4 +1,5 @@
 import type { TradePageData } from "@/lib/tradePages";
+import { CONTENT_PRICING_COPY } from "@/lib/promo";
 
 export const forKitchenBathroomFittersPage: TradePageData = {
   slug: "kitchenBathroomFitters",
@@ -105,8 +106,7 @@ export const forKitchenBathroomFittersPage: TradePageData = {
       },
     ],
   },
-  pricingCopy:
-    "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan — quotes, clients, jobs, and invoices.",
+  pricingCopy: `${CONTENT_PRICING_COPY} One plan — quotes, clients, jobs, and invoices.`,
   faqs: [
     {
       question: "Can I split supply and fit on the quote?",

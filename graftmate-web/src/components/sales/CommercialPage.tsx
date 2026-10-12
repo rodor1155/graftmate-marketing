@@ -153,7 +153,7 @@ export function CommercialPage({ content }: CommercialPageProps) {
           </p>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted">
             {content.closingCopy ??
-              "Describe the job, send a professional quote in about two minutes, then invoice in one tap. Free until Christmas – no card needed."}
+              "Describe the job, send a professional quote in about two minutes, then invoice in one tap. 14-day free trial – no card needed."}
           </p>
           <div className="mt-6 flex flex-col items-center gap-4">
             <Button href={SIGNUP_URL} size="lg">

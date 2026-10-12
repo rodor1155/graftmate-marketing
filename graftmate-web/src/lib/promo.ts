@@ -1,69 +1,45 @@
 import { PRO_PLAN_PRICE_FULL } from "@/lib/config";
 
-/** Inclusive end of the free-until-Christmas offer (UTC). */
-export const CHRISTMAS_PROMO_END_ISO = "2026-12-25T23:59:59Z";
-const CHRISTMAS_PROMO_END_MS = Date.parse(CHRISTMAS_PROMO_END_ISO);
+export const PROMO_STRIP_TEXT = "14-day free trial – no card needed";
 
-export function isChristmasPromoActive(now: Date = new Date()): boolean {
-  return now.getTime() <= CHRISTMAS_PROMO_END_MS;
+export const PRICING_SUBLINE = `14-day free trial from sign-up – no card needed. Then ${PRO_PLAN_PRICE_FULL}. One plan, cancel anytime.`;
+
+export function getPricingSubline(): string {
+  return PRICING_SUBLINE;
 }
 
-export const PROMO_STRIP_TEXT = "Free until Christmas – no card needed";
+export const PRICING_CARD_BADGE = "14-day free trial";
 
-export const PRICING_SUBLINE_CHRISTMAS =
-  "Free until Christmas – no card needed. From 26 Dec, £29.99/month. One plan, cancel anytime.";
-
-export const PRICING_SUBLINE_STANDARD = `${PRO_PLAN_PRICE_FULL}. One plan, cancel anytime.`;
-
-export function getPricingSubline(now: Date = new Date()): string {
-  return isChristmasPromoActive(now)
-    ? PRICING_SUBLINE_CHRISTMAS
-    : PRICING_SUBLINE_STANDARD;
+export function getPricingCardBadge(): string {
+  return PRICING_CARD_BADGE;
 }
 
-export const PRICING_CARD_BADGE_CHRISTMAS = "Free until Christmas";
-export const PRICING_CARD_BADGE_STANDARD = "GraftMate Pro";
+export const PRICING_CARD_DETAIL =
+  "Try GraftMate free for 14 days from sign-up — no card needed. After that, GraftMate Pro is £29.99/month. One plan, every feature included. Pay by card on the web, or subscribe via Apple in-app purchase on iPhone.";
 
-export function getPricingCardBadge(now: Date = new Date()): string {
-  return isChristmasPromoActive(now)
-    ? PRICING_CARD_BADGE_CHRISTMAS
-    : PRICING_CARD_BADGE_STANDARD;
-}
-
-export const PRICING_CARD_DETAIL_CHRISTMAS =
-  "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan, every feature included. Pay by card on the web, or subscribe via Apple in-app purchase on iPhone.";
-
-export const PRICING_CARD_DETAIL_STANDARD =
-  "GraftMate Pro — £29.99/month. One plan, every feature included. Pay by card on the web, or subscribe via Apple in-app purchase on iPhone.";
-
-export function getPricingCardDetail(now: Date = new Date()): string {
-  return isChristmasPromoActive(now)
-    ? PRICING_CARD_DETAIL_CHRISTMAS
-    : PRICING_CARD_DETAIL_STANDARD;
+export function getPricingCardDetail(): string {
+  return PRICING_CARD_DETAIL;
 }
 
 const SITE_DESCRIPTION_LEAD =
   "Describe the job, send a professional quote in about two minutes, then invoice in one tap. AI quoting for UK trades.";
 
-export function getSiteDescription(now: Date = new Date()): string {
-  if (isChristmasPromoActive(now)) {
-    return `${SITE_DESCRIPTION_LEAD} Free until Christmas – no card needed. From 26 Dec, £29.99/month.`;
-  }
-  return `${SITE_DESCRIPTION_LEAD} ${PRO_PLAN_PRICE_FULL}. One plan, cancel anytime.`;
+export function getSiteDescription(): string {
+  return `${SITE_DESCRIPTION_LEAD} 14-day free trial – no card needed. Then ${PRO_PLAN_PRICE_FULL}. One plan, cancel anytime.`;
 }
 
-export function getPricingPageMetaDescription(now: Date = new Date()): string {
-  if (isChristmasPromoActive(now)) {
-    return "Free until Christmas – no card needed. One plan with every feature for UK sole traders. From 26 Dec, £29.99/month.";
-  }
-  return "£29.99/month. One plan with every feature for UK sole traders. Cancel anytime.";
+export function getPricingPageMetaDescription(): string {
+  return "14-day free trial – no card needed. One plan with every feature, built for sole traders and small teams. Then £29.99/month. Cancel anytime.";
 }
 
-/** Shared pricing paragraph for trade and content pages (dateless, always accurate). */
+/** Shared pricing paragraph for trade and content pages. */
 export const CONTENT_PRICING_COPY =
-  "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan, cancel anytime. Pay by card on the web, or subscribe through Apple in-app purchase on iPhone.";
+  "Try GraftMate free for 14 days from sign-up — no card needed. After that, GraftMate Pro is £29.99/month. One plan, cancel anytime. Pay by card on the web, or subscribe through Apple in-app purchase on iPhone.";
 
-export const FAQ_AFTER_CHRISTMAS_QUESTION = "What happens after Christmas?";
+export const FAQ_AFTER_TRIAL_QUESTION = "What happens after 14 days?";
 
-export const FAQ_AFTER_CHRISTMAS_ANSWER =
-  "From 26 Dec 2026, GraftMate Pro is £29.99/month. Subscribe with Apple in-app purchase on iPhone or by card on the web. You won't be charged unless you choose to subscribe — free access until 25 Dec does not require a card.";
+export const FAQ_AFTER_TRIAL_ANSWER =
+  "After your 14-day trial you can subscribe to GraftMate Pro at £29.99/month or stop using the service. We don't take a card during the trial — you're only charged if you choose to subscribe.";
+
+export const BROWSER_ON_ANY_PHONE_COPY =
+  "No iPhone? GraftMate works in the browser on any phone, including Android.";
