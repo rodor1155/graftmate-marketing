@@ -11,7 +11,7 @@ export function CtaBanner() {
           Send your next quote from your phone
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-lg text-muted">
-          Free until Christmas – no card needed. From 26 Dec, £29.99/month.
+          14-day free trial from sign-up – no card needed. Then £29.99/month.
           Describe a real job and see how fast you can quote it.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4">

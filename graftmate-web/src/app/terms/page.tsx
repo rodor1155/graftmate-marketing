@@ -43,7 +43,7 @@ export default function TermsPage() {
           <h2>2. Service Description</h2>
           <p>
             GraftMate is an AI-powered job management platform designed for UK
-            sole traders and small trade businesses. The service includes:
+            sole traders and small teams. The service includes:
           </p>
           <ul>
             <li>
@@ -77,11 +77,10 @@ export default function TermsPage() {
             giving access to all current features on a single plan.
           </p>
           <p>
-            <strong>Free until Christmas:</strong> GraftMate is free for everyone
-            until 25 December 2026, with no card required. From 26 December 2026,
-            GraftMate Pro is £29.99 per month if you choose to subscribe. You
-            will not be charged unless you subscribe — we will notify registered
-            users before any paid billing begins.
+            <strong>14-day free trial:</strong> New accounts get 14 days of free
+            access from sign-up, with no card required. After the trial, GraftMate
+            Pro is £29.99 per month if you choose to subscribe. You will not be
+            charged during the trial or unless you subscribe.
           </p>
           <ul>
             <li>

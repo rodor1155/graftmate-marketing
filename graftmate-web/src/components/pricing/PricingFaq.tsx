@@ -1,12 +1,12 @@
 import {
-  FAQ_AFTER_CHRISTMAS_ANSWER,
-  FAQ_AFTER_CHRISTMAS_QUESTION,
+  FAQ_AFTER_TRIAL_ANSWER,
+  FAQ_AFTER_TRIAL_QUESTION,
 } from "@/lib/promo";
 
 const faqs = [
   {
-    question: FAQ_AFTER_CHRISTMAS_QUESTION,
-    answer: FAQ_AFTER_CHRISTMAS_ANSWER,
+    question: FAQ_AFTER_TRIAL_QUESTION,
+    answer: FAQ_AFTER_TRIAL_ANSWER,
   },
   {
     question: "Can I cancel anytime?",
@@ -14,9 +14,9 @@ const faqs = [
       "Yes. Cancel from your account settings whenever you like. There are no long-term contracts or cancellation fees.",
   },
   {
-    question: "Is GraftMate free right now?",
+    question: "Is there a free trial?",
     answer:
-      "Yes — free for everyone until 25 Dec 2026, with no card needed. From 26 Dec, GraftMate Pro is £29.99/month if you choose to subscribe.",
+      "Yes — a 14-day free trial from sign-up, with no card needed. After that, GraftMate Pro is £29.99/month if you choose to subscribe.",
   },
   {
     question: "Is VAT included?",
@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "On the web, pay by card (including Apple Pay and Google Pay) via Stripe. On iPhone, subscribe through Apple in-app purchase when the iOS app is on the App Store.",
+      "On the web, pay by card (including Apple Pay and Google Pay) via Stripe. On iPhone, subscribe through Apple in-app purchase on the App Store.",
   },
 ];
 

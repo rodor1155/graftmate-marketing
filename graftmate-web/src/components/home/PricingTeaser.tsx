@@ -54,8 +54,8 @@ export function PricingTeaser() {
 
             <div className="flex flex-col justify-center gap-4">
               <p className="text-sm leading-relaxed text-muted">
-                Competitors charge £30–40/month and still lock features behind
-                higher tiers. GraftMate gives you everything for one honest price.
+                AI quoting, unified inbox, client management, and quote-to-invoice
+                — all included in one plan, built for sole traders and small teams.
               </p>
               <Button href="/pricing" size="lg" className="w-full sm:w-auto">
                 See full pricing

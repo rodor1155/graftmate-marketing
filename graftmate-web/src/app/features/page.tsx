@@ -23,7 +23,7 @@ import { SIGNUP_URL } from "@/lib/urls";
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "AI quote generation, unified inbox, inbound email parsing, client management, and UK VAT — built for sole traders.",
+    "AI quote generation, unified inbox, inbound email parsing, client management, and UK VAT — built for sole traders and small teams.",
   alternates: {
     canonical: "https://graftmate.net/features",
   },
@@ -42,7 +42,7 @@ export default function FeaturesPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
             AI quotes, unified inbox, client management, and invoicing — in one
-            app built for UK sole traders. No spreadsheets. No faff.
+            app built for UK sole traders and small teams. No spreadsheets. No faff.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href={SIGNUP_URL} size="lg">
@@ -143,7 +143,7 @@ export default function FeaturesPage() {
             "Multi-rate VAT: 20%, 5%, and 0% on quotes and invoices",
             "All amounts in £ sterling — no currency confusion",
             "UK date formats and phone number fields",
-            "British English throughout — designed for sole traders",
+            "British English throughout — built for sole traders and small teams",
           ]}
           visual={<UkVisual />}
           reversed
@@ -156,7 +156,7 @@ export default function FeaturesPage() {
             All features. One plan.
           </h2>
           <p className="mx-auto mt-3 max-w-md text-muted">
-            Free until Christmas – no card needed. From 26 Dec, £29.99/month. No
+            14-day free trial from sign-up – no card needed. Then £29.99/month. No
             tiers, no per-seat fees.
           </p>
           <Button href={SIGNUP_URL} size="lg" className="mt-8">

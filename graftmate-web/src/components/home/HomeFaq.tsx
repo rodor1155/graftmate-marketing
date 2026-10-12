@@ -1,6 +1,6 @@
 import {
-  FAQ_AFTER_CHRISTMAS_ANSWER,
-  FAQ_AFTER_CHRISTMAS_QUESTION,
+  FAQ_AFTER_TRIAL_ANSWER,
+  FAQ_AFTER_TRIAL_QUESTION,
 } from "@/lib/promo";
 
 const faqs = [
@@ -10,13 +10,13 @@ const faqs = [
       "Describe the job in plain English — in site notes or typed text. GraftMate drafts a professional quote with line items and UK VAT. You review everything before it goes to the customer.",
   },
   {
-    question: FAQ_AFTER_CHRISTMAS_QUESTION,
-    answer: FAQ_AFTER_CHRISTMAS_ANSWER,
+    question: FAQ_AFTER_TRIAL_QUESTION,
+    answer: FAQ_AFTER_TRIAL_ANSWER,
   },
   {
     question: "Can I subscribe on iPhone?",
     answer:
-      "Yes. On the web you pay by card via Stripe. On iPhone you can subscribe through Apple in-app purchase (GraftMate Pro Monthly) when the iOS app is live on the App Store.",
+      "Yes. On the web you pay by card via Stripe. On iPhone you can subscribe through Apple in-app purchase (GraftMate Pro Monthly) on the App Store.",
   },
   {
     question: "Can I cancel anytime?",

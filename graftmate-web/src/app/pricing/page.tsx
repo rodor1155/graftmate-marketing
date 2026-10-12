@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/Card";
 import { IconChip } from "@/components/ui/IconChip";
 import { PricingFaq } from "@/components/pricing/PricingFaq";
 import { PricingOfferCopy } from "@/components/pricing/PricingOfferCopy";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { getPricingPageMetaDescription } from "@/lib/promo";
 
 import { SIGNUP_URL } from "@/lib/urls";
@@ -28,7 +29,7 @@ const features = [
   "Unlimited quotes & invoices",
   "UK VAT support",
   "Email support",
-  "No user limits",
+  "Built for sole traders and small teams",
 ];
 
 function CheckIcon() {
@@ -63,6 +64,9 @@ export default function PricingPage() {
           <p className="mt-4 text-center text-sm text-muted-dim">
             Cancel anytime.
           </p>
+          <div className="mt-6 flex flex-col items-center">
+            <AppStoreBadge />
+          </div>
 
           <ul className="mt-10 space-y-3 border-t border-border-subtle pt-10">
             {features.map((feature) => (
