@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
+import { getGuideRoute, guideRegistry } from "@/lib/guides/registry";
 import { resourcePageLinks, tradePageLinks } from "@/lib/tradePageCatalog";
+
+const guideRoutes = guideRegistry.map((entry) => getGuideRoute(entry.slug));
 
 const staticRoutes = [
   "",
@@ -8,6 +11,9 @@ const staticRoutes = [
   "/terms",
   "/privacy",
   ...resourcePageLinks.map((link) => link.href),
+  ...guideRoutes.filter(
+    (route) => !resourcePageLinks.some((link) => link.href === route),
+  ),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
