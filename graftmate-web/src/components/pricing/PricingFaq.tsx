@@ -1,8 +1,12 @@
+import {
+  FAQ_AFTER_CHRISTMAS_ANSWER,
+  FAQ_AFTER_CHRISTMAS_QUESTION,
+} from "@/lib/promo";
+
 const faqs = [
   {
-    question: "What happens after the first free month?",
-    answer:
-      "Your subscription continues at the standard rate of £29.99/month. We'll remind you before your free month ends — no surprises.",
+    question: FAQ_AFTER_CHRISTMAS_QUESTION,
+    answer: FAQ_AFTER_CHRISTMAS_ANSWER,
   },
   {
     question: "Can I cancel anytime?",
@@ -10,9 +14,9 @@ const faqs = [
       "Yes. Cancel from your account settings whenever you like. There are no long-term contracts or cancellation fees.",
   },
   {
-    question: "What is the current launch offer?",
+    question: "Is GraftMate free right now?",
     answer:
-      "First month free. Sign up now and get full access to GraftMate completely free for your first month, with no card required.",
+      "Yes — free for everyone until 25 Dec 2026, with no card needed. From 26 Dec, GraftMate Pro is £29.99/month if you choose to subscribe.",
   },
   {
     question: "Is VAT included?",
@@ -22,7 +26,7 @@ const faqs = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept card payments, Apple Pay, and Google Pay — quick and secure checkout when you're ready to subscribe.",
+      "On the web, pay by card (including Apple Pay and Google Pay) via Stripe. On iPhone, subscribe through Apple in-app purchase when the iOS app is on the App Store.",
   },
 ];
 

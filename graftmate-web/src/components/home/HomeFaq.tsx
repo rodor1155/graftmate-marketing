@@ -1,3 +1,8 @@
+import {
+  FAQ_AFTER_CHRISTMAS_ANSWER,
+  FAQ_AFTER_CHRISTMAS_QUESTION,
+} from "@/lib/promo";
+
 const faqs = [
   {
     question: "How does AI quoting work?",
@@ -5,14 +10,13 @@ const faqs = [
       "Describe the job in plain English — in site notes or typed text. GraftMate drafts a professional quote with line items and UK VAT. You review everything before it goes to the customer.",
   },
   {
-    question: "What happens after the first free month?",
-    answer:
-      "GraftMate Pro continues at £29.99/month. We remind you before billing starts. Every feature stays included — one plan, no tiers.",
+    question: FAQ_AFTER_CHRISTMAS_QUESTION,
+    answer: FAQ_AFTER_CHRISTMAS_ANSWER,
   },
   {
     question: "Can I subscribe on iPhone?",
     answer:
-      "Yes. On the web you pay by card via Stripe. On iPhone you can subscribe through Apple in-app purchase (GraftMate Pro Monthly, 30-day free trial) when the iOS app is live on the App Store.",
+      "Yes. On the web you pay by card via Stripe. On iPhone you can subscribe through Apple in-app purchase (GraftMate Pro Monthly) when the iOS app is live on the App Store.",
   },
   {
     question: "Can I cancel anytime?",

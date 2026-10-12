@@ -106,7 +106,7 @@ export const forRoofersPage: TradePageData = {
     ],
   },
   pricingCopy:
-    "GraftMate Pro is £29.99/month with your first month free. One plan — quotes, clients, jobs, and invoices included.",
+    "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan — quotes, clients, jobs, and invoices included.",
   faqs: [
     {
       question: "Can GraftMate handle staged payments on re-roofs?",

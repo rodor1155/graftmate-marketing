@@ -106,7 +106,7 @@ export const forKitchenBathroomFittersPage: TradePageData = {
     ],
   },
   pricingCopy:
-    "GraftMate Pro is £29.99/month with your first month free. One plan — quotes, clients, jobs, and invoices.",
+    "GraftMate is free for everyone until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month. One plan — quotes, clients, jobs, and invoices.",
   faqs: [
     {
       question: "Can I split supply and fit on the quote?",

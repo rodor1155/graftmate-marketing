@@ -8,7 +8,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
   eyebrow: "Compare",
   heroTitle: "A Tradify alternative with one UK plan",
   heroSubtitle:
-    "If you are comparing trade job software in the UK, GraftMate keeps pricing simple: £29.99/month after a free first month, with AI quoting, a unified inbox, and quote-to-invoice in one app. See how it compares — verify Tradify details on their site before you decide.",
+    "If you are comparing trade job software in the UK, GraftMate keeps pricing simple: free until 25 Dec 2026 (no card needed), then £29.99/month from 26 Dec, with AI quoting, a unified inbox, and quote-to-invoice in one app. See how it compares — verify Tradify details on their site before you decide.",
   sections: [
     {
       id: "why-compare",
@@ -30,7 +30,8 @@ export const tradifyAlternativePage: CommercialPageContent = {
         rows: [
           {
             label: "Public pricing (UK)",
-            graftmate: "£29.99/month, first month free (this site)",
+            graftmate:
+              "Free until 25 Dec 2026, then £29.99/month (this site)",
             other: "TODO(verify): Tradify UK plan names and prices from tradify.co.uk",
           },
           {
@@ -70,7 +71,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
         "Unified inbox for email and WhatsApp linked to clients",
         "Client and job records with quote history",
         "Quote to invoice in one tap with UK VAT support",
-        "£29.99/month after first month free — pay on the web or via Apple IAP on iPhone (30-day free trial on IAP per pricing page)",
+        "Free until 25 Dec 2026, then £29.99/month — pay on the web by card or via Apple in-app purchase on iPhone",
       ],
     },
   ],
@@ -92,5 +93,5 @@ export const tradifyAlternativePage: CommercialPageContent = {
     },
   ],
   closingCopy:
-    "Try GraftMate on your next quote — first month free, then £29.99/month. Make your own comparison against Tradify using their latest pricing and feature list.",
+    "Try GraftMate on your next quote — free until Christmas, no card needed. From 26 Dec, £29.99/month. Make your own comparison against Tradify using their latest pricing and feature list.",
 };

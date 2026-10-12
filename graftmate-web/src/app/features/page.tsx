@@ -156,7 +156,8 @@ export default function FeaturesPage() {
             All features. One plan.
           </h2>
           <p className="mx-auto mt-3 max-w-md text-muted">
-            £29.99/month, first month free. No tiers, no per-seat fees.
+            Free until Christmas – no card needed. From 26 Dec, £29.99/month. No
+            tiers, no per-seat fees.
           </p>
           <Button href={SIGNUP_URL} size="lg" className="mt-8">
             Get started →

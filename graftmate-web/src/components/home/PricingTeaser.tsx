@@ -1,3 +1,4 @@
+import { PricingHighlightLine } from "@/components/pricing/PricingHighlightLine";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { IconChip } from "@/components/ui/IconChip";
@@ -33,9 +34,7 @@ export function PricingTeaser() {
               <span className="font-mono text-3xl text-muted">.99</span>
               <span className="text-xl font-medium text-muted">/month</span>
             </p>
-            <p className="mt-3 text-sm text-muted">
-              First month free, then £29.99/month.
-            </p>
+            <PricingHighlightLine className="mt-3 text-sm text-muted" />
             <p className="mt-2 text-muted">
               One plan. Every feature. No tiers, no upsells, no per-seat fees.
             </p>

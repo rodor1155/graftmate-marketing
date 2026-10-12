@@ -4,7 +4,7 @@ import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Button } from "@/components/ui/Button";
 import { MetricPill } from "@/components/ui/MetricPill";
 import { PhoneFrame } from "@/components/ui/PhoneFrame";
-import { PRO_PLAN_PRICE_FULL } from "@/lib/config";
+import { PricingHighlightLine } from "@/components/pricing/PricingHighlightLine";
 import { tradePages } from "@/lib/tradePages";
 import { SIGNUP_URL } from "@/lib/urls";
 
@@ -41,9 +41,7 @@ export function Hero() {
               <AppStoreBadge />
             </div>
 
-            <p className="mt-3 text-sm text-muted-dim sm:mt-4">
-              {PRO_PLAN_PRICE_FULL} · First month free · Cancel anytime
-            </p>
+            <PricingHighlightLine className="mt-3 text-sm text-muted-dim sm:mt-4" />
 
             <p className="mt-3 text-sm text-muted">
               Built for{" "}

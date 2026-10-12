@@ -4,7 +4,7 @@ export const invoiceAppForTradesmenPage: CommercialPageContent = {
   route: "/invoice-app-for-tradesmen",
   title: "Best Invoice App for Tradesmen UK | GraftMate",
   description:
-    "Invoice app for UK tradesmen: AI quotes, VAT-ready invoices, clients and WhatsApp in one place. £29.99/month, first month free. Built for sole traders.",
+    "Invoice app for UK tradesmen: AI quotes, VAT-ready invoices, clients and WhatsApp in one place. Free until Christmas – no card needed. Built for sole traders.",
   eyebrow: "Invoice app",
   heroTitle: "Invoice app for UK tradesmen — quotes included",
   heroSubtitle:
@@ -28,7 +28,7 @@ export const invoiceAppForTradesmenPage: CommercialPageContent = {
       title: "How GraftMate fits UK trades",
       body: [
         "Describe the job in plain English and review an AI-drafted quote with line items and VAT. When the customer accepts, invoice in one tap. Keep clients, jobs, and chats together so admin does not eat your evenings.",
-        "GraftMate Pro is £29.99/month with your first month free — one plan with quotes, inbox, clients, and unlimited quotes and invoices on the pricing page.",
+        "GraftMate is free until 25 Dec 2026 — no card needed. From 26 Dec, GraftMate Pro is £29.99/month — one plan with quotes, inbox, clients, and unlimited quotes and invoices on the pricing page.",
       ],
     },
     {
@@ -58,7 +58,7 @@ export const invoiceAppForTradesmenPage: CommercialPageContent = {
     {
       question: "Can I subscribe on iPhone?",
       answer:
-        "Yes. Pay by card on the web or subscribe via Apple in-app purchase on iPhone. The pricing page notes a 30-day free trial for Apple IAP.",
+        "Yes. Pay by card on the web or subscribe via Apple in-app purchase on iPhone when the iOS app is on the App Store.",
     },
     {
       question: "Are there user limits?",
