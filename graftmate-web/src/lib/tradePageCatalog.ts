@@ -37,4 +37,5 @@ export const resourcePageLinks = [
   { href: "/invoice-app-for-tradesmen", label: "Invoice app for trades" },
   { href: "/tradify-alternative", label: "Tradify alternative" },
   { href: "/late-payment-calculator", label: "Late payment calculator" },
+  { href: "/mtd", label: "Making Tax Digital checker" },
 ];
