@@ -75,10 +75,10 @@ export default function FeaturesPage() {
           id="unified-inbox"
           icon={<InboxIcon />}
           label="Unified inbox"
-          title="Email and WhatsApp in one place"
+          title="Email in one place"
           description="Stop scrolling through hundreds of messages to find a job detail. GraftMate brings every client conversation into one inbox — automatically linked to the right contact and job."
           bullets={[
-            "WhatsApp and email messages in a single view",
+            "Email messages in a single view",
             "Conversations auto-linked to clients and jobs",
             "See full message history without switching apps",
             "Never lose a quote request in the chat again",

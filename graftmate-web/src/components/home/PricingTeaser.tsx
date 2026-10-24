@@ -5,7 +5,7 @@ import { IconChip } from "@/components/ui/IconChip";
 
 const included = [
   "AI quote generation",
-  "Unified inbox (email + WhatsApp)",
+  "Unified inbox for your email",
   "Inbound email parsing",
   "Client management",
   "Quote-to-invoice in one tap",

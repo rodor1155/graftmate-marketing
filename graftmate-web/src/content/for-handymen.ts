@@ -48,7 +48,7 @@ export const forHandymenPage: TradePageData = {
       icon: "inbox",
       title: "Client messages in one place",
       description:
-        "Email and WhatsApp linked to the customer so gate codes and photos are easy to find.",
+        "Email linked to the customer so gate codes and photos are easy to find.",
     },
     {
       icon: "client",

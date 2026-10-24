@@ -10,7 +10,7 @@ const usps = [
   {
     title: "Unified inbox",
     description:
-      "Emails and WhatsApp in one place, automatically linked to clients.",
+      "Emails in one place, automatically linked to clients.",
   },
   {
     title: "Inbound email parsing",

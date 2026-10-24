@@ -51,7 +51,7 @@ export default function TermsPage() {
               produces a professional draft quote you can review and send.
             </li>
             <li>
-              Unified inbox — manage email and WhatsApp messages from a single
+              Unified inbox — manage email messages from a single
               interface, linked to clients and jobs.
             </li>
             <li>

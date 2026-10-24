@@ -9,13 +9,13 @@ export const forKitchenBathroomFittersPage: TradePageData = {
   tradePlural: "kitchen & bathroom fitters",
   title: "Kitchen & Bathroom Fitter Quote App | GraftMate",
   description:
-    "Quote bathroom and kitchen installs line by line, with materials, labour and VAT, and chase sign-off by WhatsApp and email in one inbox.",
+    "Quote bathroom and kitchen installs line by line, with materials, labour and VAT, and chase sign-off by email in one inbox.",
   eyebrow: "For UK kitchen & bathroom fitters",
   heroTitle: "Quote kitchen and bathroom installs line by line",
   subheading:
     "Units, tiling, plumbing allowances — describe the fit-out and send a clear quote with VAT before the customer shops elsewhere.",
   heroCopy:
-    "Fit-out quotes need detail: supply vs fit, waste, electrics, and tiling. GraftMate helps you build line-item quotes on site, keep WhatsApp and email with the client, and invoice when the job is signed off.",
+    "Fit-out quotes need detail: supply vs fit, waste, electrics, and tiling. GraftMate helps you build line-item quotes on site, keep email with the client, and invoice when the job is signed off.",
   painIntro:
     "Customers compare multiple fitters. A fast, professional quote helps you win the install without a late-night Word session.",
   painPoints: [
@@ -46,7 +46,7 @@ export const forKitchenBathroomFittersPage: TradePageData = {
     },
     {
       icon: "inbox",
-      title: "WhatsApp and email together",
+      title: "Email in one place",
       description:
         "Chase sign-off and snag lists in one inbox tied to the customer — no switching apps.",
     },
@@ -119,9 +119,9 @@ export const forKitchenBathroomFittersPage: TradePageData = {
         "No. GraftMate handles quoting, messages, clients, and invoicing — use your usual design and supplier tools for layouts.",
     },
     {
-      question: "Can I chase sign-off over WhatsApp?",
+      question: "Can I chase sign-off over email?",
       answer:
-        "Yes. WhatsApp and email sit in one inbox linked to the client and job.",
+        "Yes. Email sits in one inbox linked to the client and job.",
     },
     {
       question: "Is VAT supported on fit-out quotes?",

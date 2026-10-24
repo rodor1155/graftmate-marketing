@@ -48,7 +48,7 @@ export const forPaintersDecoratorsPage: TradePageData = {
       icon: "inbox",
       title: "Client messages in one place",
       description:
-        "Email and WhatsApp in one inbox linked to the job — colour codes and access notes stay findable.",
+        "Email in one inbox linked to the job, so colour codes and access notes stay findable.",
     },
     {
       icon: "client",
