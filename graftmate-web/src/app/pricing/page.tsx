@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const features = [
   "AI quote generation",
-  "Unified inbox (email + WhatsApp)",
+  "Unified inbox for your email",
   "Inbound email parsing",
   "Client management",
   "Unlimited quotes & invoices",

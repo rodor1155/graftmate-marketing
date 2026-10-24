@@ -133,7 +133,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
         icon: "inbox",
         title: "Client messages in one place",
         description:
-          "Email and WhatsApp sit together, linked to the right client and job. Access notes, photos, and last-minute changes stay with the work.",
+          "Email in one place, linked to the right client and job. Access notes, photos, and last-minute changes stay with the work.",
       },
       {
         icon: "client",
@@ -245,7 +245,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
       {
         title: "Messages scattered everywhere",
         description:
-          "Keep WhatsApp and email together, linked to the client. When someone asks when you are arriving, you find the thread quickly.",
+          "Keep email together, linked to the client. When someone asks when you are arriving, you find the thread quickly.",
       },
       {
         title: "Weekend admin",
@@ -266,7 +266,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
         icon: "inbox",
         title: "Client messages in one place",
         description:
-          "Email and WhatsApp messages live together, linked to clients and jobs. Photos, measurements, and access details stay easy to find.",
+          "Email messages live together, linked to clients and jobs. Photos, measurements, and access details stay easy to find.",
       },
       {
         icon: "client",
@@ -399,7 +399,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
         icon: "inbox",
         title: "Client messages in one place",
         description:
-          "Keep email and WhatsApp together, so photos, decisions, access details, and change requests stay with the right client and job.",
+          "Keep email together, so photos, decisions, access details, and change requests stay with the right client and job.",
       },
       {
         icon: "client",
@@ -532,7 +532,7 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
         icon: "inbox",
         title: "Client messages in one place",
         description:
-          "Email and WhatsApp linked to the right client. Tenant access details, boiler model photos, and agent updates stay with the job.",
+          "Email linked to the right client. Tenant access details, boiler model photos, and agent updates stay with the job.",
       },
       {
         icon: "client",

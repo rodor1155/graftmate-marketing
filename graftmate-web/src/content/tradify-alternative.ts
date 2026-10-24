@@ -16,7 +16,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
       title: "Why trades look for Tradify alternatives",
       body: [
         "Tradify is a well-known quote and invoice tool for trades. Some UK businesses look elsewhere when they want a different price model, faster quoting, or a lighter setup.",
-        "GraftMate is built for UK sole traders and small teams who want AI-assisted quoting, email and WhatsApp in one inbox, and a single plan without tier hunting.",
+        "GraftMate is built for UK sole traders and small teams who want AI-assisted quoting, email in one inbox, and a single plan without tier hunting.",
       ],
     },
     {
@@ -46,7 +46,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
             other: "TODO(verify): whether Tradify offers AI quote generation and how it works",
           },
           {
-            label: "Unified inbox (email + WhatsApp)",
+            label: "Unified inbox for your email",
             graftmate: "Included — messages linked to clients and jobs",
             other: "TODO(verify): Tradify messaging channels and inbox behaviour",
           },
@@ -69,7 +69,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
       title: "What GraftMate includes today",
       bullets: [
         "AI quote generation from plain-English job notes",
-        "Unified inbox for email and WhatsApp linked to clients",
+        "Unified inbox for email linked to clients",
         "Client and job records with quote history",
         "Quote to invoice in one tap with UK VAT support",
         `${CONTENT_PRICING_COPY}`,

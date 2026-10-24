@@ -11,7 +11,7 @@ const features = [
   },
   {
     tag: "Unified inbox",
-    title: "Email and WhatsApp in one place",
+    title: "Email in one place",
     description:
       "Every client conversation in a single inbox, automatically linked to the right job and contact.",
     highlight: false,

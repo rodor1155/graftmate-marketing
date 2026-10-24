@@ -27,7 +27,7 @@ export const forRoofersPage: TradePageData = {
     {
       title: "Scope changes lost in texts",
       description:
-        "Keep WhatsApp and email with the client record so chimney stack extras and scaffold access notes do not disappear.",
+        "Keep email with the client record so chimney stack extras and scaffold access notes do not disappear.",
     },
     {
       title: "Invoices after the van is loaded",
@@ -48,7 +48,7 @@ export const forRoofersPage: TradePageData = {
       icon: "inbox",
       title: "Client messages in one place",
       description:
-        "Email and WhatsApp linked to the job — photos of ridge tiles, insurance docs, and access details stay easy to find.",
+        "Email linked to the job, so photos of ridge tiles, insurance docs, and access details stay easy to find.",
     },
     {
       icon: "client",

@@ -5,11 +5,11 @@ export const invoiceAppForTradesmenPage: CommercialPageContent = {
   route: "/invoice-app-for-tradesmen",
   title: "Best Invoice App for Tradesmen UK | GraftMate",
   description:
-    "Invoice app for UK tradesmen: AI quotes, VAT-ready invoices, clients and WhatsApp in one place. 14-day free trial – no card needed. Built for sole traders and small teams.",
+    "Invoice app for UK tradesmen: AI quotes, VAT-ready invoices, clients and email in one place. 14-day free trial – no card needed. Built for sole traders and small teams.",
   eyebrow: "Invoice app",
   heroTitle: "Invoice app for UK tradesmen — quotes included",
   heroSubtitle:
-    "The best invoice app for trades is the one you actually use on site. GraftMate combines AI quoting, VAT-ready invoices, client records, and email plus WhatsApp in one UK-friendly app.",
+    "The best invoice app for trades is the one you actually use on site. GraftMate combines AI quoting, VAT-ready invoices, client records, and email in one UK-friendly app.",
   sections: [
     {
       id: "what-to-look-for",
