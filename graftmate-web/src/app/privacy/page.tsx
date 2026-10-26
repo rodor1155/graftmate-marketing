@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy | GraftMate",
   description:
-    "Privacy Policy for GraftMate by Rodor Technologies Ltd. How we collect, use, and protect your personal data under UK GDPR.",
+    "Privacy Policy for GraftMate, a trading name of Ross Ellner, trading as Rodor Technologies. How we collect, use, and protect your personal data under UK GDPR.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -13,16 +13,17 @@ export default function PrivacyPolicyPage() {
       <h1 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
         Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted-dim">Last updated: June 2026</p>
+      <p className="mt-4 text-sm text-muted-dim">Last updated: October 2026</p>
 
       <div className="prose-custom mt-10 space-y-10 text-muted [&_a]:text-secondary [&_a]:underline [&_a]:underline-offset-2 [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-foreground [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1">
         <section>
           <h2>1. Who We Are</h2>
           <p>
-            GraftMate is operated by <strong>Rodor Technologies Ltd</strong>, a
-            company registered in England and Wales. References to
-            &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo; in this
-            policy refer to Rodor Technologies Ltd.
+            GraftMate is a trading name of <strong>Ross Ellner</strong>,
+            trading as <strong>Rodor Technologies</strong>, a sole trader
+            based in England. References to &ldquo;we&rdquo;, &ldquo;us&rdquo;,
+            or &ldquo;our&rdquo; in this policy refer to Ross Ellner trading as
+            Rodor Technologies.
           </p>
           <p>
             If you have any questions about how we handle your personal data,
@@ -236,7 +237,7 @@ export default function PrivacyPolicyPage() {
             We take reasonable technical and organisational measures to protect
             your personal data from unauthorised access, loss, or disclosure.
             These include encrypted data storage, HTTPS for all data in transit,
-            and access controls that limit who within Rodor Technologies Ltd can
+            and access controls that limit who within Rodor Technologies can
             access personal data.
           </p>
         </section>
@@ -255,7 +256,7 @@ export default function PrivacyPolicyPage() {
           <h2>10. Contact</h2>
           <p>
             If you have any questions, concerns, or requests relating to this
-            Privacy Policy or how Rodor Technologies Ltd handles your personal
+            Privacy Policy or how Rodor Technologies handles your personal
             data, please contact us:
           </p>
           <ul>
@@ -264,8 +265,8 @@ export default function PrivacyPolicyPage() {
               <a href="mailto:ross@ellner.co.uk">ross@ellner.co.uk</a>
             </li>
             <li>
-              <strong>Company:</strong> Rodor Technologies Ltd, England and
-              Wales
+              <strong>Operator:</strong> Ross Ellner, trading as Rodor
+              Technologies (sole trader)
             </li>
           </ul>
         </section>

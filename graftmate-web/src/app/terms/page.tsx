@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms & Conditions | GraftMate",
   description:
-    "Terms and Conditions for using GraftMate, operated by Rodor Technologies Ltd. Governing law: England and Wales.",
+    "Terms and Conditions for using GraftMate, a trading name of Ross Ellner, trading as Rodor Technologies. Governing law: England and Wales.",
 };
 
 export default function TermsPage() {
@@ -13,18 +13,19 @@ export default function TermsPage() {
       <h1 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
         Terms &amp; Conditions
       </h1>
-      <p className="mt-4 text-sm text-muted-dim">Last updated: June 2026</p>
+      <p className="mt-4 text-sm text-muted-dim">Last updated: October 2026</p>
 
       <div className="mt-10 space-y-10 text-muted [&_a]:text-secondary [&_a]:underline [&_a]:underline-offset-2 [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-foreground [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1">
         <section>
           <h2>1. About These Terms</h2>
           <p>
-            These Terms &amp; Conditions (&ldquo;Terms&rdquo;) govern your use
-            of GraftMate, a software-as-a-service platform for UK
-            tradespeople, operated by{" "}
-            <strong>Rodor Technologies Ltd</strong> (&ldquo;we&rdquo;,
-            &ldquo;us&rdquo;, or &ldquo;our&rdquo;), a company registered in
-            England and Wales.
+            GraftMate is a software-as-a-service platform for UK
+            tradespeople. GraftMate is a trading name of{" "}
+            <strong>Ross Ellner</strong>, trading as{" "}
+            <strong>Rodor Technologies</strong> (&ldquo;we&rdquo;,
+            &ldquo;us&rdquo;, or &ldquo;our&rdquo;), a sole trader based in
+            England. These Terms &amp; Conditions (&ldquo;Terms&rdquo;) govern
+            your use of GraftMate.
           </p>
           <p>
             By creating an account or using GraftMate, you agree to be bound by
@@ -168,7 +169,7 @@ export default function TermsPage() {
           <p>
             All intellectual property in the GraftMate platform — including
             software, design, trademarks, and content created by us — belongs to
-            Rodor Technologies Ltd or our licensors.
+            Rodor Technologies or our licensors.
           </p>
           <p>
             You retain ownership of any content you create and store in
@@ -193,7 +194,7 @@ export default function TermsPage() {
           <h2>8. Limitation of Liability</h2>
           <p>
             To the fullest extent permitted by applicable law, Rodor
-            Technologies Ltd shall not be liable for any:
+            Technologies shall not be liable for any:
           </p>
           <ul>
             <li>
@@ -266,7 +267,7 @@ export default function TermsPage() {
           <h2>12. Contact</h2>
           <p>
             For questions about these Terms, please contact Rodor Technologies
-            Ltd at:
+            at:
           </p>
           <ul>
             <li>
