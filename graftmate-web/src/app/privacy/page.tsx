@@ -268,6 +268,10 @@ export default function PrivacyPolicyPage() {
               <strong>Operator:</strong> Ross Ellner, trading as Rodor
               Technologies (sole trader)
             </li>
+            <li>
+              <strong>Address:</strong> Suite 861, 80A Ruskin Ave, Welling
+              DA16 3QQ
+            </li>
           </ul>
         </section>
       </div>
