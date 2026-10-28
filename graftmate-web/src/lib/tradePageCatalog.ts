@@ -36,4 +36,5 @@ export const resourcePageLinks = [
   { href: "/cis-invoice-template", label: "CIS invoice template" },
   { href: "/invoice-app-for-tradesmen", label: "Invoice app for trades" },
   { href: "/tradify-alternative", label: "Tradify alternative" },
+  { href: "/late-payment-calculator", label: "Late payment calculator" },
 ];
