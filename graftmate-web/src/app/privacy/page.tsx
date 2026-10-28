@@ -151,10 +151,10 @@ export default function PrivacyPolicyPage() {
               privacy policy and enterprise data-use commitments.
             </li>
             <li>
-              <strong>Google Analytics</strong> — website analytics on the
-              marketing site (graftmate.net) to help us understand how visitors
-              find and use the site. Analytics data is aggregated and
-              anonymised where possible.
+              <strong>Google Analytics</strong> — analytics on the marketing
+              site (graftmate.net) and in the GraftMate app (web and iOS) to
+              help us understand how people find and use GraftMate. Analytics
+              data is aggregated and anonymised where possible.
             </li>
             <li>
               <strong>Vercel</strong> — hosting and deployment of both the
@@ -174,9 +174,49 @@ export default function PrivacyPolicyPage() {
             GraftMate uses cookies and similar technologies for authentication,
             session management, and analytics. By continuing to use GraftMate
             you consent to essential cookies required for the service to
-            function. Analytics cookies (Google Analytics) may be set on the
-            marketing site; you can opt out via your browser settings or a
+            function. The cookies we use are listed below. We use no
+            advertising cookies.
+          </p>
+          <p>
+            <strong>Analytics cookies (Google Analytics 4)</strong> — set on the
+            marketing site and in the GraftMate app:
+          </p>
+          <ul>
+            <li>
+              <code>_ga</code> — distinguishes visitors; lasts about 2 years.
+            </li>
+            <li>
+              <code>_ga_&lt;container-id&gt;</code> — keeps session state; lasts
+              about 2 years.
+            </li>
+          </ul>
+          <p>
+            You can opt out of analytics cookies via your browser settings or a
             cookie-management tool.
+          </p>
+          <p>
+            <strong>Essential cookies (GraftMate app)</strong>:
+          </p>
+          <ul>
+            <li>
+              <code>sb-…-auth-token</code> — Supabase sign-in session cookies
+              that keep you signed in. They may be split into several parts.
+            </li>
+            <li>
+              <code>graftmate_native_shell</code> — marks a session started in
+              the GraftMate iOS app; lasts 2 hours.
+            </li>
+            <li>
+              <code>gmail_oauth_state</code> and{" "}
+              <code>calendar_oauth_state_&lt;provider&gt;</code> — short-lived
+              security cookies used while you connect a Gmail account or
+              calendar.
+            </li>
+          </ul>
+          <p>
+            <strong>Device storage (not cookies)</strong> — the GraftMate app
+            also keeps small preferences on your device, such as your theme,
+            banners you have dismissed, and review-prompt state.
           </p>
         </section>
 
