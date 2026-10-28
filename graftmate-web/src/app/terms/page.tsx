@@ -35,7 +35,7 @@ export default function TermsPage() {
           </p>
           <p>
             For questions about these Terms, contact us at{" "}
-            <a href="mailto:ross@ellner.co.uk">ross@ellner.co.uk</a>.
+            <a href="mailto:info@rodortech.com">info@rodortech.com</a>.
           </p>
         </section>
 
@@ -271,7 +271,7 @@ export default function TermsPage() {
           <ul>
             <li>
               <strong>Email:</strong>{" "}
-              <a href="mailto:ross@ellner.co.uk">ross@ellner.co.uk</a>
+              <a href="mailto:info@rodortech.com">info@rodortech.com</a>
             </li>
           </ul>
         </section>
