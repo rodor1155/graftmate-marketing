@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
           <p>
             If you have any questions about how we handle your personal data,
             please contact us at{" "}
-            <a href="mailto:ross@ellner.co.uk">ross@ellner.co.uk</a>.
+            <a href="mailto:info@rodortech.com">info@rodortech.com</a>.
           </p>
         </section>
 
@@ -217,7 +217,7 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>
             To exercise any of these rights, please email us at{" "}
-            <a href="mailto:ross@ellner.co.uk">ross@ellner.co.uk</a>. We will
+            <a href="mailto:info@rodortech.com">info@rodortech.com</a>. We will
             respond within 30 days. You also have the right to lodge a complaint
             with the{" "}
             <a
@@ -262,7 +262,7 @@ export default function PrivacyPolicyPage() {
           <ul>
             <li>
               <strong>Email:</strong>{" "}
-              <a href="mailto:ross@ellner.co.uk">ross@ellner.co.uk</a>
+              <a href="mailto:info@rodortech.com">info@rodortech.com</a>
             </li>
             <li>
               <strong>Operator:</strong> Ross Ellner, trading as Rodor
