@@ -8,7 +8,6 @@
     "start": "next start",
     "test": "vitest run",
     "lint": "eslint",
-    "test": "vitest run",
     "generate:og": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
