@@ -274,6 +274,10 @@ export default function TermsPage() {
               <strong>Email:</strong>{" "}
               <a href="mailto:info@rodortech.com">info@rodortech.com</a>
             </li>
+            <li>
+              <strong>Address:</strong> Suite 861, 80A Ruskin Ave, Welling
+              DA16 3QQ
+            </li>
           </ul>
         </section>
       </div>
