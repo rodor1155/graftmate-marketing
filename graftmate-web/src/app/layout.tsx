@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
 import { Inter, JetBrains_Mono, Outfit } from "next/font/google";
 import Script from "next/script";
+import { AnalyticsConsentProvider } from "@/components/consent/AnalyticsConsent";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { PromoBanner } from "@/components/layout/PromoBanner";
+import { GOOGLE_CONSENT_DEFAULTS_SCRIPT } from "@/lib/googleConsentMode";
 import { getSiteDescription } from "@/lib/promo";
 import "./globals.css";
 
@@ -97,27 +98,19 @@ export default function RootLayout({
       className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-Z4N9PVFF88"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-Z4N9PVFF88');
-          `}
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {GOOGLE_CONSENT_DEFAULTS_SCRIPT}
         </Script>
       </head>
       <body className="min-h-full flex flex-col bg-plus-pattern font-sans antialiased">
-        <div className="sticky top-0 z-50">
-          <PromoBanner />
-          <Header />
-        </div>
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <Analytics />
+        <AnalyticsConsentProvider>
+          <div className="sticky top-0 z-50">
+            <PromoBanner />
+            <Header />
+          </div>
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </AnalyticsConsentProvider>
       </body>
     </html>
   );
