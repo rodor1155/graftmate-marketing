@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { FooterLegalLinks } from "@/components/layout/FooterLegalLinks";
 import { Logo } from "@/components/layout/Logo";
 import {
   resourcePageLinks,
@@ -68,14 +69,7 @@ export function Footer() {
           <p className="text-xs text-muted-dim">
             © 2026 GraftMate. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-muted-dim">
-            <Link href="/privacy" className="hover:text-muted">
-              Privacy
-            </Link>
-            <Link href="/terms" className="hover:text-muted">
-              Terms
-            </Link>
-          </div>
+          <FooterLegalLinks />
         </div>
       </div>
     </footer>

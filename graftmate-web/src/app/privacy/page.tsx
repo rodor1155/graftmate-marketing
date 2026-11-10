@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <h1 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
         Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted-dim">Last updated: October 2026</p>
+      <p className="mt-4 text-sm text-muted-dim">Last updated: November 2026</p>
 
       <div className="prose-custom mt-10 space-y-10 text-muted [&_a]:text-secondary [&_a]:underline [&_a]:underline-offset-2 [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-foreground [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1">
         <section>
@@ -151,14 +151,16 @@ export default function PrivacyPolicyPage() {
               privacy policy and enterprise data-use commitments.
             </li>
             <li>
-              <strong>Google Analytics</strong> — analytics on the marketing
-              site (graftmate.net) and in the GraftMate app (web and iOS) to
-              help us understand how people find and use GraftMate. Analytics
-              data is aggregated and anonymised where possible.
+              <strong>Google Analytics</strong> — on graftmate.net we load
+              Google Analytics 4 only after you accept analytics cookies in
+              our cookie banner (see section 6). The GraftMate app may use
+              Google Analytics under separate notices in the application.
             </li>
             <li>
-              <strong>Vercel</strong> — hosting and deployment of both the
-              marketing site and the GraftMate application.
+              <strong>Vercel</strong> — hosting for the marketing site and the
+              GraftMate application. On graftmate.net, Vercel Web Analytics runs
+              only after you accept analytics cookies; we do not rely on
+              legitimate interest alone for this tool on the marketing site.
             </li>
           </ul>
           <p>
@@ -168,31 +170,56 @@ export default function PrivacyPolicyPage() {
           </p>
         </section>
 
-        <section>
+        <section id="cookies">
           <h2>6. Cookies</h2>
           <p>
-            GraftMate uses cookies and similar technologies for authentication,
-            session management, and analytics. By continuing to use GraftMate
-            you consent to essential cookies required for the service to
-            function. The cookies we use are listed below. We use no
-            advertising cookies.
+            This section describes cookies and similar technologies on{" "}
+            <strong>graftmate.net</strong> (the marketing site). The GraftMate
+            application uses additional essential cookies for sign-in and
+            features; those are listed below for reference.
           </p>
           <p>
-            <strong>Analytics cookies (Google Analytics 4)</strong> — set on the
-            marketing site and in the GraftMate app:
+            Under the UK Privacy and Electronic Communications Regulations
+            (PECR) and UK GDPR, we ask for your consent before setting optional
+            analytics on the marketing site. When you first visit graftmate.net,
+            a cookie banner offers equally prominent <strong>Accept</strong> and{" "}
+            <strong>Reject</strong> choices. Your choice is stored in your
+            browser so we can remember it on later visits. You can change your
+            choice at any time via <strong>Cookie settings</strong> in the site
+            footer.
+          </p>
+          <p>
+            <strong>Strictly necessary storage</strong> — we store your
+            analytics choice under the key{" "}
+            <code>graftmate_analytics_consent</code> in{" "}
+            <code>localStorage</code> so the site can honour Accept or Reject.
+            This is required to operate the consent mechanism and is not used for
+            advertising.
+          </p>
+          <p>
+            <strong>Analytics (consent required on graftmate.net)</strong> — if
+            you accept analytics, we load:
           </p>
           <ul>
             <li>
-              <code>_ga</code> — distinguishes visitors; lasts about 2 years.
+              <strong>Google Analytics 4</strong> — measurement ID{" "}
+              <code>G-Z4N9PVFF88</code>. Google may set cookies such as{" "}
+              <code>_ga</code> and <code>_ga_&lt;container-id&gt;</code> (typically
+              up to about 2 years). We use Google Consent Mode v2 with analytics
+              storage denied until you accept.
             </li>
             <li>
-              <code>_ga_&lt;container-id&gt;</code> — keeps session state; lasts
-              about 2 years.
+              <strong>Vercel Web Analytics</strong> — page-view statistics for
+              graftmate.net. Although Vercel describes this product as
+              privacy-oriented, on this marketing site we only enable it after
+              you accept analytics cookies alongside GA4, rather than treating
+              it as cookieless legitimate interest.
             </li>
           </ul>
           <p>
-            You can opt out of analytics cookies via your browser settings or a
-            cookie-management tool.
+            If you reject analytics, we do not load Google Analytics or Vercel
+            Web Analytics on graftmate.net. We use no advertising cookies on the
+            marketing site.
           </p>
           <p>
             <strong>Essential cookies (GraftMate app)</strong>:
