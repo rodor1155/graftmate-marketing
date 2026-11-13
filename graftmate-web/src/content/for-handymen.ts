@@ -92,7 +92,7 @@ export const forHandymenPage: TradePageData = {
   },
   templateSection: {
     title: "Free handyman quote template",
-    body: "A simple UK quote for multi-task visits — labour, materials, and VAT. Downloads are placeholders for now; quote the same list in GraftMate before you pack the van.",
+    body: "A simple UK quote for multi-task visits — labour, materials, and VAT. Quote the same list in GraftMate before you pack the van.",
     downloads: [
       {
         label: "Word (.docx)",

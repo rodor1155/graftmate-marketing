@@ -92,7 +92,7 @@ export const forLandscapersPage: TradePageData = {
   },
   templateSection: {
     title: "Free landscaping invoice template",
-    body: "A UK invoice layout for garden projects and maintenance — labour, materials, and VAT. Download links are placeholders until files are added; quote the same scope in GraftMate in minutes.",
+    body: "A UK invoice layout for garden projects and maintenance — labour, materials, and VAT. Quote the same scope in GraftMate in minutes.",
     downloads: [
       {
         label: "Word (.docx)",

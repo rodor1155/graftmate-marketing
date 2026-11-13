@@ -2,6 +2,10 @@
 export const APP_STORE_LIVE =
   process.env.NEXT_PUBLIC_APP_STORE_LIVE !== "false";
 
+/** Set NEXT_PUBLIC_TEMPLATE_DOWNLOADS=true when Word/PDF trade templates are published. */
+export const TEMPLATE_DOWNLOADS_ENABLED =
+  process.env.NEXT_PUBLIC_TEMPLATE_DOWNLOADS === "true";
+
 export const APP_STORE_URL =
   "https://apps.apple.com/app/id6811976725";
 

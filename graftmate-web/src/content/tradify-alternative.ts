@@ -9,7 +9,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
   eyebrow: "Compare",
   heroTitle: "A Tradify alternative with one UK plan",
   heroSubtitle:
-    "If you are comparing trade job software in the UK, GraftMate keeps pricing simple: 14-day free trial from sign-up (no card needed), then £29.99/month, with AI quoting, a unified inbox, and quote-to-invoice in one app. See how it compares — verify Tradify details on their site before you decide.",
+    "If you are comparing trade job software in the UK, GraftMate keeps pricing simple: 14-day free trial from sign-up (no card needed), then £29.99/month, with AI quoting, a unified inbox, and quote-to-invoice in one app. See how it compares — check Tradify's current pricing and features on their site before you decide.",
   sections: [
     {
       id: "why-compare",
@@ -22,9 +22,9 @@ export const tradifyAlternativePage: CommercialPageContent = {
     {
       id: "comparison",
       variant: "surface",
-      title: "GraftMate vs Tradify (verify before you switch)",
+      title: "GraftMate vs Tradify (check Tradify before you switch)",
       body: [
-        "The table below uses GraftMate facts from this site plus clearly marked placeholders for Tradify. Do not treat placeholder cells as accurate — check Tradify's current pricing and features directly.",
+        "The table below shows what GraftMate offers on this site. For Tradify, use their official website and App Store listing — plans and features change over time.",
       ],
       comparisonRows: {
         headers: ["Topic", "GraftMate", "Tradify"],
@@ -33,36 +33,36 @@ export const tradifyAlternativePage: CommercialPageContent = {
             label: "Public pricing (UK)",
             graftmate:
               "14-day free trial, then £29.99/month (this site)",
-            other: "TODO(verify): Tradify UK plan names and prices from tradify.co.uk",
+            other: "See tradify.co.uk for current UK plan names and prices",
           },
           {
             label: "Plan structure",
             graftmate: "One plan — quotes, clients, jobs, invoices included",
-            other: "TODO(verify): Tradify tier count and what each tier includes",
+            other: "See tradify.co.uk for tiers and what each plan includes",
           },
           {
             label: "AI quote drafting",
             graftmate: "Describe the job in plain English; review line items before sending",
-            other: "TODO(verify): whether Tradify offers AI quote generation and how it works",
+            other: "See Tradify's product pages for quote and estimate tools",
           },
           {
             label: "Unified inbox for your email",
             graftmate: "Included — messages linked to clients and jobs",
-            other: "TODO(verify): Tradify messaging channels and inbox behaviour",
+            other: "See Tradify for messaging channels and inbox behaviour",
           },
           {
             label: "App Store rating (GB)",
             graftmate: "New listing — ratings still building",
-            other: "TODO(verify): current GB App Store rating count for Tradify",
+            other: "See the GB App Store listing for current ratings",
           },
           {
             label: "Best for",
             graftmate: "UK sole traders and small teams wanting fast AI quotes and one monthly price",
-            other: "TODO(verify): Tradify's stated target customer and team size",
+            other: "See Tradify's site for their stated target customer and team size",
           },
         ],
       },
-      note: "TODO(verify): every Tradify column cell above. No unverified Tradify pricing, feature, or rating claims should be published without a source.",
+      note: "Tradify details change — confirm pricing, features, and ratings on tradify.co.uk before you switch.",
     },
     {
       id: "graftmate-facts",
@@ -80,17 +80,17 @@ export const tradifyAlternativePage: CommercialPageContent = {
     {
       question: "Is GraftMate a drop-in replacement for Tradify?",
       answer:
-        "It depends on your workflow. Compare features you use every day — scheduling, inventory, accounting integrations — and verify Tradify capabilities before switching. TODO(verify): feature parity checklist once product team confirms.",
+        "It depends on your workflow. Compare features you use every day — scheduling, inventory, accounting integrations — on Tradify's site before switching. GraftMate focuses on AI quoting, clients, jobs, and invoicing in one UK-priced plan.",
     },
     {
       question: "Can I import Tradify data?",
       answer:
-        "TODO(verify): document whether customer or job import exists before claiming migration support.",
+        "Contact us if you need help moving customer or job data — we can advise what is possible with your export files.",
     },
     {
       question: "Which is cheaper?",
       answer:
-        "GraftMate publishes one price on this site. Tradify pricing varies by plan — TODO(verify): fetch current Tradify UK pricing before making cost comparisons in ads or sales calls.",
+        "GraftMate publishes one price on this site. Tradify pricing varies by plan — compare their latest UK pricing on tradify.co.uk against £29.99/month here.",
     },
   ],
   closingCopy:
