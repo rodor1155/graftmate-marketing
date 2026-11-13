@@ -10,6 +10,7 @@ import {
   InvoiceIcon,
   QuoteIcon,
 } from "@/components/features/FeatureIcons";
+import { TestimonialsSection } from "@/components/trust/TestimonialsSection";
 import { indefiniteArticle } from "@/lib/indefiniteArticle";
 import { getVisibleTemplateDownloads } from "@/lib/templateDownloads";
 import type { TradePageData } from "@/lib/tradePages";
@@ -189,6 +190,8 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
           </div>
         </section>
       ) : null}
+
+      <TestimonialsSection trade={page.slug} />
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <Card className="p-8 text-center sm:p-10">
