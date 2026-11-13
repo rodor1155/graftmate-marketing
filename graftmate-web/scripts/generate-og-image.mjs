@@ -46,8 +46,17 @@ const phoneComposite = await sharp({
   .png()
   .toBuffer();
 
+const iconSize = 56;
+const logoMeta = await sharp(join(publicDir, "logo.png")).metadata();
+const iconCropHeight = logoMeta.width ?? iconSize;
 const logo = await sharp(join(publicDir, "logo.png"))
-  .resize(72, 88, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+  .extract({
+    left: 0,
+    top: 0,
+    width: logoMeta.width ?? iconSize,
+    height: Math.min(iconCropHeight, logoMeta.height ?? iconSize),
+  })
+  .resize(iconSize, iconSize, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
   .toBuffer();
 
 const wordmarkSvg = Buffer.from(`
@@ -74,7 +83,7 @@ await sharp(heroScene)
   .composite([
     { input: overlaySvg, top: 0, left: 0 },
     { input: logo, top: 72, left: 72 },
-    { input: wordmarkSvg, top: 68, left: 160 },
+    { input: wordmarkSvg, top: 64, left: 72 + iconSize + 16 },
     {
       input: phoneComposite,
       top: Math.round((HEIGHT - phoneHeight - 16) / 2),
