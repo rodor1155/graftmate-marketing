@@ -2,6 +2,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 import { PROMO_STRIP_TEXT } from "@/lib/promo";
 
 const articleProseClassName =
@@ -62,6 +63,24 @@ export function GuideArticle({ body, relatedLinks }: GuideArticleProps) {
                 </a>
               );
             },
+            table: ({ children }) => (
+              <ResponsiveTable className="mt-6 [&_table]:m-0 [&_table]:min-w-[28rem] [&_table]:border-0 [&_table]:bg-transparent">
+                <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
+                  {children}
+                </table>
+              </ResponsiveTable>
+            ),
+            thead: ({ children }) => <thead>{children}</thead>,
+            tbody: ({ children }) => <tbody>{children}</tbody>,
+            tr: ({ children }) => <tr>{children}</tr>,
+            th: ({ children }) => (
+              <th className="border-b border-border-subtle px-3 py-3 font-display font-semibold text-foreground">
+                {children}
+              </th>
+            ),
+            td: ({ children }) => (
+              <td className="border-b border-border-subtle px-3 py-3">{children}</td>
+            ),
           }}
         >
           {body}

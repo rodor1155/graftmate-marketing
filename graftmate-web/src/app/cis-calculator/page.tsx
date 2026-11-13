@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 import { CisCalculatorForm } from "@/components/calculators/CisCalculatorForm";
+import {
+  ResourcePageLayout,
+  ResourcePageSection,
+} from "@/components/resources/ResourcePageLayout";
 import { buildGuidePageMetadata } from "@/lib/guides/metadata";
+import { getResourceHeroVisual } from "@/lib/resourcePageVisuals";
 import { APP_STORE_URL } from "@/lib/config";
 
 const ROUTE = "/cis-calculator";
@@ -54,25 +60,24 @@ const faqs = [
 
 export default function CisCalculatorPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-      <p className="text-sm font-medium uppercase tracking-wider text-accent">
-        Free calculator
-      </p>
-      <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-        CIS deduction calculator UK
-      </h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-        How much will be taken off your invoice under the Construction
-        Industry Scheme? Put in your figures and you&apos;ll see the
-        deduction and your net pay. It&apos;s free, and nothing you type is
-        saved.
-      </p>
-
-      <div className="mt-10">
+    <ResourcePageLayout
+      eyebrow="Free calculator"
+      title="CIS deduction calculator UK"
+      intro={
+        <>
+          How much will be taken off your invoice under the Construction
+          Industry Scheme? Put in your figures and you&apos;ll see the
+          deduction and your net pay. It&apos;s free, and nothing you type is
+          saved.
+        </>
+      }
+      heroVisual={getResourceHeroVisual(ROUTE)}
+    >
+      <ResourcePageSection variant="narrow">
         <CisCalculatorForm />
-      </div>
+      </ResourcePageSection>
 
-      <section className="mt-16">
+      <ResourcePageSection>
         <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           How CIS deductions work
         </h2>
@@ -130,16 +135,16 @@ export default function CisCalculatorPage() {
             GOV.UK – Make deductions and pay subcontractors
           </a>
         </p>
-      </section>
+      </ResourcePageSection>
 
-      <section className="mt-16">
+      <ResourcePageSection variant="surface">
         <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           A worked example (HMRC&apos;s own)
         </h2>
         <p className="mt-4 leading-relaxed text-muted">
           This is the example HMRC uses in its guidance for contractors:
         </p>
-        <div className="mt-6 overflow-x-auto">
+        <ResponsiveTable className="mt-6">
           <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
             <tbody>
               <tr className="border-b border-border-subtle">
@@ -170,7 +175,7 @@ export default function CisCalculatorPage() {
               </tr>
             </tbody>
           </table>
-        </div>
+        </ResponsiveTable>
         <p className="mt-4 leading-relaxed text-muted">
           Not registered? At 30% the deduction on the same job would be
           £660.00, leaving £1,907.00. That&apos;s a good reason to register.
@@ -186,9 +191,9 @@ export default function CisCalculatorPage() {
             HMRC manual CISR61230
           </a>
         </p>
-      </section>
+      </ResourcePageSection>
 
-      <section className="mt-16">
+      <ResourcePageSection>
         <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           FAQ
         </h2>
@@ -207,9 +212,9 @@ export default function CisCalculatorPage() {
             </details>
           ))}
         </div>
-      </section>
+      </ResourcePageSection>
 
-      <section className="mt-16">
+      <ResourcePageSection variant="narrow" className="pb-8">
         <Card className="px-6 py-10 text-center sm:px-10 sm:py-12">
           <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
             Do this on every invoice without the maths
@@ -228,18 +233,20 @@ export default function CisCalculatorPage() {
             </p>
           </div>
         </Card>
-      </section>
+      </ResourcePageSection>
 
-      <p className="mt-10 text-center text-sm text-muted-dim">
-        Need the background reading?{" "}
-        <Link
-          href="/guides"
-          className="text-secondary underline underline-offset-2 hover:text-accent"
-        >
-          See all guides
-        </Link>
-        .
-      </p>
-    </div>
+      <ResourcePageSection variant="narrow" className="pb-20 pt-0">
+        <p className="text-center text-sm text-muted-dim">
+          Need the background reading?{" "}
+          <Link
+            href="/guides"
+            className="text-secondary underline underline-offset-2 hover:text-accent"
+          >
+            See all guides
+          </Link>
+          .
+        </p>
+      </ResourcePageSection>
+    </ResourcePageLayout>
   );
 }
