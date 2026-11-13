@@ -128,48 +128,45 @@ function CookieBanner({
 }) {
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-[100] border-t border-border bg-surface-raised p-4 shadow-[0_-8px_24px_rgba(0,0,0,0.12)] sm:p-6"
+      className="fixed inset-x-0 bottom-0 z-[100] border-t border-border bg-surface-raised px-3 py-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.1)] sm:px-6 sm:py-4"
       role="region"
       aria-labelledby={titleId}
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div className="max-w-2xl text-sm leading-relaxed text-muted">
-          <p id={titleId} className="font-display text-base font-semibold text-foreground">
-            Analytics cookies
-          </p>
-          <p className="mt-2">
-            We use optional analytics on graftmate.net to understand how
-            visitors find and use our marketing pages. Accept to allow Google
-            Analytics 4 and Vercel Web Analytics. Reject to continue without
-            these tools. See our{" "}
-            <Link
-              href="/privacy#cookies"
-              className="text-secondary underline underline-offset-2"
-            >
-              Privacy Policy (cookies)
-            </Link>
-            .
-          </p>
-        </div>
-        <div className="flex shrink-0 flex-col gap-2 sm:flex-row sm:items-center">
+      <div className="mx-auto flex max-w-6xl flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+        <p
+          id={titleId}
+          className="max-w-2xl text-xs leading-snug text-muted sm:text-sm sm:leading-relaxed"
+        >
+          <span className="font-display font-semibold text-foreground">
+            Analytics cookies.
+          </span>{" "}
+          Optional Google Analytics 4 and Vercel analytics on graftmate.net.{" "}
+          <Link
+            href="/privacy#cookies"
+            className="text-secondary underline underline-offset-2"
+          >
+            Privacy (cookies)
+          </Link>
+        </p>
+        <div className="flex shrink-0 gap-2">
           <Button
             type="button"
             variant="secondary"
-            size="md"
+            size="sm"
             onClick={onAccept}
-            className="w-full sm:w-auto"
+            className="min-w-0 flex-1 sm:flex-none"
             autoFocus
           >
-            Accept analytics
+            Accept
           </Button>
           <Button
             type="button"
             variant="secondary"
-            size="md"
+            size="sm"
             onClick={onReject}
-            className="w-full sm:w-auto"
+            className="min-w-0 flex-1 sm:flex-none"
           >
-            Reject analytics
+            Reject
           </Button>
         </div>
       </div>
