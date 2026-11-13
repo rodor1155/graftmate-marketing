@@ -20,13 +20,14 @@ export function Hero() {
             </p>
 
             <h1 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-foreground sm:mt-6 sm:text-5xl lg:text-[3.25rem]">
-              Describe the job. Send a professional quote in about two minutes.
+              Turn a rough job description into a ready-to-send quote in
+              seconds
             </h1>
 
             <p className="mt-5 max-w-lg text-base leading-relaxed text-muted sm:text-lg">
-              GraftMate turns site notes or a quick typed message into a quote
-              you can review and send from your phone — then keeps clients, jobs,
-              and invoicing in one place.
+              Type it or say it. GraftMate builds the quote for you to review
+              and send from your phone, and keeps clients, jobs, and invoicing
+              in one place.
             </p>
 
             <div className="mt-6 flex flex-col gap-4 sm:mt-8">
