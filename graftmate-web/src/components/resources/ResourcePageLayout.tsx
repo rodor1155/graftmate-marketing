@@ -1,0 +1,109 @@
+import type { ReactNode } from "react";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { Button } from "@/components/ui/Button";
+import { PhoneFrame } from "@/components/ui/PhoneFrame";
+import { PricingHighlightLine } from "@/components/pricing/PricingHighlightLine";
+import type { ResourceHeroVisual } from "@/lib/resourcePageVisuals";
+import { SIGNUP_URL } from "@/lib/urls";
+
+type ResourcePageLayoutProps = {
+  eyebrow?: string;
+  title: string;
+  intro: ReactNode;
+  heroVisual: ResourceHeroVisual;
+  heroAside?: ReactNode;
+  children: ReactNode;
+};
+
+export function ResourcePageLayout({
+  eyebrow,
+  title,
+  intro,
+  heroVisual,
+  heroAside,
+  children,
+}: ResourcePageLayoutProps) {
+  return (
+    <div className="relative overflow-hidden">
+      <section className="relative overflow-hidden border-b border-border-subtle">
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:gap-12 sm:px-6 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-20">
+          <div className="min-w-0">
+            {eyebrow ? (
+              <p className="text-sm font-medium uppercase tracking-wider text-accent">
+                {eyebrow}
+              </p>
+            ) : null}
+            <h1
+              className={`font-display text-[1.75rem] font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl ${eyebrow ? "mt-4" : ""}`}
+            >
+              {title}
+            </h1>
+            <div className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+              {intro}
+            </div>
+            {heroAside ? <div className="mt-6">{heroAside}</div> : null}
+            <div className="mt-8 flex flex-col gap-4">
+              <Button href={SIGNUP_URL} size="lg">
+                Start free →
+              </Button>
+              <PricingHighlightLine className="text-sm text-muted-dim" />
+              <AppStoreBadge />
+            </div>
+          </div>
+
+          <div className="mx-auto w-full max-w-[280px] sm:max-w-xs lg:max-w-sm lg:justify-self-end">
+            <PhoneFrame
+              src={heroVisual.src}
+              alt={heroVisual.alt}
+              statusBar={heroVisual.statusBar}
+            />
+          </div>
+        </div>
+      </section>
+
+      {children}
+    </div>
+  );
+}
+
+type ResourcePageSectionProps = {
+  children: ReactNode;
+  variant?: "default" | "surface" | "narrow";
+  className?: string;
+  id?: string;
+};
+
+export function ResourcePageSection({
+  children,
+  variant = "default",
+  className = "",
+  id,
+}: ResourcePageSectionProps) {
+  if (variant === "surface") {
+    return (
+      <section
+        id={id}
+        className={`border-y border-border-subtle bg-surface py-14 sm:py-16 ${className}`.trim()}
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">{children}</div>
+        </div>
+      </section>
+    );
+  }
+
+  const widthClass =
+    variant === "narrow"
+      ? "mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8"
+      : "mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8";
+
+  return (
+    <section id={id} className={`${widthClass} ${className}`.trim()}>
+      {variant === "default" ? (
+        <div className="mx-auto max-w-3xl">{children}</div>
+      ) : (
+        children
+      )}
+    </section>
+  );
+}

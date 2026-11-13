@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 import { MtdChecker } from "@/components/mtd/MtdChecker";
+import {
+  ResourcePageLayout,
+  ResourcePageSection,
+} from "@/components/resources/ResourcePageLayout";
 import { APP_STORE_URL } from "@/lib/config";
+import { getResourceHeroVisual } from "@/lib/resourcePageVisuals";
+
+const ROUTE = "/mtd";
 
 export const metadata: Metadata = {
   title: "Do I Need Making Tax Digital? MTD Checker for Trades",
@@ -50,67 +58,59 @@ const faqs = [
 
 export default function MtdPage() {
   return (
-    <div className="relative overflow-hidden">
-      <section className="relative overflow-hidden border-b border-border-subtle">
-        <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-sm font-medium uppercase tracking-wider text-accent">
-            MTD checker
-          </p>
-          <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl">
-            Do I need Making Tax Digital, and when?
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-            Making Tax Digital (MTD) for Income Tax means keeping digital
-            records and sending HMRC quarterly updates through compatible
-            software. It&apos;s coming in stages for sole traders and
-            landlords. Enter your qualifying income to see where you stand.
-          </p>
-
-          <div className="mt-6 rounded-xl border-2 border-border-subtle bg-surface p-4 text-sm leading-relaxed text-muted">
-            <span className="font-semibold text-foreground">
-              Straight up:
-            </span>{" "}
-            GraftMate keeps digital records of your invoices and expenses,
-            but it isn&apos;t MTD filing software. You&apos;ll still need
-            HMRC-recognised software to submit.
-          </div>
+    <ResourcePageLayout
+      eyebrow="MTD checker"
+      title="Do I need Making Tax Digital, and when?"
+      intro={
+        <>
+          Making Tax Digital (MTD) for Income Tax means keeping digital
+          records and sending HMRC quarterly updates through compatible
+          software. It&apos;s coming in stages for sole traders and
+          landlords. Enter your qualifying income to see where you stand.
+        </>
+      }
+      heroVisual={getResourceHeroVisual(ROUTE)}
+      heroAside={
+        <div className="rounded-xl border-2 border-border-subtle bg-surface p-4 text-sm leading-relaxed text-muted">
+          <span className="font-semibold text-foreground">Straight up:</span>{" "}
+          GraftMate keeps digital records of your invoices and expenses,
+          but it isn&apos;t MTD filing software. You&apos;ll still need
+          HMRC-recognised software to submit.
         </div>
-      </section>
-
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      }
+    >
+      <ResourcePageSection variant="narrow">
         <MtdChecker />
-      </section>
+      </ResourcePageSection>
 
-      <section className="border-y border-border-subtle bg-surface py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            What MTD means day to day
-          </h2>
-          <p className="mt-4 leading-relaxed text-muted">
-            Once you&apos;re in, your software will need to:
-          </p>
-          <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
-            <li className="flex gap-3">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-              <span>keep digital records of your self-employment income and expenses</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-              <span>send HMRC a summary every quarter (these updates aren&apos;t tax returns)</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-              <span>submit your tax return by 31 January after the tax year ends</span>
-            </li>
-          </ul>
-          <p className="mt-4 leading-relaxed text-muted">
-            You still do a Self Assessment return for the year before you
-            start.
-          </p>
-        </div>
-      </section>
+      <ResourcePageSection variant="surface">
+        <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          What MTD means day to day
+        </h2>
+        <p className="mt-4 leading-relaxed text-muted">
+          Once you&apos;re in, your software will need to:
+        </p>
+        <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
+          <li className="flex gap-3">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+            <span>keep digital records of your self-employment income and expenses</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+            <span>send HMRC a summary every quarter (these updates aren&apos;t tax returns)</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+            <span>submit your tax return by 31 January after the tax year ends</span>
+          </li>
+        </ul>
+        <p className="mt-4 leading-relaxed text-muted">
+          You still do a Self Assessment return for the year before you
+          start.
+        </p>
+      </ResourcePageSection>
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <ResourcePageSection>
         <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Example
         </h2>
@@ -120,47 +120,45 @@ export default function MtdPage() {
           their qualifying income is £34,000. That&apos;s over £30,000, so
           MTD applies from 6 April 2027.
         </p>
-      </section>
+      </ResourcePageSection>
 
-      <section className="border-y border-border-subtle bg-surface py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Where GraftMate fits (and where it doesn&apos;t)
-          </h2>
-          <div className="mt-8 overflow-x-auto">
-            <table className="w-full min-w-[32rem] border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-border-subtle text-left">
-                  <th className="py-3 pr-4 font-display font-semibold text-foreground">
-                    &nbsp;
-                  </th>
-                  <th className="py-3 pr-4 font-display font-semibold text-foreground">
-                    GraftMate
-                  </th>
-                  <th className="py-3 font-display font-semibold text-foreground">
-                    MTD-compatible software / your accountant
-                  </th>
+      <ResourcePageSection variant="surface">
+        <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          Where GraftMate fits (and where it doesn&apos;t)
+        </h2>
+        <ResponsiveTable className="mt-8">
+          <table className="w-full min-w-[32rem] border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-border-subtle text-left">
+                <th className="py-3 pr-4 font-display font-semibold text-foreground">
+                  &nbsp;
+                </th>
+                <th className="py-3 pr-4 font-display font-semibold text-foreground">
+                  GraftMate
+                </th>
+                <th className="py-3 font-display font-semibold text-foreground">
+                  MTD-compatible software / your accountant
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonRows.map((row) => (
+                <tr key={row.label} className="border-b border-border-subtle">
+                  <td className="py-3 pr-4 text-muted">{row.label}</td>
+                  <td className="py-3 pr-4 text-muted">
+                    {row.graftmate === true ? "✓" : "✗"}
+                  </td>
+                  <td className="py-3 text-muted">
+                    {row.other === true ? "✓" : row.other === false ? "✗" : row.other}
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {comparisonRows.map((row) => (
-                  <tr key={row.label} className="border-b border-border-subtle">
-                    <td className="py-3 pr-4 text-muted">{row.label}</td>
-                    <td className="py-3 pr-4 text-muted">
-                      {row.graftmate === true ? "✓" : "✗"}
-                    </td>
-                    <td className="py-3 text-muted">
-                      {row.other === true ? "✓" : row.other === false ? "✗" : row.other}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+              ))}
+            </tbody>
+          </table>
+        </ResponsiveTable>
+      </ResourcePageSection>
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <ResourcePageSection>
         <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           FAQ
         </h2>
@@ -211,9 +209,9 @@ export default function MtdPage() {
           </a>
           .
         </p>
-      </section>
+      </ResourcePageSection>
 
-      <section className="mx-auto max-w-3xl px-4 pb-20 sm:px-6 lg:px-8">
+      <ResourcePageSection variant="narrow" className="pb-20">
         <Card className="p-8 text-center sm:p-10">
           <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
             Get your invoices in order before April 2027.
@@ -231,8 +229,8 @@ export default function MtdPage() {
             </p>
           </div>
         </Card>
-      </section>
-    </div>
+      </ResourcePageSection>
+    </ResourcePageLayout>
   );
 }
 
