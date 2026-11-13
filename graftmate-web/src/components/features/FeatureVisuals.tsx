@@ -64,7 +64,7 @@ export function ClientVisual() {
           DM
         </span>
         <div>
-          <p className="font-display font-semibold text-foreground">Dave Mitchell</p>
+          <p className="font-display font-semibold text-foreground">Sample customer</p>
           <p className="text-xs text-muted">Leeds · 3 jobs · Last contact 2d ago</p>
         </div>
       </div>

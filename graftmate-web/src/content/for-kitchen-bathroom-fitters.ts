@@ -65,7 +65,9 @@ export const forKitchenBathroomFittersPage: TradePageData = {
   ],
   exampleQuote: {
     title: "Bathroom refit — supply & fit",
-    client: "Priya Shah",
+    siteNotes:
+      "Main bathroom strip-out and refit — remove suite, first and second fix, tile walls and floor, install new WC, basin vanity and shower enclosure. Make good and dispose of waste.",
+    client: "Sample customer",
     location: "Reading",
     status: "Sent",
     subtotal: "£4,166.67",

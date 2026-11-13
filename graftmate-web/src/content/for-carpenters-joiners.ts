@@ -65,7 +65,9 @@ export const forCarpentersJoinersPage: TradePageData = {
   ],
   exampleQuote: {
     title: "Supply and fit internal doors",
-    client: "Riverside Developments",
+    siteNotes:
+      "First-floor flat refurbishment — hang and adjust six internal doors, linings, handles and architrave. Minor patch and fill around frames.",
+    client: "Riverside Developments (main contractor)",
     location: "Cambridge",
     status: "Sent",
     subtotal: "£1,041.67",

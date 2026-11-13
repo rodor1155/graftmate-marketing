@@ -8,7 +8,6 @@ import {
   ResourcePageSection,
 } from "@/components/resources/ResourcePageLayout";
 import { APP_STORE_URL } from "@/lib/config";
-import { getResourceHeroVisual } from "@/lib/resourcePageVisuals";
 
 const ROUTE = "/mtd";
 
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Check if and when Making Tax Digital for Income Tax applies to you as a sole trader in the trades: April 2026, 2027 or 2028. Free, based on GOV.UK.",
   alternates: {
-    canonical: "https://graftmate.net/mtd",
+    canonical: `https://graftmate.net${ROUTE}`,
   },
 };
 
@@ -59,6 +58,7 @@ const faqs = [
 export default function MtdPage() {
   return (
     <ResourcePageLayout
+      variant="tool"
       eyebrow="MTD checker"
       title="Do I need Making Tax Digital, and when?"
       intro={
@@ -69,7 +69,7 @@ export default function MtdPage() {
           landlords. Enter your qualifying income to see where you stand.
         </>
       }
-      heroVisual={getResourceHeroVisual(ROUTE)}
+      primaryAction={{ label: "Check", href: "#calculator" }}
       heroAside={
         <div className="rounded-xl border-2 border-border-subtle bg-surface p-4 text-sm leading-relaxed text-muted">
           <span className="font-semibold text-foreground">Straight up:</span>{" "}
@@ -78,11 +78,8 @@ export default function MtdPage() {
           HMRC-recognised software to submit.
         </div>
       }
+      tool={<MtdChecker />}
     >
-      <ResourcePageSection variant="narrow">
-        <MtdChecker />
-      </ResourcePageSection>
-
       <ResourcePageSection variant="surface">
         <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           What MTD means day to day

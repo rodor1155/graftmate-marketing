@@ -65,7 +65,9 @@ export const forPlasterersPage: TradePageData = {
   ],
   exampleQuote: {
     title: "Living room skim",
-    client: "Mo Khan",
+    siteNotes:
+      "Living room re-skim after wallpaper removal — prep walls, PVA, two-coat skim to approx. 18m², beads as required. Dust sheets and clear waste.",
+    client: "Sample customer",
     location: "Leicester",
     status: "Sent",
     subtotal: "£458.33",

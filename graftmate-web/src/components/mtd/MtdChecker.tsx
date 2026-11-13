@@ -18,7 +18,7 @@ export function MtdChecker() {
   const result = qualifyingIncome === null ? null : checkMtdRequirement(qualifyingIncome);
 
   return (
-    <Card className="p-6 sm:p-8">
+    <Card id="calculator" className="p-6 sm:p-8">
       <label
         htmlFor={inputId}
         className="font-display text-base font-semibold text-foreground"

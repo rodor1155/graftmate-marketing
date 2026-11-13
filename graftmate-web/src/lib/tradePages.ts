@@ -37,6 +37,8 @@ export type ExampleQuoteLine = {
 
 export type ExampleQuote = {
   title: string;
+  /** Plain-English site notes shown in the quote builder mock */
+  siteNotes: string;
   client: string;
   location: string;
   status: string;
@@ -150,7 +152,9 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
     ],
     exampleQuote: {
       title: "Consumer unit replacement",
-      client: "Dave Mitchell",
+      siteNotes:
+        "Terrace property — remove existing fuse board, supply and fit 10-way RCBO consumer unit, test and certify. Works to BS 7671. Dispose of waste.",
+      client: "Sample customer",
       location: "Leeds",
       status: "Sent",
       subtotal: "£291.67",
@@ -283,7 +287,9 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
     ],
     exampleQuote: {
       title: "Basin and tap replacement",
-      client: "Sarah Connolly",
+      siteNotes:
+        "Upstairs cloakroom — isolate water, remove old basin and taps, supply and fit 550mm vanity basin with mixer tap, new waste and flexible connectors. Test for leaks.",
+      client: "Sample customer",
       location: "Manchester",
       status: "Sent",
       subtotal: "£237.50",
@@ -416,7 +422,9 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
     ],
     exampleQuote: {
       title: "Garden wall rebuild",
-      client: "Tom & Helen Wright",
+      siteNotes:
+        "Rear boundary — dismantle leaning wall (~12m), rebuild in matching brick with new DPC, repoint and clear site. Access via side gate.",
+      client: "Sample customer",
       location: "Sheffield",
       status: "Sent",
       subtotal: "£2,000.00",
@@ -549,7 +557,9 @@ export const tradePages: Record<CoreTradeSlug, TradePageData> = {
     ],
     exampleQuote: {
       title: "Annual boiler service",
-      client: "Greenfield Lettings",
+      siteNotes:
+        "Rental flat — annual boiler service: visual inspection, flue check, combustion analysis, safety devices, landlord gas safety due this month. Tenant access 9–12.",
+      client: "Oakdale Lettings (agent)",
       location: "Bristol",
       status: "Sent",
       subtotal: "£79.17",

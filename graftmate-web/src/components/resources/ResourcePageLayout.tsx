@@ -10,8 +10,12 @@ type ResourcePageLayoutProps = {
   eyebrow?: string;
   title: string;
   intro: ReactNode;
-  heroVisual: ResourceHeroVisual;
+  heroVisual?: ResourceHeroVisual;
   heroAside?: ReactNode;
+  /** Free tool / calculator pages: tool first, no sales hero */
+  variant?: "default" | "tool";
+  tool?: ReactNode;
+  primaryAction?: { label: string; href: string };
   children: ReactNode;
 };
 
@@ -21,8 +25,47 @@ export function ResourcePageLayout({
   intro,
   heroVisual,
   heroAside,
+  variant = "default",
+  tool,
+  primaryAction,
   children,
 }: ResourcePageLayoutProps) {
+  const isTool = variant === "tool";
+
+  if (isTool) {
+    const action = primaryAction ?? { label: "Calculate", href: "#calculator" };
+
+    return (
+      <div className="relative overflow-hidden">
+        <section className="relative border-b border-border-subtle">
+          <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+            {eyebrow ? (
+              <p className="text-sm font-medium uppercase tracking-wider text-accent">
+                {eyebrow}
+              </p>
+            ) : null}
+            <h1
+              className={`font-display text-[1.75rem] font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem] ${eyebrow ? "mt-4" : ""}`}
+            >
+              {title}
+            </h1>
+            <div className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+              {intro}
+            </div>
+            {heroAside ? <div className="mt-5">{heroAside}</div> : null}
+            <div className="mt-6">
+              <Button href={action.href} size="lg">
+                {action.label}
+              </Button>
+            </div>
+            {tool ? <div className="mt-8">{tool}</div> : null}
+          </div>
+        </section>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <div className="relative overflow-hidden">
       <section className="relative overflow-hidden border-b border-border-subtle">
@@ -51,13 +94,15 @@ export function ResourcePageLayout({
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-[280px] sm:max-w-xs lg:max-w-sm lg:justify-self-end">
-            <PhoneFrame
-              src={heroVisual.src}
-              alt={heroVisual.alt}
-              statusBar={heroVisual.statusBar}
-            />
-          </div>
+          {heroVisual ? (
+            <div className="mx-auto w-full max-w-[280px] sm:max-w-xs lg:max-w-sm lg:justify-self-end">
+              <PhoneFrame
+                src={heroVisual.src}
+                alt={heroVisual.alt}
+                statusBar={heroVisual.statusBar}
+              />
+            </div>
+          ) : null}
         </div>
       </section>
 

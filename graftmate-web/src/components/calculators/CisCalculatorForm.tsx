@@ -40,7 +40,7 @@ export function CisCalculatorForm() {
   );
 
   return (
-    <Card className="p-6 sm:p-8">
+    <Card id="calculator" className="p-6 sm:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <Field
           label="Total invoice amount ex VAT (gross)"

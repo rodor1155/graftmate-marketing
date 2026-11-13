@@ -65,7 +65,9 @@ export const forRoofersPage: TradePageData = {
   ],
   exampleQuote: {
     title: "Re-roof — semi-detached",
-    client: "James Porter",
+    siteNotes:
+      "Semi-detached main roof — strip concrete tiles, renew underfelt and battens, re-tile, replace ridge and verge. Skip for waste. Scaffold arranged by homeowner.",
+    client: "Sample customer",
     location: "Norwich",
     status: "Sent",
     subtotal: "£4,583.33",

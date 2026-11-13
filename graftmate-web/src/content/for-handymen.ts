@@ -65,7 +65,9 @@ export const forHandymenPage: TradePageData = {
   ],
   exampleQuote: {
     title: "Snag list — rental flat",
-    client: "Oak Lettings",
+    siteNotes:
+      "Pre-checkout snag list — re-seal bath, adjust kitchen door, replace curtain pole, fill and touch-in minor wall chips. All in one visit.",
+    client: "Oak Lettings (agent)",
     location: "Oxford",
     status: "Sent",
     subtotal: "£162.50",
