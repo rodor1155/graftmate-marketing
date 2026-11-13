@@ -51,11 +51,6 @@ export const tradifyAlternativePage: CommercialPageContent = {
             other: "See Tradify for messaging channels and inbox behaviour",
           },
           {
-            label: "App Store rating (GB)",
-            graftmate: "New listing — ratings still building",
-            other: "See the GB App Store listing for current ratings",
-          },
-          {
             label: "Best for",
             graftmate: "UK sole traders and small teams wanting fast AI quotes and one monthly price",
             other: "See Tradify's site for their stated target customer and team size",

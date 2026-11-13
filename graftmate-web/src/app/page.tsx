@@ -3,9 +3,11 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { Hero } from "@/components/home/Hero";
 import { HomeFaq } from "@/components/home/HomeFaq";
 import { HowItWorks } from "@/components/home/HowItWorks";
+import { PhoneToQuoteSequence } from "@/components/home/PhoneToQuoteSequence";
 import { PricingTeaser } from "@/components/home/PricingTeaser";
 import { ProductShowcase } from "@/components/home/ProductShowcase";
 import { TradesStrip } from "@/components/home/TradesStrip";
+import { TestimonialsSection } from "@/components/trust/TestimonialsSection";
 import { getSiteDescription } from "@/lib/promo";
 
 export const dynamic = "force-dynamic";
@@ -35,7 +37,9 @@ export default function Home() {
       <Hero />
       <TradesStrip />
       <HowItWorks />
+      <PhoneToQuoteSequence />
       <ProductShowcase />
+      <TestimonialsSection />
       <PricingTeaser />
       <HomeFaq />
       <CtaBanner />
