@@ -1,43 +1,27 @@
 import {
-  homeRoughJobNotes,
-  homeSequenceQuote,
-} from "@/content/homeQuoteSequence";
-import { JobNotesInputScreen } from "@/components/quotes/JobNotesInputScreen";
-import {
-  QuoteBuilderPhoneFrame,
-  quoteBuilderAlt,
-} from "@/components/quotes/QuoteBuilderPhoneFrame";
-import { QuoteSentScreen } from "@/components/quotes/QuoteSentScreen";
-import { PhoneFrame } from "@/components/ui/PhoneFrame";
+  DescribeJobStepVisual,
+  ReviewQuoteStepVisual,
+  SendQuoteStepVisual,
+} from "@/components/home/homeQuoteStepVisuals";
 
 const steps = [
   {
     step: "01",
     title: "Rough notes in",
     caption: "Type how you would text a mate — GraftMate understands plain English.",
-    renderPhone: () => (
-      <PhoneFrame alt="GraftMate new quote screen with rough site notes typed in">
-        <JobNotesInputScreen roughNotes={homeRoughJobNotes} />
-      </PhoneFrame>
-    ),
+    Visual: DescribeJobStepVisual,
   },
   {
     step: "02",
     title: "Quote built",
     caption: "Line items, VAT, and totals — ready for you to review on site.",
-    renderPhone: () => (
-      <QuoteBuilderPhoneFrame quote={homeSequenceQuote} />
-    ),
+    Visual: ReviewQuoteStepVisual,
   },
   {
     step: "03",
     title: "Quote sent",
     caption: "Send before you leave. Your customer gets a professional PDF by email.",
-    renderPhone: () => (
-      <PhoneFrame alt={`${quoteBuilderAlt(homeSequenceQuote)} — sent confirmation`}>
-        <QuoteSentScreen quote={homeSequenceQuote} />
-      </PhoneFrame>
-    ),
+    Visual: SendQuoteStepVisual,
   },
 ] as const;
 
@@ -71,7 +55,9 @@ export function PhoneToQuoteSequence() {
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {item.caption}
               </p>
-              <div className="mt-6 w-full max-w-[280px]">{item.renderPhone()}</div>
+              <div className="mt-6 w-full max-w-[280px]">
+                <item.Visual />
+              </div>
             </li>
           ))}
         </ol>
