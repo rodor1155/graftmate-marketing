@@ -11,7 +11,7 @@ type CtaBannerProps = {
 
 export function CtaBanner({
   title = "Send your next quote from your phone",
-  description = `14-day free trial from sign-up – no card needed. Then £29.99/month. Describe a real job and see how fast you can quote it.`,
+  description = `Describe a real job and see how fast you can quote it. Review line items and VAT, then send before you leave site.`,
   showBrowserNote = true,
 }: CtaBannerProps) {
   return (

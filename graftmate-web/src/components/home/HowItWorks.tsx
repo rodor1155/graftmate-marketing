@@ -1,21 +1,30 @@
+import {
+  DescribeJobStepVisual,
+  ManageJobStepVisual,
+  ReviewQuoteStepVisual,
+} from "@/components/home/homeQuoteStepVisuals";
+
 const steps = [
   {
     step: "01",
     title: "Describe the job",
     description:
       "Tell GraftMate what the customer needs — in site notes or typed text. Mention labour, materials, and anything that affects the price.",
+    Visual: DescribeJobStepVisual,
   },
   {
     step: "02",
     title: "Review and send the quote",
     description:
       "GraftMate drafts a professional quote with line items and UK VAT. Check it, tweak anything you need, and send it from your phone.",
+    Visual: ReviewQuoteStepVisual,
   },
   {
     step: "03",
     title: "Manage the job and invoice",
     description:
       "Keep the client, messages, and job in one place. When the work is accepted, turn the quote into an invoice in one tap.",
+    Visual: ManageJobStepVisual,
   },
 ];
 
@@ -33,10 +42,13 @@ export function HowItWorks() {
           From job description to sent quote in about two minutes
         </h2>
 
-        <ol className="mt-12 grid gap-8 sm:grid-cols-3">
+        <ol className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
           {steps.map((item) => (
-            <li key={item.step} className="relative">
-              <span className="font-display text-5xl font-bold text-accent/20">
+            <li key={item.step} className="flex flex-col">
+              <div className="w-full max-w-[280px]">
+                <item.Visual />
+              </div>
+              <span className="mt-6 font-display text-5xl font-bold text-accent/20">
                 {item.step}
               </span>
               <h3 className="mt-2 font-display text-lg font-semibold text-foreground">

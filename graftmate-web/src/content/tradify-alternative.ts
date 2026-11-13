@@ -1,5 +1,5 @@
 import type { CommercialPageContent } from "@/lib/commercialPages";
-import { CONTENT_PRICING_COPY } from "@/lib/promo";
+import { CONTENT_PLAN_BLURB } from "@/lib/promo";
 
 export const tradifyAlternativePage: CommercialPageContent = {
   route: "/tradify-alternative",
@@ -9,7 +9,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
   eyebrow: "Compare",
   heroTitle: "A Tradify alternative with one UK plan",
   heroSubtitle:
-    "If you are comparing trade job software in the UK, GraftMate keeps pricing simple: 14-day free trial from sign-up (no card needed), then £29.99/month, with AI quoting, a unified inbox, and quote-to-invoice in one app. See how it compares — check Tradify's current pricing and features on their site before you decide.",
+    "If you are comparing trade job software in the UK, GraftMate keeps pricing simple: one £29.99/month plan with AI quoting, a unified inbox, and quote-to-invoice in one app. See how it compares — check Tradify's current pricing and features on their site before you decide.",
   sections: [
     {
       id: "why-compare",
@@ -31,8 +31,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
         rows: [
           {
             label: "Public pricing (UK)",
-            graftmate:
-              "14-day free trial, then £29.99/month (this site)",
+            graftmate: "£29.99/month on this site — see pricing for trial details",
             other: "See tradify.co.uk for current UK plan names and prices",
           },
           {
@@ -67,7 +66,7 @@ export const tradifyAlternativePage: CommercialPageContent = {
         "Unified inbox for email linked to clients",
         "Client and job records with quote history",
         "Quote to invoice in one tap with UK VAT support",
-        `${CONTENT_PRICING_COPY}`,
+        `${CONTENT_PLAN_BLURB}`,
       ],
     },
   ],

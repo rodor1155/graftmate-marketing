@@ -15,7 +15,7 @@ export function getPricingCardBadge(): string {
 }
 
 export const PRICING_CARD_DETAIL =
-  "Try GraftMate free for 14 days from sign-up — no card needed. After that, GraftMate Pro is £29.99/month. One plan, every feature included. Pay by card on the web, or subscribe via Apple in-app purchase on iPhone.";
+  "Try GraftMate free for 14 days from sign-up — no card needed. After that, GraftMate Pro is £29.99/month. One plan, every feature included. Subscribe via Apple in-app purchase on iPhone.";
 
 export function getPricingCardDetail(): string {
   return PRICING_CARD_DETAIL;
@@ -32,9 +32,16 @@ export function getPricingPageMetaDescription(): string {
   return "14-day free trial – no card needed. One plan with every feature, built for sole traders and small teams. Then £29.99/month. Cancel anytime.";
 }
 
-/** Shared pricing paragraph for trade and content pages. */
+/** Shared pricing paragraph for trade pricing cards (counts as the page’s trial mention). */
 export const CONTENT_PRICING_COPY =
-  "Try GraftMate free for 14 days from sign-up — no card needed. After that, GraftMate Pro is £29.99/month. One plan, cancel anytime. Pay by card on the web, or subscribe through Apple in-app purchase on iPhone.";
+  "Try GraftMate free for 14 days from sign-up — no card needed. After that, GraftMate Pro is £29.99/month. One plan, cancel anytime.";
+
+/** Mid-page resource copy — no repeated trial line (banner + closing CTA carry that). */
+export const CONTENT_PLAN_BLURB =
+  "GraftMate Pro is £29.99/month with every feature on one plan — quotes, clients, jobs, and invoices. Cancel anytime.";
+
+/** Matches visible on-page trial marketing (see trialLinePlacement.test.ts). */
+export const TRIAL_LINE_SNIPPET = "14-day free trial";
 
 export const FAQ_AFTER_TRIAL_QUESTION = "What happens after 14 days?";
 

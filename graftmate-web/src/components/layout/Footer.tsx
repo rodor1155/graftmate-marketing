@@ -20,8 +20,8 @@ export function Footer() {
   return (
     <footer className="section-dark border-t border-border">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-2">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:items-start">
+          <div>
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
               Describe a job and get a professional quote you can review and

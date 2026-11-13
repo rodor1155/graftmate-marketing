@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Button } from "@/components/ui/Button";
 import { PhoneFrame } from "@/components/ui/PhoneFrame";
-import { PricingHighlightLine } from "@/components/pricing/PricingHighlightLine";
 import type { ResourceHeroVisual } from "@/lib/resourcePageVisuals";
 import { SIGNUP_URL } from "@/lib/urls";
 
@@ -69,7 +68,7 @@ export function ResourcePageLayout({
   return (
     <div className="relative overflow-hidden">
       <section className="relative overflow-hidden border-b border-border-subtle">
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:gap-12 sm:px-6 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-20">
+        <div className="relative mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:gap-10 sm:px-6 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:px-8 lg:py-14">
           <div className="min-w-0">
             {eyebrow ? (
               <p className="text-sm font-medium uppercase tracking-wider text-accent">
@@ -89,7 +88,6 @@ export function ResourcePageLayout({
               <Button href={SIGNUP_URL} size="lg">
                 Start free →
               </Button>
-              <PricingHighlightLine className="text-sm text-muted-dim" />
               <AppStoreBadge />
             </div>
           </div>
@@ -128,7 +126,7 @@ export function ResourcePageSection({
     return (
       <section
         id={id}
-        className={`border-y border-border-subtle bg-surface py-14 sm:py-16 ${className}`.trim()}
+        className={`border-y border-border-subtle bg-surface py-10 sm:py-12 ${className}`.trim()}
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">{children}</div>
@@ -139,8 +137,8 @@ export function ResourcePageSection({
 
   const widthClass =
     variant === "narrow"
-      ? "mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8"
-      : "mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8";
+      ? "mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8"
+      : "mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8";
 
   return (
     <section id={id} className={`${widthClass} ${className}`.trim()}>

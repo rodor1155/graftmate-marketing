@@ -1,5 +1,5 @@
 import type { CommercialPageContent } from "@/lib/commercialPages";
-import { CONTENT_PRICING_COPY } from "@/lib/promo";
+import { CONTENT_PLAN_BLURB } from "@/lib/promo";
 
 export const invoiceAppForTradesmenPage: CommercialPageContent = {
   route: "/invoice-app-for-tradesmen",
@@ -29,7 +29,7 @@ export const invoiceAppForTradesmenPage: CommercialPageContent = {
       title: "How GraftMate fits UK trades",
       body: [
         "Describe the job in plain English and review an AI-drafted quote with line items and VAT. When the customer accepts, invoice in one tap. Keep clients, jobs, and chats together so admin does not eat your evenings.",
-        `${CONTENT_PRICING_COPY} One plan with quotes, inbox, clients, and unlimited quotes and invoices on the pricing page.`,
+        `${CONTENT_PLAN_BLURB} Quotes, inbox, clients, and unlimited quotes and invoices on the pricing page.`,
       ],
     },
     {
@@ -59,7 +59,7 @@ export const invoiceAppForTradesmenPage: CommercialPageContent = {
     {
       question: "Can I subscribe on iPhone?",
       answer:
-        "Yes. Pay by card on the web or subscribe via Apple in-app purchase on iPhone on the App Store.",
+        "Yes. Subscribe via Apple in-app purchase on iPhone on the App Store.",
     },
     {
       question: "Who is GraftMate for?",
