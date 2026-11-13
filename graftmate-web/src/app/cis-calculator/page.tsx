@@ -8,7 +8,6 @@ import {
   ResourcePageSection,
 } from "@/components/resources/ResourcePageLayout";
 import { buildGuidePageMetadata } from "@/lib/guides/metadata";
-import { getResourceHeroVisual } from "@/lib/resourcePageVisuals";
 import { APP_STORE_URL } from "@/lib/config";
 
 const ROUTE = "/cis-calculator";
@@ -61,6 +60,7 @@ const faqs = [
 export default function CisCalculatorPage() {
   return (
     <ResourcePageLayout
+      variant="tool"
       eyebrow="Free calculator"
       title="CIS deduction calculator UK"
       intro={
@@ -71,12 +71,9 @@ export default function CisCalculatorPage() {
           saved.
         </>
       }
-      heroVisual={getResourceHeroVisual(ROUTE)}
+      primaryAction={{ label: "Calculate", href: "#calculator" }}
+      tool={<CisCalculatorForm />}
     >
-      <ResourcePageSection variant="narrow">
-        <CisCalculatorForm />
-      </ResourcePageSection>
-
       <ResourcePageSection>
         <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           How CIS deductions work

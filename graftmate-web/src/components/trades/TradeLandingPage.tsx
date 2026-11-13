@@ -3,7 +3,7 @@ import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { IconChip } from "@/components/ui/IconChip";
-import { PhoneFrame } from "@/components/ui/PhoneFrame";
+import { QuoteBuilderPhoneFrame } from "@/components/quotes/QuoteBuilderPhoneFrame";
 import {
   ClientIcon,
   InboxIcon,
@@ -49,11 +49,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
           </div>
 
           <div className="mx-auto w-full max-w-xs sm:max-w-sm">
-            <PhoneFrame
-              src={page.heroScreenshot.src}
-              alt={page.heroScreenshot.alt}
-              statusBar={page.heroScreenshot.statusBar}
-            />
+            <QuoteBuilderPhoneFrame quote={page.exampleQuote} priority />
           </div>
         </div>
       </section>
@@ -140,11 +136,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
           </p>
         </div>
         <div className="mt-10 max-w-xs sm:max-w-sm">
-          <PhoneFrame
-            src={page.heroScreenshot.src}
-            alt={page.heroScreenshot.alt}
-            statusBar={page.heroScreenshot.statusBar}
-          />
+          <QuoteBuilderPhoneFrame quote={page.exampleQuote} />
         </div>
       </section>
 

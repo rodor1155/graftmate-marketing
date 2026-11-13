@@ -9,7 +9,6 @@ import {
   ResourcePageSection,
 } from "@/components/resources/ResourcePageLayout";
 import { APP_STORE_URL } from "@/lib/config";
-import { getResourceHeroVisual } from "@/lib/resourcePageVisuals";
 
 const ROUTE = "/late-payment-calculator";
 
@@ -28,6 +27,7 @@ const proseClassName =
 export default function LatePaymentCalculatorPage() {
   return (
     <ResourcePageLayout
+      variant="tool"
       eyebrow="Free calculator"
       title="Late payment interest calculator"
       intro={
@@ -37,12 +37,9 @@ export default function LatePaymentCalculatorPage() {
           how much.
         </>
       }
-      heroVisual={getResourceHeroVisual(ROUTE)}
+      primaryAction={{ label: "Calculate", href: "#calculator" }}
+      tool={<LatePaymentCalculator />}
     >
-      <ResourcePageSection variant="narrow">
-        <LatePaymentCalculator />
-      </ResourcePageSection>
-
       <ResourcePageSection>
         <div className={proseClassName}>
           <h2>When is an invoice late?</h2>

@@ -65,7 +65,9 @@ export const forPaintersDecoratorsPage: TradePageData = {
   ],
   exampleQuote: {
     title: "Three-bed redecoration",
-    client: "Anna Hughes",
+    siteNotes:
+      "Whole-house redec — prep and paint walls and ceilings (three bedrooms, hall, stairs), woodwork to water-based satin, minor filling included. Customer supplies colours.",
+    client: "Sample customer",
     location: "Brighton",
     status: "Sent",
     subtotal: "£1,916.67",

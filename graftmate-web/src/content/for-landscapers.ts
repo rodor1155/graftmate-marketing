@@ -65,7 +65,9 @@ export const forLandscapersPage: TradePageData = {
   ],
   exampleQuote: {
     title: "Rear patio — porcelain",
-    client: "Claire & Rob Dunn",
+    siteNotes:
+      "Rear garden patio — excavate 150mm, compact sub-base, lay 600×600 porcelain slabs (approx. 24m²), granite setts edging, point joints. Skip via drive.",
+    client: "Sample customer",
     location: "Chester",
     status: "Sent",
     subtotal: "£3,333.33",
