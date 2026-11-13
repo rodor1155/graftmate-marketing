@@ -8,6 +8,7 @@ import {
 } from "@/components/resources/ResourcePageLayout";
 import type { CommercialPageContent } from "@/lib/commercialPages";
 import { getResourceHeroVisual } from "@/lib/resourcePageVisuals";
+import { getVisibleTemplateDownloads } from "@/lib/templateDownloads";
 import { SIGNUP_URL } from "@/lib/urls";
 
 type CommercialPageProps = {
@@ -24,7 +25,12 @@ export function CommercialPage({ content }: CommercialPageProps) {
       intro={content.heroSubtitle}
       heroVisual={heroVisual}
     >
-      {content.sections.map((section) => (
+      {content.sections.map((section) => {
+        const visibleDownloads = section.downloads
+          ? getVisibleTemplateDownloads(section.downloads)
+          : [];
+
+        return (
         <ResourcePageSection key={section.id} variant={section.variant === "surface" ? "surface" : "default"}>
           {section.title ? (
             <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
@@ -51,9 +57,9 @@ export function CommercialPage({ content }: CommercialPageProps) {
               ))}
             </ul>
           ) : null}
-          {section.downloads ? (
+          {visibleDownloads.length > 0 ? (
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              {section.downloads.map((download) => (
+              {visibleDownloads.map((download) => (
                 <Button
                   key={download.label}
                   href={download.href}
@@ -61,7 +67,6 @@ export function CommercialPage({ content }: CommercialPageProps) {
                   size="lg"
                 >
                   {download.label}
-                  {download.placeholder ? " (placeholder)" : ""}
                 </Button>
               ))}
             </div>
@@ -99,7 +104,8 @@ export function CommercialPage({ content }: CommercialPageProps) {
             </ResponsiveTable>
           ) : null}
         </ResourcePageSection>
-      ))}
+        );
+      })}
 
       {content.faqs?.length ? (
         <ResourcePageSection variant="narrow">

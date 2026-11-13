@@ -92,7 +92,7 @@ export const forKitchenBathroomFittersPage: TradePageData = {
   },
   templateSection: {
     title: "Free bathroom fitting quotation template",
-    body: "A line-item quotation layout for kitchen and bathroom installs — labour, materials, and VAT. Placeholder downloads until files ship; send the same quote from GraftMate in about two minutes.",
+    body: "A line-item quotation layout for kitchen and bathroom installs — labour, materials, and VAT. Send the same quote from GraftMate in about two minutes.",
     downloads: [
       {
         label: "Word (.docx)",

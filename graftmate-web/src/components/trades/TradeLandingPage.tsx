@@ -10,14 +10,20 @@ import {
   InvoiceIcon,
   QuoteIcon,
 } from "@/components/features/FeatureIcons";
-import { SIGNUP_URL } from "@/lib/urls";
+import { indefiniteArticle } from "@/lib/indefiniteArticle";
+import { getVisibleTemplateDownloads } from "@/lib/templateDownloads";
 import type { TradePageData } from "@/lib/tradePages";
+import { SIGNUP_URL } from "@/lib/urls";
 
 type TradeLandingPageProps = {
   page: TradePageData;
 };
 
 export function TradeLandingPage({ page }: TradeLandingPageProps) {
+  const templateDownloads = page.templateSection
+    ? getVisibleTemplateDownloads(page.templateSection.downloads)
+    : [];
+
   return (
     <div className="relative overflow-hidden">
       <section className="relative overflow-hidden border-b border-border-subtle">
@@ -132,7 +138,8 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
             Example quote
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            What a {page.tradeSingular} quote looks like in GraftMate
+            What {indefiniteArticle(page.tradeSingular)}{" "}
+            {page.tradeSingular} quote looks like in GraftMate
           </h2>
           <p className="mt-4 leading-relaxed text-muted">
             Describe the job in plain English. GraftMate drafts line items, VAT,
@@ -165,25 +172,20 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
                 {page.templateSection.body}
               </p>
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              {page.templateSection.downloads.map((download) => (
-                <Button
-                  key={download.label}
-                  href={download.href}
-                  variant="secondary"
-                  size="lg"
-                  className="sm:min-w-[10rem]"
-                >
-                  {download.label}
-                  {download.placeholder ? " (placeholder)" : ""}
-                </Button>
-              ))}
-            </div>
-            {page.templateSection.downloads.some((d) => d.placeholder) ? (
-              <p className="mt-4 text-xs text-muted-dim">
-                TODO(verify): replace placeholder download links with real Word/PDF
-                template files.
-              </p>
+            {templateDownloads.length > 0 ? (
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                {templateDownloads.map((download) => (
+                  <Button
+                    key={download.label}
+                    href={download.href}
+                    variant="secondary"
+                    size="lg"
+                    className="sm:min-w-[10rem]"
+                  >
+                    {download.label}
+                  </Button>
+                ))}
+              </div>
             ) : null}
             <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted">
               Prefer to skip Word?{" "}

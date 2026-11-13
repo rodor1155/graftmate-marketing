@@ -92,7 +92,7 @@ export const forCarpentersJoinersPage: TradePageData = {
   },
   templateSection: {
     title: "Free carpenter invoice template",
-    body: "A simple UK invoice for joinery and fix-out work — labour, materials, and VAT. Template files are placeholders for now; quote and invoice the same job in GraftMate in about two minutes.",
+    body: "A simple UK invoice for joinery and fix-out work — labour, materials, and VAT. Quote and invoice the same job in GraftMate in about two minutes.",
     downloads: [
       {
         label: "Word (.docx)",

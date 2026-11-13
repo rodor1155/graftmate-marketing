@@ -92,7 +92,7 @@ export const forPlasterersPage: TradePageData = {
   },
   templateSection: {
     title: "Free plastering quote template",
-    body: "Download a UK plastering quote layout with room descriptions, labour, materials, and VAT. Files are placeholders until published — or quote in GraftMate before you leave site.",
+    body: "A UK plastering quote layout with room descriptions, labour, materials, and VAT — or quote the same scope in GraftMate before you leave site.",
     downloads: [
       {
         label: "Word (.docx)",

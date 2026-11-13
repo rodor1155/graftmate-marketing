@@ -99,52 +99,15 @@ function ProductVisual() {
         </div>
       </div>
 
-      {/* Mobile: full-width scene under copy, phone overlapping */}
-      <div className="relative lg:hidden">
-        <div className="relative aspect-[1280/720] overflow-hidden rounded-xl border-2 border-border shadow-[var(--card-shadow)] sm:rounded-2xl">
-          <Image
-            src="/brand/mobile-home-hero-scene.webp"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-            aria-hidden
-          />
-
-          <div className="absolute right-2 top-2 z-20 flex flex-col items-end gap-1.5 sm:right-3 sm:top-3 sm:gap-2">
-            <MetricPill icon={<QuoteIcon />} className="scale-[0.92] sm:scale-100">
-              2 quotes
-            </MetricPill>
-            <MetricPill icon={<MoneyIcon />} className="scale-[0.92] sm:scale-100">
-              £3,540.00 quoted
-            </MetricPill>
-          </div>
-        </div>
-
-        <div className="absolute -bottom-2 left-1/2 z-30 w-[52%] max-w-[220px] -translate-x-1/2 sm:-bottom-4 sm:w-[48%] sm:max-w-[240px]">
-          <PhoneFrame
-            src="/app/home.webp"
-            alt="GraftMate home screen showing today's briefing, jobs due, and quotes awaiting reply"
-            statusBar="#a9b8c0"
-            priority
-          />
-        </div>
-
-        <div className="pointer-events-none absolute -bottom-1 right-0 z-10 w-[38%] max-w-[140px] sm:hidden">
-          <Image
-            src="/brand/mobile-home-hero-van.webp"
-            alt=""
-            width={304}
-            height={140}
-            className="h-auto w-full"
-            aria-hidden
-          />
-        </div>
+      {/* Mobile: centred phone only — no collage overlap into copy above */}
+      <div className="mx-auto w-full max-w-[220px] pt-2 sm:max-w-[240px] lg:hidden">
+        <PhoneFrame
+          src="/app/home.webp"
+          alt="GraftMate home screen showing today's briefing, jobs due, and quotes awaiting reply"
+          statusBar="#a9b8c0"
+          priority
+        />
       </div>
-
-      {/* Spacer for overlapping phone on mobile */}
-      <div className="h-24 sm:h-28 lg:hidden" aria-hidden />
     </div>
   );
 }
