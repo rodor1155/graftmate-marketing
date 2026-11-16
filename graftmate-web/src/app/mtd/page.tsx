@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Button } from "@/components/ui/Button";
+import { AppStoreButton } from "@/components/ui/AppStoreButton";
 import { Card } from "@/components/ui/Card";
 import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 import { MtdChecker } from "@/components/mtd/MtdChecker";
@@ -7,8 +7,6 @@ import {
   ResourcePageLayout,
   ResourcePageSection,
 } from "@/components/resources/ResourcePageLayout";
-import { APP_STORE_URL } from "@/lib/config";
-
 const ROUTE = "/mtd";
 
 export const metadata: Metadata = {
@@ -218,9 +216,9 @@ export default function MtdPage() {
             phone, ready for whoever does your books.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3">
-            <Button href={APP_STORE_URL} size="lg">
+            <AppStoreButton placement="calculator-cta" size="lg">
               Get GraftMate on the App Store
-            </Button>
+            </AppStoreButton>
             <p className="text-sm text-muted">
               Try GraftMate free for 14 days
             </p>

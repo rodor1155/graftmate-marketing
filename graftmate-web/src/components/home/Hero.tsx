@@ -38,7 +38,7 @@ export function Hero() {
                   How it works
                 </Button>
               </div>
-              <AppStoreBadge />
+              <AppStoreBadge placement="hero" />
             </div>
 
             <p className="mt-3 text-sm text-muted">

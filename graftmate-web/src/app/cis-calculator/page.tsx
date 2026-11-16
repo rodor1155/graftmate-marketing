@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
+import { AppStoreButton } from "@/components/ui/AppStoreButton";
 import { Card } from "@/components/ui/Card";
 import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 import { CisCalculatorForm } from "@/components/calculators/CisCalculatorForm";
@@ -8,8 +8,6 @@ import {
   ResourcePageSection,
 } from "@/components/resources/ResourcePageLayout";
 import { buildGuidePageMetadata } from "@/lib/guides/metadata";
-import { APP_STORE_URL } from "@/lib/config";
-
 const ROUTE = "/cis-calculator";
 
 export const metadata = buildGuidePageMetadata({
@@ -222,9 +220,9 @@ export default function CisCalculatorPage() {
             deduction is worked out on.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3">
-            <Button href={APP_STORE_URL} size="lg">
+            <AppStoreButton placement="calculator-cta" size="lg">
               Get GraftMate on the App Store
-            </Button>
+            </AppStoreButton>
             <p className="text-sm text-muted-dim">
               Try GraftMate free for 14 days
             </p>

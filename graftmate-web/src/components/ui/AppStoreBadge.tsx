@@ -1,13 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import { APP_STORE_LIVE, APP_STORE_URL } from "@/lib/config";
+import type { AppStoreClickPlacement } from "@/lib/appStoreLink";
+import { trackAppStoreClick } from "@/lib/trackAppStoreClick";
 import { BROWSER_ON_ANY_PHONE_COPY } from "@/lib/promo";
 
 type AppStoreBadgeProps = {
+  placement: AppStoreClickPlacement;
   className?: string;
   showBrowserNote?: boolean;
 };
 
 export function AppStoreBadge({
+  placement,
   className = "",
   showBrowserNote = true,
 }: AppStoreBadgeProps) {
@@ -23,6 +29,7 @@ export function AppStoreBadge({
         rel="noopener noreferrer"
         className="inline-block transition-opacity hover:opacity-90"
         aria-label="Download GraftMate on the App Store"
+        onClick={() => trackAppStoreClick(placement)}
       >
         <Image
           src="/download-on-the-app-store.svg"

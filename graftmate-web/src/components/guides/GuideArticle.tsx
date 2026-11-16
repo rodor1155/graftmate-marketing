@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { GuideMarkdownAnchor } from "@/components/guides/GuideMarkdownAnchor";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 import { PROMO_STRIP_TEXT } from "@/lib/promo";
@@ -49,20 +50,7 @@ export function GuideArticle({ body, relatedLinks }: GuideArticleProps) {
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
-            a: ({ href, children, ...props }) => {
-              if (href?.startsWith("/")) {
-                return (
-                  <Link href={href} {...props}>
-                    {children}
-                  </Link>
-                );
-              }
-              return (
-                <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
-                  {children}
-                </a>
-              );
-            },
+            a: GuideMarkdownAnchor,
             table: ({ children }) => (
               <ResponsiveTable className="mt-6 [&_table]:m-0 [&_table]:min-w-[28rem] [&_table]:border-0 [&_table]:bg-transparent">
                 <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
