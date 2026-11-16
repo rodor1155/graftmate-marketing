@@ -65,7 +65,7 @@ export default function PricingPage() {
             Cancel anytime.
           </p>
           <div className="mt-6 flex flex-col items-center">
-            <AppStoreBadge />
+            <AppStoreBadge placement="pricing" />
           </div>
 
           <ul className="mt-10 space-y-3 border-t border-border-subtle pt-10">

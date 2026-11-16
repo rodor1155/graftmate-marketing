@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
+import { AppStoreButton } from "@/components/ui/AppStoreButton";
 import { Card } from "@/components/ui/Card";
 import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 import { LatePaymentCalculator } from "@/components/calculators/LatePaymentCalculator";
@@ -8,8 +8,6 @@ import {
   ResourcePageLayout,
   ResourcePageSection,
 } from "@/components/resources/ResourcePageLayout";
-import { APP_STORE_URL } from "@/lib/config";
-
 const ROUTE = "/late-payment-calculator";
 
 export const metadata: Metadata = {
@@ -218,14 +216,9 @@ export default function LatePaymentCalculatorPage() {
             so you know who to chase and when. Quotes and invoices in one app.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3">
-            <Button
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
-            >
+            <AppStoreButton placement="calculator-cta" size="lg">
               Get GraftMate on the App Store →
-            </Button>
+            </AppStoreButton>
             <p className="text-sm text-muted-dim">Try GraftMate free for 14 days</p>
           </div>
         </Card>

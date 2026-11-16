@@ -29,7 +29,7 @@ export function Footer() {
               invoicing included.
             </p>
             <div className="mt-5">
-              <AppStoreBadge />
+              <AppStoreBadge placement="footer" />
             </div>
             <p className="mt-4 text-xs text-muted-dim">
               Prices in GBP · VAT-ready · Made for UK trades

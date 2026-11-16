@@ -50,7 +50,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
                   See example quote
                 </Button>
               </div>
-              <AppStoreBadge />
+              <AppStoreBadge placement="hero" />
             </div>
           </div>
 
@@ -208,7 +208,7 @@ export function TradeLandingPage({ page }: TradeLandingPageProps) {
             <Button href={SIGNUP_URL} size="lg">
               Start free
             </Button>
-            <AppStoreBadge />
+            <AppStoreBadge placement="trade-pricing" />
           </div>
         </Card>
       </section>

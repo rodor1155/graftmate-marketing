@@ -144,7 +144,7 @@ export function CommercialPage({ content }: CommercialPageProps) {
             <Button href={SIGNUP_URL} size="lg">
               Start free
             </Button>
-            <AppStoreBadge />
+            <AppStoreBadge placement="commercial-cta" />
           </div>
         </Card>
       </ResourcePageSection>

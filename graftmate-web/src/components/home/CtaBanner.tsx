@@ -27,7 +27,7 @@ export function CtaBanner({
           <Button href={SIGNUP_URL} size="lg">
             Start free →
           </Button>
-          <AppStoreBadge showBrowserNote={showBrowserNote} />
+          <AppStoreBadge placement="cta-banner" showBrowserNote={showBrowserNote} />
         </div>
         <p className="mt-4 text-sm text-muted-dim">Cancel anytime · UK support</p>
       </Card>

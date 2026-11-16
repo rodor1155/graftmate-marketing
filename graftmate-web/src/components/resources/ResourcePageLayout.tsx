@@ -88,7 +88,7 @@ export function ResourcePageLayout({
               <Button href={SIGNUP_URL} size="lg">
                 Start free →
               </Button>
-              <AppStoreBadge />
+              <AppStoreBadge placement="resource-hero" />
             </div>
           </div>
 
